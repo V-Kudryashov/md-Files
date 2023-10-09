@@ -1,61 +1,36 @@
-# MapSensor
+# Bike Balance
 
-**Table of Contents**
 - [Description](#description)
-- [Files](#files)
 - [Examples](#examples)
-    - [1 channel camera](#1-channel-camera)
-    - [4 channels camera](#4-channels-camera)
-- [Dependencies](#dependencies)
+    - [Bike](#bike)
+    - [Forks](#forks)
 
 ## Description
-Map Sensor is a sensor for Unity ml-agents tools. The Map Sensor is designed to use non-visual data as visual observations.
+There are many assets that offer realistic car physics. The WheelCollider allows you to simulate the physics of a car quite accurately. It is possible to fine-tune the technical characteristics of the car. What about the bike?
+The bike requires balance. This is not an easy task. For this reason, bike models usually use magical forces or no physics at all. Such models move unnaturally. In the Bike Balance asset, balance is maintained solely by changing the steering angle.<br>
+Let<br>
+s - steering angle.<br>
+t -  target steering angle.<br>
+b - balance steering angle.
+d - dumper. This value depends on the angle of inclination and the rate of change of this angle. It should be noted that dumper is not a magical power. Dumper is applied not to the bike, but to the steering angle.<br>
+k - is a constant coefficient.<br>
+Then the steering angle is calculated using the following formula:<br>
 
-For example, we need the agent to be able to see the heightmap. To solve this problem, you can draw a heightmap on the plane and then get observations using the Camera Sensor. At first I did just that. It works. Then I developed a special Map Sensor similar to the Camera Sensor. Map Sensor has some advantages over Camera Sensor.
-* Map Sensor faster than Camera Sensor. No camera rendering, no image to array conversion.
-* Map Sensor has an unlimited number of channels. Camera Sensor has 1 (greyscale) or 3 (RGB) channels.
-* Map Sensor does not use graphics. We can use the `no_graphics` engine setting.
-## Files
-Map Sensor API contains 4 files:
-- `MapSensor.cs` - contains `MapSensor` class. The `MapSensor` receives one frame from the `MapCamera` and writes it directly to the `ObservationWriter`.
-- `MapSensorComponent.cs` - script to be attached to the Agent object.
-- `MapSensorComponentEditor.cs` - editor script.
-- `MapCamera.cs` - abstract class that you should implement. The main task of this class is to cut a rectangular frame from the map array. Provided examples contains 2 implementations of this class: Simple 1 channel `HeightmapCamera.cs` and more complex 4 channel `TerrainCamera.cs`.
+s = b + (b - t) * k + d
+
+As a result, the bike tilts towards the turn until the factor (b - t) becomes zero.
+
 ## Examples
-### 1 channel camera
-In this example, the role of the map is performed by an array of heights obtained from the Terrain. `float[,] H = terrain.terrainData.GetHeights(0, 0, res, res);`
-The car is moving towards the target and avoiding the peaks of the terrain.
+### Bike
+This example demonstrates the use of a bike physics simulator. The simulator is implemented in the BikeController script. This script require model with two WheelColiders. This script assumes some control program that sets the target steering angle. In the example provided, this is the ManualControl script. This script uses user input to control the bike, but it could be another program. This program can drive the bike around the race track, around the city, etc.
 
-Video:
+The ManualControl script has a fullAuto option. If this option is enabled, the controller provides balance as described in the previous paragraph. The user sets the target steering angle using the keyboard, then controller performs the required maneuver while maintaining balance. In this case, driving the bike is very easy.
+If fullAuto option turned off:<br>
+s = t + d<br>
+In this case, maintaining balance is quite difficult. This task is made a little easier by using a dumper. The difficulty is that in order to turn left, you need to turn the steering wheel to the right. After this, the bike will tilt to the left and we can turn left. Such a maneuver seems somewhat paradoxical, but this is exactly what a person does when driving a real bike.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/MPu49Scu4fk/0.jpg)](https://www.youtube.com/watch?v=MPu49Scu4fk)
-
-### 4 channels camera
-It is more complex example. The `TerrainMap` script allows you to get a map that includes up to eight channels:
-- `Height`
-- `NormalX`
-- `NormalY`
-- `NormalMagnitude`
-- `CurvatureX`
-- `CurvatureY`
-- `CurvatureMagnitude`
-- `Objects`
-
-Most of the data comes from `TerrainData`: `terrainData.GetInterpolatedHeights`, `terrainData.GetInterpolatedNormal(X, Y);`. 
-`Objects` are moving objects, such as other Agents.
-
-`TerrainCamera` uses 4 channels:
-- `NormalX`
-- `NormalY`
-- `CurvatureMagnitude`
-- `Objects`
- 
-In this example 3 cars  is moving towards the target and avoiding the peaks and other cars.
-
-Video:
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/OlC7LPSNq_E/0.jpg)](https://www.youtube.com/watch?v=OlC7LPSNq_E)
-
-## Dependencies
-- Unity 2020.3.26f1
-- ML Agents 2.1.0-exp.1
+### Forks
+Forks prefab is similar to Bike prefab. Rear and front forks have been added to the prefab. Two scripts have also been added, FrontForkVisualizer and RearForkVisualizer. Scripts are attached to gameObjects<br>
+BikeWithForks->WheelFront->ForkAxis->Fork<br>
+BikeWithForks->WheelRear->Fork.<br>
+A new gameObject, Wheel_Image, has also been added. Old Wheel_Image has been disabled. 
