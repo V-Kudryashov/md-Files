@@ -6,7 +6,7 @@
     - [Bike Forks](#bike-forks)
 
 ## Description
-There are many assets that offer realistic car physics. The WheelCollider allows you to simulate the physics of a car quite accurately. It is possible to fine-tune the technical characteristics of the car. What about the bike?
+There are many assets that offer realistic car physics. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) allows you to simulate the physics of a car quite accurately. It is possible to fine-tune the technical characteristics of the car. What about the bike?
 The bike requires balance. This is not an easy task. For this reason, bike models usually use magical forces or no physics at all. Such models move unnaturally. In the Bike Balance asset, balance is maintained solely by changing the steering angle.<br>
 Let<br>
 > s - steering angle.<br>
