@@ -49,6 +49,75 @@ A new gameObject, Wheel_Image, has also been added. Old Wheel_Image has been dis
 ## 3 Scripts
 <a name="bikecontroller"></a>
 ### 3.1 BikeController
+**Description**<br>
+BikeController allows you to control a bike, which consists of two WheelColliders and a RigidBody. BikeController itself does not use user input. There are public methods to control the bike: setSteer, SetAcceleration etc. It follows from this that another script is needed to control the bike. This script can use user input, for example.
+For a given speed and lean angle, there is a steering angle that ensures the balance of the bike - the balance angle. BikeController uses the balance angle to control the bike. Obviously, the balance angle depends on the mechanical properties of the bike. BikeController was tested on two models close to real ones: cross bike and road bike.
+
+**Properties**
+- **FrontCollider** - 
+Front [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html)
+- **RearCollider** - 
+Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html)
+- **FrontImage** -
+Front wheel image (tyre and rim)
+- **RearImage** -
+Rear wheel image (tyre and rim)
+- **MaxSteer** -
+Limits steering angle
+- **MaxLean** -
+Limits bike lean
+- **centerOfMassY** -
+Determines the height of the center of mass above the ground. Lowering the center of mass makes the bike more stable.
+- **useParticle** -
+Splashes from under the rear wheel.
+- **minTralSlip** -
+Wheel slip threshold for the appearance of a trail.
+- **minParticleSlip** -
+Rear wheel slip threshold for splashing.
+- **curves** -
+Curves are generated automatically at runtime.
+- **info** -
+These fields are generated automatically at runtime.
+
+**Public Methods**
+- **GetBalanceSteer** -
+Returns the balance steering angle.
+- **SetAcceleration** -
+Sets rear wheel torque acording to the given acceleration.
+- **FrontBrake** -
+Sets front brake according to the given acceleration. Clamps acceleration to minimize slipping.
+- **RearBrake** -
+Sets rear brake according to the given acceleration. Clamps acceleration to minimize slipping.
+- **SafeBrake** -
+Sets both brakes according to the given acceleration. Clamps the brakes to minimize slip and prevent rollovers.
+- **ReleaseBrakes** -
+Releases both brakes.
+- **SetSteerDirectly** -
+Sets steering angle to given.
+- **setLean** -
+Brings the bike closer to the desired lean by slightly off balance. This method is useful for high speed control.
+- **setSteer** -
+Brings the steer angle closer to the required steer by a small deviation from the balance steer.
+- **setSteerByLean** -
+Same as setSteer but first calculate lean then call setLean.
+- **getSidewaysFriction** -
+BikeController changes SidewaysFriction depend on velocity. This method returns SidewaysFriction for the given speed.
+- **getLean** -
+Returns current lean.
+- **getMaxForwardAcceleration** -
+Returns max forward acceleration. Acceleration is limited by slipping and the possibility of rolling over.
+- **getMaxBrakeAcceleration** -
+Returns max brake acceleration. Acceleration is limited by slipping and the possibility of rolling over.
+- **getMaxSidewaysAcceleration** -
+Returns max sideways acceleration for the given velocity. Acceleration is limited by sideways friction.
+- **getMaxVelocity** -
+Returns the maximum velocity for a given turning radius.
+- **reset** -
+Returns bike to the starting position.
+- **getup** -
+Getting bike up. Use if the bike falls over.
+- **getHitPoint** -
+Returns the midpoint between the front and back touch points.
 <a name="manualcontrol"></a>
 ### 3.2 ManualControl
 <a name="bikeinput"></a>
