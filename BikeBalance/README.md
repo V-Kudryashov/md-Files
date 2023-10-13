@@ -1,9 +1,10 @@
 # Bike Balance
 
-- [Description](#description)
-- [Examples](#examples)
-    - [Bike](#bike)
-    - [Bike Forks](#bike-forks)
+- 1 [Description](#description)
+- 2 [Examples](#examples)
+    - 2.1 [Bike](#bike)
+    - 2.2 [Bike Forks](#bike-forks)
+- 3 [Scripts](#scripts)
 
 ## Description
 There are many assets that offer realistic car physics. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) allows you to simulate the physics of a car quite accurately. It is possible to fine-tune the technical characteristics of the car. What about the bike?
@@ -35,3 +36,5 @@ BikeWithForks prefab is similar to Bike prefab. Rear and front forks have been a
 BikeWithForks->WheelFront->ForkAxis->Fork<br>
 BikeWithForks->WheelRear->Fork.<br>
 A new gameObject, Wheel_Image, has also been added. Old Wheel_Image has been disabled. 
+
+## Scripts
