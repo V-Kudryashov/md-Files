@@ -155,6 +155,21 @@ These fields are calculated automatically at runtime.
 **Description**<br>
 BikeInput supports old and new Input System. If new Input System available user can select one of InputDevece from [InputSystem.devices](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputSystem.html#properties). BikeInput supports the following devices: [Keyboard](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Keyboard.html), [Mouse](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Mouse.html), [Joystick](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Joystick.html) and [Gamepad](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Gamepad.html).
 If new Input System not available BikeInput use [Input.GetAxis](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html) method.
+In either case, user input is placed in the xAxis and yAxis fields.
+
+**Fields**
+- **keyboardSettings** -
+For new input system only.
+- **joystickSettings** -
+For new input system only.
+- **sensitivity** -
+User input sensitivity.
+- **toZero** -
+Determines the speed at which the return to zero occurs.
+- **xAxis** -
+Output of this script.
+- **yAxis** -
+Output of this script.
 
 <a name="devicedropdown"></a>
 ### 3.4 DeviceDropdown
