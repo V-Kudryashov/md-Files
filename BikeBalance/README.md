@@ -173,6 +173,15 @@ Output of this script.
 
 <a name="devicedropdown"></a>
 ### 3.4 DeviceDropdown
+**Description**<br>
+For new input system only. This script allow you to select one of the available Input Devices.
+
+**Fields**
+- **deviceDropdown** -
+This [Dropdown](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-Dropdown.html) will be contain available Input Devices.
+- **bikeInput** -
+[BikeInput](#bikeinput) script.
+
 <a name="frontforkvisualizer"></a>
 ### 3.5 FrontForkVisualizer
 <a name="rearforkvisualizer"></a>
