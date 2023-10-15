@@ -53,18 +53,18 @@ A new gameObject, Wheel_Image, has also been added. Old Wheel_Image has been dis
 BikeController allows you to control a bike, which consists of two WheelColliders and a RigidBody. BikeController itself does not use user input. There are public methods to control the bike: setSteer, SetAcceleration etc. It follows from this that another script is needed to control the bike. This script can use user input, for example.
 For a given speed and lean angle, there is a steering angle that ensures the balance of the bike - the balance angle. BikeController uses the balance angle to control the bike. Obviously, the balance angle depends on the mechanical properties of the bike. BikeController was tested on two models close to real ones: cross bike and road bike.
 
-**Properties**
-- **FrontCollider** - 
+**Fields**
+- **frontCollider** - 
 Front [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html)
-- **RearCollider** - 
+- **rearCollider** - 
 Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html)
-- **FrontImage** -
+- **frontImage** -
 Front wheel image (tyre and rim)
-- **RearImage** -
+- **rearImage** -
 Rear wheel image (tyre and rim)
-- **MaxSteer** -
+- **maxSteer** -
 Limits steering angle
-- **MaxLean** -
+- **maxLean** -
 Limits bike lean
 - **centerOfMassY** -
 Determines the height of the center of mass above the ground. Lowering the center of mass makes the bike more stable.
@@ -77,31 +77,31 @@ Rear wheel slip threshold for splashing.
 - **curves** -
 Curves are generated automatically at runtime.
 - **info** -
-These fields are generated automatically at runtime.
+These fields are calculated automatically at runtime.
 
 **Public Methods**
-- **GetBalanceSteer** -
-Returns the balance steering angle.
-- **SetAcceleration** -
+- **getBalanceSteer** -
+Returns the steer angle required to maintain balance at the current speed and the current lean.
+- **setAcceleration** -
 Sets rear wheel torque acording to the given acceleration.
-- **FrontBrake** -
+- **frontBrake** -
 Sets front brake according to the given acceleration. Clamps acceleration to minimize slipping.
-- **RearBrake** -
+- **rearBrake** -
 Sets rear brake according to the given acceleration. Clamps acceleration to minimize slipping.
-- **SafeBrake** -
+- **safeBrake** -
 Sets both brakes according to the given acceleration. Clamps the brakes to minimize slip and prevent rollovers.
-- **ReleaseBrakes** -
+- **releaseBrakes** -
 Releases both brakes.
-- **SetSteerDirectly** -
+- **setSteerDirectly** -
 Sets steering angle to given.
 - **setLean** -
 Brings the bike closer to the desired lean by slightly off balance. This method is useful for high speed control.
 - **setSteer** -
 Brings the steer angle closer to the required steer by a small deviation from the balance steer.
 - **setSteerByLean** -
-Same as setSteer but first calculate lean then call setLean.
+Brings the steer angle closer to the required steer by a small deviation from the balance steer. First calculate lean then call setLean.
 - **getSidewaysFriction** -
-BikeController changes SidewaysFriction depend on velocity. This method returns SidewaysFriction for the given speed.
+BikeController changes [SidewaysFriction](https://docs.unity3d.com/ScriptReference/WheelCollider-sidewaysFriction.html) depend on velocity. This method returns [SidewaysFriction](https://docs.unity3d.com/ScriptReference/WheelCollider-sidewaysFriction.html) for the given speed.
 - **getLean** -
 Returns current lean.
 - **getMaxForwardAcceleration** -
@@ -120,6 +120,36 @@ Getting bike up. Use if the bike falls over.
 Returns the midpoint between the front and back touch points.
 <a name="manualcontrol"></a>
 ### 3.2 ManualControl
+**Description**<br>
+ManualControl receives data from the [BikeInput](bikeInput) script and controls the [BikeController](bikecontroller) script using apropriate methods.
+
+Input data:
+- X axis
+- Y axis
+
+Output data:
+- Target steering angle
+- Forward or brake  acceleration
+
+**Fields**
+- **sliderX** -
+Optional field. The slider visualizes user input along the X axis.
+- **sliderSteer** -
+Optional field. The slider visualizes the current steering angle.
+- **bikeController** -
+[BikeController](#bikecontroller)
+- **timeScale** -
+Sets the [Time.timeScale](https://docs.unity3d.com/ScriptReference/Time-timeScale.html);
+- **maxVelocity** -
+Scale of X axis. If X axis = 1 velocity = maxVelocity.
+- **fullAuto** -
+If true, balance is carried out automatically else the user must balance manually. In the last case, steering angle calculated as mix between user input and balanced steering angle + dumper.
+- **autoBalance** -
+The interpolation value between user input and balanced steering angle.
+- **dumper** -
+Dumper factor.
+- **info** -
+These fields are calculated automatically at runtime.
 <a name="bikeinput"></a>
 ### 3.3 BikeInput
 <a name="devicedropdown"></a>
