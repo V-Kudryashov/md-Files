@@ -184,5 +184,17 @@ This [Dropdown](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/scri
 
 <a name="frontforkvisualizer"></a>
 ### 3.5 FrontForkVisualizer
+**Description**<br>
+FrontForkVisualizer is designed to visualize a telescopic fork. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) damper moves vertically, but telescopic fork has some incline. FrontForkVisualizer performs appropriate motion of the dumper and wheel.
+
+**Fields**
+- **frontCollider** -
+front [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html)
+- **fork** -
+The upper part of the fork.
+- **axis** -
+The lower part of the fork. The moving part of the dumpers and the wheel axis are located here.
+- **wheel** -
+Front wheel visual object.
 <a name="rearforkvisualizer"></a>
 ### 3.6 RearForkVisualizer
