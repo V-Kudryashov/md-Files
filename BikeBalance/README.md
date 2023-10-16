@@ -198,3 +198,9 @@ The lower part of the fork. The moving part of the dumpers and the wheel axis ar
 Front wheel visual object.
 <a name="rearforkvisualizer"></a>
 ### 3.6 RearForkVisualizer
+**Description**<br>
+RearForkVisualizer does not change the movement of the wheel. The rear fork moves around its axis.
+
+**Fields**
+- **wheel** -
+Rear wheel visual object.
