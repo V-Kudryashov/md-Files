@@ -195,7 +195,7 @@ Front wheel visual model object.
 <a name="rearfork"></a>
 #### 1.3.2 RearFork
 **Description**<br>
-RearFork does not change the movement of the wheel. The rear fork moves around its axis.
+RearFork provides the movement of the rear fork and rear wheel.
 
 **Fields**
 - **rearCollider** -
