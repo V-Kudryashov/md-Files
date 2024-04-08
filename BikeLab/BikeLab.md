@@ -1,7 +1,7 @@
 # Bike Lab
 
 **Table of Contents**
-- 1 [Bike](#bike)
+- 1 [Bike](#1-bike)
     - 1.1 [BikeController](##bikecontroller)
     - 1.2 [ManualControl](##manualcontrol)
     - 1.3 [BikeInput](##bikeinput)
