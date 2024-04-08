@@ -1,19 +1,17 @@
-# Bike Balance
+# Bike Lab
 
 **Table of Contents**
-- 1 [Description](#1-description)
-- 2 [Examples](#2-examples)
-    - 2.1 [Bike](#bike)
-    - 2.2 [Bike Forks](#bike-forks)
-- 3 [Scripts](#3-scripts)
-    - 3.1 [BikeController](#bikecontroller)
-    - 3.2 [ManualControl](#manualcontrol)
-    - 3.3 [BikeInput](#bikeinput)
-    - 3.4 [DeviceDropdown](#devicedropdown)
-    - 3.5 [FrontForkVisualizer](#frontforkvisualizer)
-    - 3.6 [RearForkVisualizer](#rearforkvisualizer)
+- 1 [Bike](#2-examples)
+    - 1.1 [Bike](#bike)
+    - 1.2 [Bike Forks](#bike-forks)
+- 2 [Scripts](#2-scripts)
+    - 2.1 [BikeController](#bikecontroller)
+    - 2.2 [ManualControl](#manualcontrol)
+    - 2.3 [BikeInput](#bikeinput)
+    - 2.4 [DeviceDropdown](#devicedropdown)
+    - 2.5 [FrontForkVisualizer](#frontforkvisualizer)
+    - 2.6 [RearForkVisualizer](#rearforkvisualizer)
 
-## 1 Description
 There are many assets that offer realistic car physics. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) allows you to simulate the physics of a car quite accurately. It is possible to fine-tune the technical characteristics of the car. What about the bike?
 The bike requires balance. This is not an easy task. For this reason, bike models usually use magical forces or no physics at all. Such models move unnaturally. In the Bike Balance package, balance is maintained solely by changing the steering angle.<br>
 Let<br>
@@ -29,9 +27,9 @@ s = b + (b - t) * k + d
 
 As a result, the bike tilts towards the turn until the factor (b - t) becomes zero.
 
-## 2 Examples
+## 1 Examples
 <a name="bike"></a>
-### 2.1 Bike
+### 1.1 Bike
 This example demonstrates the use of a bike physics simulator. The simulator is implemented in the BikeController script. This script requires model with two WheelColiders. This script assumes some control program that sets the target steering angle. In the example provided, this is the ManualControl script. This script uses user input to control the bike, but it could be another program. This program can drive the bike around the race track, around the city, etc.
 
 The ManualControl script has a fullAuto option. If this option is enabled, the controller provides balance as described in the previous paragraph. The user sets the target steering angle using the keyboard, then controller performs the required maneuver while maintaining balance. In this case, driving the bike is very easy.<br>
@@ -40,15 +38,15 @@ s = t + d<br>
 In this case, maintaining balance is quite difficult. This task is made a little easier by using a dumper. The difficulty is that in order to turn left, you need to turn the steering wheel to the right. After this, the bike will tilt to the left and we can turn left. Such a maneuver seems somewhat paradoxical, but this is exactly what a person does when driving a real bike.
 
 <a name="bike-forks"></a>
-### 2.2 Bike Forks
+### 1.2 Bike Forks
 BikeWithForks prefab is similar to Bike prefab. Rear and front forks have been added to the prefab. Two scripts have also been added, FrontForkVisualizer and RearForkVisualizer. Scripts are attached to gameObjects<br>
 BikeWithForks->WheelFront->ForkAxis->Fork<br>
 BikeWithForks->WheelRear->Fork.<br>
 A new gameObject, Wheel_Image, has also been added. Old Wheel_Image has been disabled. 
 
-## 3 Scripts
+## 2 Scripts
 <a name="bikecontroller"></a>
-### 3.1 BikeController
+### 2.1 BikeController
 **Description**<br>
 BikeController allows you to control a bike, which consists of two WheelColliders and a RigidBody. BikeController itself does not use user input. There are public methods to control the bike: setSteer, SetAcceleration etc. It follows from this that another script is needed to control the bike. This script can use user input, for example.
 For a given speed and lean angle, there is a steering angle that ensures the balance of the bike - the balance angle. BikeController uses the balance angle to control the bike. Obviously, the balance angle depends on the mechanical properties of the bike. BikeController was tested on two models close to real ones: cross bike and road bike.
@@ -119,7 +117,7 @@ Getting bike up. Use if the bike falls over.
 - **getHitPoint** -
 Returns the midpoint between the front and back touch points.
 <a name="manualcontrol"></a>
-### 3.2 ManualControl
+### 2.2 ManualControl
 **Description**<br>
 ManualControl receives data from the [BikeInput](bikeInput) script and controls the [BikeController](bikecontroller) script using apropriate methods.
 
@@ -151,7 +149,7 @@ Dumper factor.
 - **info** -
 These fields are calculated automatically at runtime.
 <a name="bikeinput"></a>
-### 3.3 BikeInput
+### 2.3 BikeInput
 **Description**<br>
 BikeInput supports old and new Input System. If new Input System available user can select one of InputDevece from [InputSystem.devices](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputSystem.html#properties). BikeInput supports the following devices: [Keyboard](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Keyboard.html), [Mouse](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Mouse.html), [Joystick](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Joystick.html) and [Gamepad](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Gamepad.html).
 If new Input System not available BikeInput use [Input.GetAxis](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html) method.
@@ -172,7 +170,7 @@ Output of this script.
 Output of this script.
 
 <a name="devicedropdown"></a>
-### 3.4 DeviceDropdown
+### 2.4 DeviceDropdown
 **Description**<br>
 For new input system only. This script allow you to select one of the available Input Devices.
 
@@ -183,7 +181,7 @@ This [Dropdown](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/scri
 [BikeInput](#bikeinput) script.
 
 <a name="frontforkvisualizer"></a>
-### 3.5 FrontForkVisualizer
+### 2.5 FrontForkVisualizer
 **Description**<br>
 FrontForkVisualizer is designed to visualize a telescopic fork. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) damper moves vertically, but telescopic fork has some incline. FrontForkVisualizer performs appropriate motion of the dumper and wheel.
 
@@ -197,7 +195,7 @@ The lower part of the fork. The moving part of the dumpers and the wheel axis ar
 - **wheel** -
 Front wheel visual object.
 <a name="rearforkvisualizer"></a>
-### 3.6 RearForkVisualizer
+### 2.6 RearForkVisualizer
 **Description**<br>
 RearForkVisualizer does not change the movement of the wheel. The rear fork moves around its axis.
 
