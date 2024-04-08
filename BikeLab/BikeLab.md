@@ -11,8 +11,13 @@
 
 <a name="bike"></a>
 ## 1 Bike
-There are many assets that offer realistic car physics. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) allows you to simulate the physics of a car quite accurately. It is possible to fine-tune the technical characteristics of the car. What about the bike?
-The bike requires balance. This is not an easy task. For this reason, bike models usually use magical forces or no physics at all. Such models move unnaturally. In the Bike Balance package, balance is maintained solely by changing the steering angle.<br>
+
+<a name="bikecontroller"></a>
+### 1.1 BikeController
+**Description**<br>
+BikeController allows you to control a bike, which consists of two WheelColliders and a RigidBody. BikeController itself does not use user input. There are public methods to control the bike: setSteer, SetAcceleration etc. It follows from this that another script is needed to control the bike. This script can use user input, for example.
+For a given speed and lean angle, there is a steering angle that ensures the balance of the bike - the balance angle. BikeController uses the balance angle to control the bike. Obviously, the balance angle depends on the mechanical properties of the bike. BikeController was tested on two models close to real ones: cross bike and road bike.
+
 Let<br>
 > s - steering angle.<br>
 t -  target steering angle.<br>
@@ -25,12 +30,6 @@ Then the steering angle is calculated using the following formula:<br>
 s = b + (b - t) * k + d
 
 As a result, the bike tilts towards the turn until the factor (b - t) becomes zero.
-
-<a name="bikecontroller"></a>
-### 1.1 BikeController
-**Description**<br>
-BikeController allows you to control a bike, which consists of two WheelColliders and a RigidBody. BikeController itself does not use user input. There are public methods to control the bike: setSteer, SetAcceleration etc. It follows from this that another script is needed to control the bike. This script can use user input, for example.
-For a given speed and lean angle, there is a steering angle that ensures the balance of the bike - the balance angle. BikeController uses the balance angle to control the bike. Obviously, the balance angle depends on the mechanical properties of the bike. BikeController was tested on two models close to real ones: cross bike and road bike.
 
 **Fields**
 - **frontCollider** - 
