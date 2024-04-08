@@ -183,8 +183,15 @@ front [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html)
 The upper part of the fork.
 - **axis** -
 The lower part of the fork. The moving part of the dumpers and the wheel axis are located here.
-- **wheel** -
-Front wheel visual object.
+- **frontWheel** -
+Front wheel object.
+- **frontForkModel** -
+Front fork visual model object.
+- **frontAxisModel** -
+Front axis visual model object.
+- **frontWheelModel** -
+Front wheel visual model object.
+
 <a name="rearfork"></a>
 #### 1.3.2 RearFork
 **Description**<br>
