@@ -4,9 +4,10 @@
 - 1 [Bike](#1-bike)
     - 1.1 [Physics](#physics)
         - 1.1.1 [BikeController](#bikecontroller)
-    - 1.2 [ManualControl](#manualcontrol)
-    - 1.3 [BikeInput](#bikeinput)
-    - 1.4 [DeviceDropdown](#devicedropdown)
+    - 1.2 [Input](#input)
+        - 1.2.1 [ManualControl](#manualcontrol)
+        - 1.2.2 [BikeInput](#bikeinput)
+        - 1.2.3 [DeviceDropdown](#devicedropdown)
     - 1.5 [FrontFork](#frontfork)
     - 1.6 [RearFork](#rearfork)
 
@@ -100,8 +101,12 @@ Returns bike to the starting position.
 Getting bike up. Use if the bike falls over.
 - **getHitPoint** -
 Returns the midpoint between the front and back touch points.
+
+<a name="input"></a>
+### 1.2 Input
+
 <a name="manualcontrol"></a>
-#### 1.2 ManualControl
+#### 1.2.1 ManualControl
 **Description**<br>
 ManualControl receives data from the [BikeInput](bikeInput) script and controls the [BikeController](bikecontroller) script using apropriate methods.
 
@@ -133,7 +138,7 @@ Dumper factor.
 - **info** -
 These fields are calculated automatically at runtime.
 <a name="bikeinput"></a>
-#### 1.3 BikeInput
+#### 1.2.2 BikeInput
 **Description**<br>
 BikeInput supports old and new Input System. If new Input System available user can select one of InputDevece from [InputSystem.devices](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputSystem.html#properties). BikeInput supports the following devices: [Keyboard](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Keyboard.html), [Mouse](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Mouse.html), [Joystick](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Joystick.html) and [Gamepad](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Gamepad.html).
 If new Input System not available BikeInput use [Input.GetAxis](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html) method.
@@ -154,7 +159,7 @@ Output of this script.
 Output of this script.
 
 <a name="devicedropdown"></a>
-#### 1.4 DeviceDropdown
+#### 1.2.3 DeviceDropdown
 **Description**<br>
 For new input system only. This script allow you to select one of the available Input Devices.
 
