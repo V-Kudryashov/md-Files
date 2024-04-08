@@ -132,8 +132,8 @@ Scale of X axis. If X axis = 1 velocity = maxVelocity.
 If true, balance is carried out automatically else the user must balance manually. In the last case, steering angle calculated as mix between user input and balanced steering angle + dumper.
 - **autoBalance** -
 The interpolation value between user input and balanced steering angle.
-- **dumper** -
-Dumper factor.
+- **damper** -
+Damper factor.
 - **info** -
 These fields are calculated automatically at runtime.
 <a name="bikeinput"></a>
