@@ -1,5 +1,13 @@
 # Bike Lab
 
+The basis of the Bike Lab package is the BikeController script. BikeController implements the physics of the bike and allows you to control it manually or using another program. This program, for example, can drive the bike to a target object (Motobol) or along a track.
+
+Track is the second important part of the Bike Lab package. You can create tracks for motocross, road racing, mountain tracks, city tracks, etc.
+
+The next necessary part is the motorcyclist. The humanoid model is controlled using IK.
+
+The Bike Lab package also includes a Segway Controller. This is a relatively simple script since the balance task for a Segway is much simpler than for a Bike.
+
 **Table of Contents**
 - 1 [Bike](#1-bike)
     - 1.1 [Physics](#physics)
