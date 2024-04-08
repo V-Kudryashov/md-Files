@@ -198,6 +198,8 @@ Front wheel visual model object.
 RearFork does not change the movement of the wheel. The rear fork moves around its axis.
 
 **Fields**
+- **rearCollider** -
+Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html).
 - **wheel** -
-Rear wheel visual object.
+Rear wheel object.
 
