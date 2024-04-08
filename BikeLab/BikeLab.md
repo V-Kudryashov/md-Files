@@ -2,7 +2,8 @@
 
 **Table of Contents**
 - 1 [Bike](#1-bike)
-    - 1.1 [BikeController](#bikecontroller)
+    - 1.1 [Physics](#physics)
+        - 1.1.1 [BikeController](#bikecontroller)
     - 1.2 [ManualControl](#manualcontrol)
     - 1.3 [BikeInput](#bikeinput)
     - 1.4 [DeviceDropdown](#devicedropdown)
@@ -12,8 +13,11 @@
 <a name="bike"></a>
 ## 1 Bike
 
+<a name="physics"></a>
+### 1.1 Physics
+
 <a name="bikecontroller"></a>
-### 1.1 BikeController
+#### 1.1.1 BikeController
 **Description**<br>
 BikeController allows you to control a bike, which consists of two WheelColliders and a RigidBody. BikeController itself does not use user input. There are public methods to control the bike: setSteer, SetAcceleration etc. It follows from this that another script is needed to control the bike. This script can use user input, for example.
 For a given speed and lean angle, there is a steering angle that ensures the balance of the bike - the balance angle. BikeController uses the balance angle to control the bike. Obviously, the balance angle depends on the mechanical properties of the bike. BikeController was tested on two models close to real ones: cross bike and road bike.
@@ -97,7 +101,7 @@ Getting bike up. Use if the bike falls over.
 - **getHitPoint** -
 Returns the midpoint between the front and back touch points.
 <a name="manualcontrol"></a>
-### 1.2 ManualControl
+#### 1.2 ManualControl
 **Description**<br>
 ManualControl receives data from the [BikeInput](bikeInput) script and controls the [BikeController](bikecontroller) script using apropriate methods.
 
@@ -129,7 +133,7 @@ Dumper factor.
 - **info** -
 These fields are calculated automatically at runtime.
 <a name="bikeinput"></a>
-### 1.3 BikeInput
+#### 1.3 BikeInput
 **Description**<br>
 BikeInput supports old and new Input System. If new Input System available user can select one of InputDevece from [InputSystem.devices](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputSystem.html#properties). BikeInput supports the following devices: [Keyboard](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Keyboard.html), [Mouse](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Mouse.html), [Joystick](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Joystick.html) and [Gamepad](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Gamepad.html).
 If new Input System not available BikeInput use [Input.GetAxis](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html) method.
@@ -150,7 +154,7 @@ Output of this script.
 Output of this script.
 
 <a name="devicedropdown"></a>
-### 1.4 DeviceDropdown
+#### 1.4 DeviceDropdown
 **Description**<br>
 For new input system only. This script allow you to select one of the available Input Devices.
 
@@ -161,7 +165,7 @@ This [Dropdown](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/scri
 [BikeInput](#bikeinput) script.
 
 <a name="frontfork"></a>
-### 1.5 FrontFork
+#### 1.5 FrontFork
 **Description**<br>
 FrontFork is designed to visualize a telescopic fork. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) damper moves vertically, but telescopic fork has some incline. FrontFork performs appropriate motion of the dumper and wheel.
 
@@ -175,7 +179,7 @@ The lower part of the fork. The moving part of the dumpers and the wheel axis ar
 - **wheel** -
 Front wheel visual object.
 <a name="rearfork"></a>
-### 1.6 RearFork
+#### 1.6 RearFork
 **Description**<br>
 RearFork does not change the movement of the wheel. The rear fork moves around its axis.
 
