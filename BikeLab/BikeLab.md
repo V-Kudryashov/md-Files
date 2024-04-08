@@ -8,8 +8,9 @@
         - 1.2.1 [ManualControl](#manualcontrol)
         - 1.2.2 [BikeInput](#bikeinput)
         - 1.2.3 [DeviceDropdown](#devicedropdown)
-    - 1.5 [FrontFork](#frontfork)
-    - 1.6 [RearFork](#rearfork)
+    - 1.3 [Bike parts](#parts)
+        - 1.5 [FrontFork](#frontfork)
+        - 1.6 [RearFork](#rearfork)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -169,8 +170,11 @@ This [Dropdown](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/scri
 - **bikeInput** -
 [BikeInput](#bikeinput) script.
 
+<a name="parts"></a>
+### 1.2 Bike parts
+
 <a name="frontfork"></a>
-#### 1.5 FrontFork
+#### 1.3.1 FrontFork
 **Description**<br>
 FrontFork is designed to visualize a telescopic fork. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) damper moves vertically, but telescopic fork has some incline. FrontFork performs appropriate motion of the dumper and wheel.
 
@@ -184,7 +188,7 @@ The lower part of the fork. The moving part of the dumpers and the wheel axis ar
 - **wheel** -
 Front wheel visual object.
 <a name="rearfork"></a>
-#### 1.6 RearFork
+#### 1.3.2 RearFork
 **Description**<br>
 RearFork does not change the movement of the wheel. The rear fork moves around its axis.
 
