@@ -50,22 +50,12 @@ As a result, the bike tilts towards the turn until the factor (b - t) becomes ze
 Front [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html)
 - **rearCollider** - 
 Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html)
-- **frontImage** -
-Front wheel image (tyre and rim)
-- **rearImage** -
-Rear wheel image (tyre and rim)
 - **maxSteer** -
 Limits steering angle
 - **maxLean** -
 Limits bike lean
 - **centerOfMassY** -
 Determines the height of the center of mass above the ground. Lowering the center of mass makes the bike more stable.
-- **useParticle** -
-Splashes from under the rear wheel.
-- **minTralSlip** -
-Wheel slip threshold for the appearance of a trail.
-- **minParticleSlip** -
-Rear wheel slip threshold for splashing.
 - **curves** -
 Curves are generated automatically at runtime.
 - **info** -
