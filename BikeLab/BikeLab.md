@@ -202,4 +202,8 @@ RearFork does not change the movement of the wheel. The rear fork moves around i
 Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html).
 - **wheel** -
 Rear wheel object.
+- **rearWheelModel** -
+Rear wheel visual model object.
+- **rearForkModel** -
+Rear fork visual model object.
 
