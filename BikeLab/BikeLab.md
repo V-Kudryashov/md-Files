@@ -17,8 +17,8 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 1.2.2 [BikeInput](#bikeinput)
         - 1.2.3 [DeviceDropdown](#devicedropdown)
     - 1.3 [Bike parts](#parts)
-        - 1.5 [FrontFork](#frontfork)
-        - 1.6 [RearFork](#rearfork)
+        - 1.5 [Fork](#fork)
+        - 1.6 [Swingarm](#swingarm)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -188,10 +188,10 @@ The sequence of building a bike model.
 4. Drag the visual model (.fbx file) into your model.
 5. Fill in the fields of visual objects in scripts or unpack fbx and drag objects into your model.
 
-<a name="frontfork"></a>
-#### 1.3.1 FrontFork
+<a name="fork"></a>
+#### 1.3.1 Fork
 **Description**<br>
-FrontFork is designed to visualize a telescopic fork. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) damper moves vertically, but telescopic fork has some incline. FrontFork performs appropriate motion of the dumper and wheel.
+Fork is designed to visualize a telescopic fork. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) damper moves vertically, but telescopic fork has some incline. Fork performs appropriate motion of the damper and wheel.
 
 **Fields**
 - **frontCollider** -
@@ -202,17 +202,17 @@ The upper part of the fork.
 The lower part of the fork. The moving part of the dumpers and the wheel axis are located here.
 - **frontWheel** -
 Front wheel object.
-- **frontForkModel** -
+- **forkModel** -
 Front fork visual model object.
 - **frontAxisModel** -
 Front axis visual model object.
 - **frontWheelModel** -
 Front wheel visual model object.
 
-<a name="rearfork"></a>
-#### 1.3.2 RearFork
+<a name="swingarm"></a>
+#### 1.3.2 Swingarm
 **Description**<br>
-RearFork provides the movement of the rear fork and rear wheel.
+Swingarm provides the movement of the swingarm and rear wheel.
 
 **Fields**
 - **rearCollider** -
@@ -221,7 +221,7 @@ Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html).
 Rear wheel object.
 - **rearWheelModel** -
 Rear wheel visual model object.
-- **rearForkModel** -
+- **swingarmModel** -
 Rear fork visual model object.
 
 <a name="wheel"></a>
