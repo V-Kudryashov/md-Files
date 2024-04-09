@@ -224,3 +224,12 @@ Rear wheel visual model object.
 - **rearForkModel** -
 Rear fork visual model object.
 
+<a name="wheel"></a>
+#### 1.3.3 Wheel
+**Description**<br>
+Wheel provides the movement of the wheel. If Children contains a [TrailRenderer](https://docs.unity3d.com/Manual/class-TrailRenderer.html), the script controls it.
+
+**Fields**
+- **wheelCollider** -
+- **wheelVisualModel** -
+
