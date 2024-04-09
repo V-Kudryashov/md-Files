@@ -21,6 +21,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 1.3.2 [Swingarm](#swingarm)
         - 1.3.3 [Wheel](#wheel)
         - 1.3.4 [Damper](#damper)
+        - 1.3.5 [Chain](#chain)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -254,8 +255,8 @@ Damper bottom visual model
 - **modelSpring** -
 Spring visual model
 
-<a name="damper"></a>
-#### 1.3.4 Damper
+<a name="chain"></a>
+#### 1.3.5 Chain
 **Description**<br>
 The Chain script moves the chain. Different sections of the chain move in different ways. In this regard, the chain Mesh is divided into four parts, each of which moves in a corresponding way. Movement is limited by the length of one chain link.
 In order to prepare the script for work, you need to complete the following steps;
