@@ -172,6 +172,22 @@ This [Dropdown](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/scri
 <a name="parts"></a>
 ### 1.2 Bike parts
 
+This section contains a description of scripts that carry out the movement of some parts of the bike. Front and rear forks, wheels, etc. Each script must be attached to the corresponding bike model object.
+Each script moves several parts of the bike. So FrontFork turns the fork left and right, moves the wheel axle along the fork and rotates the wheel.
+
+There are two ways to connect a visual model to a physical one.
+1. Attach visual objects to physical ones.
+2. Fill in the script field for visual objects.
+If you have attached visual objects, then there is no need to fill out the fields. If you filled in the fields of visual objects, the script will attach them during execution.
+The second method is convenient if you edit a visual model in Blender, for example. When you export fbx to an open Unity project, changes immediately appear on the scene. You don't need to re-drag the objects.
+
+The sequence of building a bike model.
+1. Place one of the bike prefabs on the scene.
+2. Unpack the prefab (not completely).
+3. Remove visual objects.
+4. Drag the visual model (.fbx file) into your model.
+5. Fill in the fields of visual objects in scripts or unpack fbx and drag objects into your model.
+
 <a name="frontfork"></a>
 #### 1.3.1 FrontFork
 **Description**<br>
