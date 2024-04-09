@@ -238,11 +238,11 @@ Wheel provides the movement of the wheel. If Children contains a [TrailRenderer]
 <a name="damper"></a>
 #### 1.3.4 Damper
 **Description**<br>
-Dumper provides the movement of the rear dumper.
+Damper provides the movement of the rear dumper.
 
 **Fields**
 - **damperBottom** -
-Bottom of the damper
+Bottom of the damper. This part is located on the swingarm.
 - **spring** -
 Damper spring
 - **springLength** -
