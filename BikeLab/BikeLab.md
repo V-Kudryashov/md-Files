@@ -259,7 +259,8 @@ Spring visual model
 #### 1.3.5 Chain
 **Description**<br>
 The Chain script moves the chain. Different sections of the chain move in different ways. In this regard, the chain Mesh is divided into four parts, each of which moves in a corresponding way. Movement is limited by the length of one chain link.
-In order to prepare the script for work, you need to complete the following steps;
+
+In order to prepare the script for work, you need to complete the following steps:
 1. Move the Chain to the front sprocket position.
 2. Fill in the fields of the script. The frontSprocket and frontSprocketModel fields are optional.
 3. Click the Look at Wheel button.
