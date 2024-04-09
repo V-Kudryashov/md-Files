@@ -17,8 +17,10 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 1.2.2 [BikeInput](#bikeinput)
         - 1.2.3 [DeviceDropdown](#devicedropdown)
     - 1.3 [Bike parts](#parts)
-        - 1.5 [Fork](#fork)
-        - 1.6 [Swingarm](#swingarm)
+        - 1.3.1 [Fork](#fork)
+        - 1.3.2 [Swingarm](#swingarm)
+        - 1.3.3 [Wheel](#wheel)
+        - 1.3.4 [Damper](#damper)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -233,3 +235,21 @@ Wheel provides the movement of the wheel. If Children contains a [TrailRenderer]
 - **wheelCollider** -
 - **wheelVisualModel** -
 
+<a name="damper"></a>
+#### 1.3.4 Damper
+**Description**<br>
+Dumper provides the movement of the rear dumper.
+
+**Fields**
+- **damperBottom** -
+Bottom of the damper
+- **spring** -
+Damper spring
+- **springLength** -
+Length of the spring
+- **modelTop** -
+Damper top visual model
+- **modelBottom** -
+Damper bottom visual model
+- **modelSpring** -
+Spring visual model
