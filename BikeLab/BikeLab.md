@@ -253,3 +253,15 @@ Damper top visual model
 Damper bottom visual model
 - **modelSpring** -
 Spring visual model
+
+
+In order to prepare the script for work, you need to complete the following steps;
+1. Move the Chain to the front sprocket position.
+2. Fill in the fields of the script. The frontSprocket and frontSprocketModel fields are optional.
+3. Click the Look at Wheel button.
+4. Fill in the Chain field. There should be a visual object here.
+5. Click the Detect Radius button. As a result, the R1, R2 fields will be filled in and the outline of the chain, drawn in blue, will appear in the scene window. In addition, red dots will appear at the top of the chain to indicate chain links.
+6. Select Chain Pitch from the drop down menu. The pitch of the red dots must match the pitch of the chain. You can edit the Chain Pitch  field;
+7. Click the Subdivide Mesh button. As a result, four new meshes will be generated, four new objects will be added to the Chain object, and the old mesh will be deactivated.
+8. Move the slider. You will see the chain moving. Install the chain so that it fits correctly on the sprocket.
+9. You can save the new mesh. To do this, specify the Mesh Path and click the Save Mesh button.
