@@ -270,3 +270,25 @@ In order to prepare the script for work, you need to complete the following step
 7. Click the Subdivide Mesh button. As a result, four new meshes will be generated, four new objects will be added to the Chain object, and the old mesh will be deactivated.
 8. Move the slider. You will see the chain moving. Install the chain so that it fits correctly on the sprocket.
 9. You can save the new mesh. To do this, specify the Mesh Path and click the Save Mesh button.
+
+**Fields**
+- **rearCollider** -
+Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html).
+- **rearWheel** -
+Rear wheel [Transform](https://docs.unity3d.com/ScriptReference/Transform.html).
+- **chain** -
+Chain visual object
+- **frontSprocketModel** -
+Front sprocket visual object
+- **R1** -
+Front sprocket radius
+- **R2** -
+Rear sprocket radius
+- **Chain pitch** -
+Chain pitch
+- **Double pitch** -
+The chain pitch is equal to the length of two links.
+- **Offset** -
+Longitudinal chain offset
+- **Mesh path** -
+Path to save mesh
