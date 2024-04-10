@@ -292,3 +292,7 @@ The chain pitch is equal to the length of two links.
 Longitudinal chain offset
 - **Mesh path** -
 Path to save mesh
+
+**Public Methods**
+- **rotateChain** -
+Moves the chain in accordance with the specified angle of rotation of the rear sprocket. This method must be called by a script that rotates the rear wheel. [Swingarm](#swingarm) script, in our case.
