@@ -22,6 +22,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 1.3.3 [Wheel](#wheel)
         - 1.3.4 [Damper](#damper)
         - 1.3.5 [Chain](#chain)
+        - 1.3.6 [Pedals](#pedals)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -296,3 +297,18 @@ Path to save mesh
 **Public Methods**
 - **rotateChain** -
 Moves the chain in accordance with the specified angle of rotation of the rear sprocket. This method must be called by a script that rotates the rear wheel. [Swingarm](#swingarm) script, in our case.
+
+<a name="pedals"></a>
+#### 1.3.6 Pedals
+**Description**<br>
+Rotates the drive sprocket of the bicycle in accordance with the rotation of the rear wheel. The gear ratio changes automatically to keep the rotation speed within the specified limits.
+
+**Fields**
+- **rearCollider** -
+Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html).
+- **pedals** -
+Drive sprocket visual object.
+- **minRps** -
+Minimum rotation speed in revolutions per second.
+- **maxRps** -
+Maximum rotation speed in revolutions per second.
