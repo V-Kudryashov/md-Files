@@ -23,6 +23,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 1.3.4 [Damper](#damper)
         - 1.3.5 [Chain](#chain)
         - 1.3.6 [Pedals](#pedals)
+        - 1.3.7 [SlipEffects](#slipeffects)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -302,6 +303,7 @@ Moves the chain in accordance with the specified angle of rotation of the rear s
 #### 1.3.6 Pedals
 **Description**<br>
 Rotates the drive sprocket of the bicycle in accordance with the rotation of the rear wheel. The gear ratio changes automatically to keep the rotation speed within the specified limits.
+Must be attached to [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html).
 
 **Fields**
 - **rearCollider** -
@@ -312,3 +314,22 @@ Drive sprocket visual object.
 Minimum rotation speed in revolutions per second.
 - **maxRps** -
 Maximum rotation speed in revolutions per second.
+
+<a name="slipeffects"></a>
+#### 1.3.6 SlipEffects
+**Description**<br>
+Emits trail and particles depending on wheel slip and specified parameters.
+
+**Fields**
+- **useParticles** -
+Splashes or smoke from under the rear wheel
+- **minParticleSlip** -
+Wheel slip threshold for particles.
+- **backward** -
+Emit trail When slipping backward.
+- **forward** -
+Emit trail When bracking.
+- **sideways** -
+Emit trail When slipping sideways.
+- **minTrailSlip** -
+Wheel slip threshold for trail.
