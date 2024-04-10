@@ -303,7 +303,7 @@ Moves the chain in accordance with the specified angle of rotation of the rear s
 #### 1.3.6 Pedals
 **Description**<br>
 Rotates the drive sprocket of the bicycle in accordance with the rotation of the rear wheel. The gear ratio changes automatically to keep the rotation speed within the specified limits.
-Must be attached to [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html).
+Must be attached to [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html). [TrailRenderer](https://docs.unity3d.com/Manual/class-TrailRenderer.html) and [ParticleSystem](https://docs.unity3d.com/ScriptReference/ParticleSystem.html) are located in children.
 
 **Fields**
 - **rearCollider** -
