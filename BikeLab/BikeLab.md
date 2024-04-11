@@ -365,3 +365,17 @@ Info field
 #### 1.4.3 WheelColliderInterpolator
 **Description**<br>
 [WheelCollider](https://docs.unity3d.com/ScriptReference/WheelCollider.html) does not provide interpolation capabilities. This script interpolates WheelCollider data.
+
+**Fields**
+- **posInterpolated** -
+Interpolated wheel position
+- **rotInterpolated** -
+Interpolated wheel rotation
+- **steerInterpolated** -
+Interpolated steering angle
+
+**Public Methods**
+- **getWorldPose** -
+Returns the interpolated position and rotation of the wheel.
+- **getSteer** -
+Returns the interpolated steer angle.
