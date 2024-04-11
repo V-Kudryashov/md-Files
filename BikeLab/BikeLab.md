@@ -24,7 +24,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 1.3.5 [Chain](#chain)
         - 1.3.6 [Pedals](#pedals)
         - 1.3.7 [SlipEffects](#slipeffects)
-        - 1.3.8 [Sound](#ssound)
+        - 1.3.8 [Sound](#sound)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -317,7 +317,7 @@ Minimum rotation speed in revolutions per second.
 Maximum rotation speed in revolutions per second.
 
 <a name="slipeffects"></a>
-#### 1.3.6 SlipEffects
+#### 1.3.7 SlipEffects
 **Description**<br>
 Emits trail and particles depending on wheel slip and specified parameters.
 
@@ -336,7 +336,7 @@ Emit trail When slipping sideways.
 Wheel slip threshold for trail.
 
 <a name="sound"></a>
-#### 1.3.7 Sound
+#### 1.3.8 Sound
 **Description**<br>
 If rps < 0.001 play idle [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html) else play run [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html) 
 
