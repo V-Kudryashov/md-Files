@@ -349,3 +349,9 @@ Idle [AudioSource](https://docs.unity3d.com/ScriptReference/AudioSource.html)
 run [AudioSource](https://docs.unity3d.com/ScriptReference/AudioSource.html)
 - **bikeController** -
 [BikeController](#bikecontroller)
+- **runRPS** -
+RPS of run AudioClip
+- **gearRatio** -
+Full gear ratio
+- **pitch** -
+Info field
