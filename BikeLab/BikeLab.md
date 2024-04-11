@@ -26,6 +26,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
     - 1.4 [Other Bike scripts](#other)
         - 1.4.1 [SlipEffects](#slipeffects)
         - 1.4.2 [Sound](#sound)
+        - 1.4.3 [WheelColliderInterpolator](#wheelColliderInterpolator)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -359,3 +360,7 @@ RPS of run AudioClip
 Full gear ratio
 - **pitch** -
 Info field
+
+#### 1.4.3 WheelColliderInterpolator
+**Description**<br>
+[WheelCollider](https://docs.unity3d.com/ScriptReference/WheelCollider.html) does not provide interpolation capabilities. This script interpolates WheelCollider data.
