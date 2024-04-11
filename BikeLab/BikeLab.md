@@ -24,6 +24,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 1.3.5 [Chain](#chain)
         - 1.3.6 [Pedals](#pedals)
         - 1.3.7 [SlipEffects](#slipeffects)
+        - 1.3.8 [Sound](#ssound)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -333,3 +334,10 @@ Emit trail When bracking.
 Emit trail When slipping sideways.
 - **minTrailSlip** -
 Wheel slip threshold for trail.
+
+<a name="sound"></a>
+#### 1.3.7 Sound
+**Description**<br>
+If rps < 0.001 play idle [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html) else play run [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html) 
+
+
