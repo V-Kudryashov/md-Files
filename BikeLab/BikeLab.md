@@ -340,5 +340,12 @@ Wheel slip threshold for trail.
 **Description**<br>
 If rps < 0.001 plays idle [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html), else plays run [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html).
 Pitch and volume depends on [WheelCollider](https://docs.unity3d.com/ScriptReference/WheelCollider.html) [rpm](https://docs.unity3d.com/ScriptReference/WheelCollider-rpm.html) and [motorTorque](https://docs.unity3d.com/ScriptReference/WheelCollider-motorTorque.html).
+Sound on/off - O key.
 
-
+**Fields**
+- **idle** -
+Idle [AudioSource](https://docs.unity3d.com/ScriptReference/AudioSource.html)
+- **run** -
+run [AudioSource](https://docs.unity3d.com/ScriptReference/AudioSource.html)
+- **bikeController** -
+[BikeController](#bikecontroller)
