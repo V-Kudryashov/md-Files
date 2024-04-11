@@ -23,8 +23,9 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 1.3.4 [Damper](#damper)
         - 1.3.5 [Chain](#chain)
         - 1.3.6 [Pedals](#pedals)
-        - 1.3.7 [SlipEffects](#slipeffects)
-        - 1.3.8 [Sound](#sound)
+    - 1.4 [Other Bike scripts](#other)
+        - 1.4.1 [SlipEffects](#slipeffects)
+        - 1.4.2 [Sound](#sound)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -176,7 +177,7 @@ This [Dropdown](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/scri
 [BikeInput](#bikeinput) script.
 
 <a name="parts"></a>
-### 1.2 Bike parts
+### 1.3 Bike parts
 
 This section contains a description of scripts that carry out the movement of some parts of the bike. Front and rear forks, wheels, etc. Each script must be attached to the corresponding bike model object.
 Each script moves several parts of the bike. So FrontFork turns the fork left and right, moves the wheel axle along the fork and rotates the wheel.
@@ -316,8 +317,11 @@ Minimum rotation speed in revolutions per second.
 - **maxRps** -
 Maximum rotation speed in revolutions per second.
 
+<a name="other"></a>
+### 1.4 Other Bike scripts
+
 <a name="slipeffects"></a>
-#### 1.3.7 SlipEffects
+#### 1.4.1 SlipEffects
 **Description**<br>
 Emits trail and particles depending on wheel slip and specified parameters.
 
@@ -336,7 +340,7 @@ Emit trail When slipping sideways.
 Wheel slip threshold for trail.
 
 <a name="sound"></a>
-#### 1.3.8 Sound
+#### 1.4.2 Sound
 **Description**<br>
 If rps < 0.001 plays idle [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html), else plays run [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html).
 Pitch and volume depends on [WheelCollider](https://docs.unity3d.com/ScriptReference/WheelCollider.html) [rpm](https://docs.unity3d.com/ScriptReference/WheelCollider-rpm.html) and [motorTorque](https://docs.unity3d.com/ScriptReference/WheelCollider-motorTorque.html).
