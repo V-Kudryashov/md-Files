@@ -422,3 +422,7 @@ This script provides full-body IK (Inverse Kinematics) control for a character r
 - **lKnee (Transform)** - The left knee transform for IK hints.
 - **rKnee (Transform)** - The right knee transform for IK hints.
 - **inputData (InputData)** - Input data for the IK control.
+
+**Nested Classes**
+- **InputData** - Contains input data for the IK control (velocity, steer, targetLean, waitStart, safeLean, shiftUp, pedalsRotation, win).
+- **Foot** - Represents a foot for IK control, including states (Locked, Locking, WeitStart, FootDown, StrongDown, Pedal).
