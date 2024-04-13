@@ -32,7 +32,11 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
     - 2.2 [FootContact](#footcontact)
 - 3 [Track](#track)
     - 3.1 [Spline](#spline)
-    - 3.2 [Track](#footcontact)
+        - 3.1.1 [SplineSegment](#splinesegment)
+        - 3.1.2 [SplineBase](#splinebase)
+        - 3.1.3 [Spline1](#spline1)
+        - 3.1.4 [Spline2](#spline2)
+    - 3.2 [Track Spline](#trackspline)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -440,9 +444,11 @@ This class tracks the contact of a foot with a surface.
 - **collisionStay** - Indicates if the collision with the surface persists.
 - **contactPoint** - [ContactPoint](https://docs.unity3d.com/ScriptReference/ContactPoint.html)
 
+# 3 Track
 
-# SplineSegment Class
+## 3.1 Spline
 
+### SplineSegment Class
 Represents a segment of a spline curve in 3D space.
 
 ## Constructors
