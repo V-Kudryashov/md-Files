@@ -28,6 +28,8 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 1.4.2 [Sound](#sound)
         - 1.4.3 [WheelColliderInterpolator](#wheelColliderInterpolator)
 - 2 [Biker](#biker)
+    - 2.1 [IKcontrol](#ikcontrol)
+    - 2.2 [FootContact](#footcontact)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -427,7 +429,7 @@ This script provides full-body IK (Inverse Kinematics) control for a character r
 - **InputData** - Contains input data for the IK control (velocity, steer, targetLean, waitStart, safeLean, shiftUp, pedalsRotation, win).
 - **Foot** - Represents a foot for IK control, including states (Locked, Locking, WeitStart, FootDown, StrongDown, Pedal).
 
-<a name="аootContact"></a>
+<a name="footContact"></a>
 #### 2.2 FootContact
 **Description**<br>
 This class tracks the contact of a foot with a surface.
