@@ -390,3 +390,36 @@ Sets all variables to current value.
 #### 2.1 IKControl
 **Description**<br>
 This script provides full-body IK (Inverse Kinematics) control for a character riding a bike, bicycle, or in a motoball game. It allows the character to interact realistically with the vehicle, including leaning, pedaling, and foot positioning.
+
+**Fields**
+- **posInterpolated** -
+- **lookAt (bool)** - Enable/disable head tracking to look at a target.
+target (Transform): The target for the character to look at (if lookAt is enabled).
+ball (Transform): The ball object for motoball mode.
+accelerator (bool): Enable/disable accelerator control.
+Break (bool): Enable/disable brake control.
+leftHandHandle (Transform): The left hand handle for IK.
+rightHandHandle (Transform): The right hand handle for IK.
+leftFootHandle (Transform): The left foot handle for IK.
+rightFootHandle (Transform): The right foot handle for IK.
+getOnFootpegs (bool): Enable/disable getting on footpegs.
+bikerRigidbody (Rigidbody): The Rigidbody of the character.
+bikeRigidbody (Rigidbody): The Rigidbody of the bike.
+mode (Enum): The mode of the character (Bike, Bicycle, Motoball).
+frame (Transform): The frame of the bike (for visual purposes).
+leftPedalFootHandle (Transform): The left pedal foot handle.
+rightPedalFootHandle (Transform): The right pedal foot handle.
+leftPedalVisualModel (Transform): The visual model for the left pedal.
+rightPedalVisualModel (Transform): The visual model for the right pedal.
+shiftUpAcc (float): The acceleration threshold for shifting up.
+shiftHeight (float): The height for shifting up.
+onLeanAction (Enum): Action to take on leaning (None, LeftRightMotion, FootDown, Both).
+spineToSteer (float): The amount of spine rotation for steering.
+footTargetPosition (Vector3): The target position for the feet.
+hipsRotationX (float): The initial rotation of the hips on the X axis.
+spineRotationX (float): The initial rotation of the spine on the X axis.
+lElbow (Transform): The left elbow transform for IK hints.
+rElbow (Transform): The right elbow transform for IK hints.
+lKnee (Transform): The left knee transform for IK hints.
+rKnee (Transform): The right knee transform for IK hints.
+inputData (InputData): Input data for the IK control.
