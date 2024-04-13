@@ -460,7 +460,7 @@ Represents a segment of a spline curve in 3D space.
 - **SplineSegment(Vector3 p0, Vector3 p3)** - Constructs a spline segment using only the starting and ending control points. The intermediate control points are calculated automatically.
 - **SplineSegment()** - Constructs a default spline segment with all control points at the origin.
 
-### Public Methods
+#### Public Methods
 
 - **void addY(float value)** - Adds a value to the y-coordinate of all control points.
 - **void setP0y(float value)** - Sets the y-coordinate of the starting control point.
@@ -486,7 +486,7 @@ Represents a segment of a spline curve in 3D space.
 - **void update(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)** - Updates the control points of the spline segment.
 - **void updateLenght()** -Recalculates the length and other properties of the spline segment.
 
-### Public Properties
+#### Public Properties
 
 - **Vector3 P0** - Gets or sets the starting control point.
 - **Vector3 P1** - Getsor sets the first control point.
@@ -497,10 +497,10 @@ Represents a segment of a spline curve in 3D space.
 - **float minRadius** - Gets the minimum radius of curvature within the spline segment.
 
 <a name="splinebase"></a>
-## SplineBase Class
+### SplineBase Class
 A class representing the base spline curve.
 
-### Fields
+#### Fields
 
 - **segments: List<SplineSegment>** - list of spline segments.
 - **clockwise: bool** - indicates the direction of the spline.
@@ -512,7 +512,7 @@ A class representing the base spline curve.
 - **turns: List<Turn>** - list of turns on the spline.
 - **minTurnLength: float** - minimum turn length.
 
-### Methods
+#### Methods
 
 - `init(): void` - initializes the spline.
 - `getSegT(float s, out int seg): float` - gets the parameter t for the given length s.
@@ -534,7 +534,7 @@ A class representing the base spline curve.
 - `prevI(int i, int count = -1): int` - returns the previous index.
 - `clampS(float s, float length): float` - clamps the spline length value.
 
-## Internal Classes
+### Internal Classes
 
 ### SPoint
 
@@ -574,17 +574,15 @@ A class representing the base spline curve.
 - `angle: float` - turn angle.
 - `updateVectors(SplineBase spline): void` - updates vectors for the turn.
 
-# Spline1
-
-Namespace: `VK.BikeLab`
-
+<a name="spline1"></a>
+### Spline1 Class
 A class representing a specific type of spline curve, inheriting from `SplineBase`.
 
-## Constructor
+#### Constructor
 
 - `Spline1(int count, float radius, bool clockwise = false)`: Initializes a new instance of the `Spline1` class with the specified number of segments, radius, and direction.
 
-## Methods
+#### Methods
 
 - `reset(int count, float radius, bool clockwise = false)`: Resets the spline with the specified number of segments, radius, and direction.
 - `setP0(Vector3 pos, int index)`: Sets the position of control point P0 for the segment at the specified index.
@@ -594,21 +592,18 @@ A class representing a specific type of spline curve, inheriting from `SplineBas
 - `addSegment(int index)`: Adds a new segment after the segment at the specified index.
 - `removeSegment(int index)`: Removes the segment at the specified index.
 
-# Spline2
-
-Namespace: `VK.BikeLab`
-
+<a name="spline2"></a>
+### Spline2 Class
 A class representing another type of spline curve, inheriting from `SplineBase`.
 
-## Properties
+#### Properties
 
 - `List<Boor> boor`: A list of control points (Boor objects) for the spline.
 
-## Constructor
-
+#### Constructor
 - `Spline2(int count, float radius, float randomH, float randomV)`: Initializes a new instance of the `Spline2` class with the specified number of segments, radius, and randomness parameters.
 
-## Methods
+#### Methods
 
 - `reset(int count, float radius, float randomH, float randomV)`: Resets the spline with the specified number of segments, radius, and randomness parameters.
 - `update(bool soft = false)`: Updates the spline, optionally with soft updating.
@@ -616,7 +611,7 @@ A class representing another type of spline curve, inheriting from `SplineBase`.
 - `fitToPeaks(SplineBase spline, SplineBase splineL, SplineBase splineR, float width, float peacksInOut)`: Fits the spline to peaks based on other splines with specified width and peak parameters.
 - `setPos(Vector3 pos, int index)`: Sets the position of the control point at the specified index.
 
-## Boor Class
+### Boor Class
 
 - `Boor(Vector3 p)`: Initializes a new instance of the `Boor` class with the specified position.
 
