@@ -30,6 +30,9 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
 - 2 [Biker](#biker)
     - 2.1 [IKcontrol](#ikcontrol)
     - 2.2 [FootContact](#footcontact)
+- 2 [Track](#track)
+    - 2.1 [IKcontrol](#ikcontrol)
+    - 2.2 [FootContact](#footcontact)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -436,3 +439,192 @@ This class tracks the contact of a foot with a surface.
 **Fields**
 - **collisionStay** - Indicates if the collision with the surface persists.
 - **contactPoint** - [ContactPoint](https://docs.unity3d.com/ScriptReference/ContactPoint.html)
+
+
+# SplineSegment Class
+
+Represents a segment of a spline curve in 3D space.
+
+## Constructors
+
+### SplineSegment(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)
+Constructs a spline segment using control points.
+
+- **p0**: The starting control point.
+- **p1**: The first control point.
+- **p2**: The second control point.
+- **p3**: The ending control point.
+
+### SplineSegment(Vector3 p0, Vector3 p3)
+Constructs a spline segment using only the starting and ending control points. The intermediate control points are calculated automatically.
+
+- **p0**: The starting control point.
+- **p3**: The ending control point.
+
+### SplineSegment()
+Constructs a default spline segment with all control points at the origin.
+
+## Public Methods
+
+### void addY(float value)
+Adds a value to the y-coordinate of all control points.
+
+- **value**: The value to add.
+
+### void setP0y(float value)
+Sets the y-coordinate of the starting control point.
+
+- **value**: The new y-coordinate value.
+
+### void setP1y(float value)
+Sets the y-coordinate of the first control point.
+
+- **value**: The new y-coordinate value.
+
+### void setP2y(float value)
+Sets the y-coordinate of the second control point.
+
+- **value**: The new y-coordinate value.
+
+### void setP3y(float value)
+Sets the y-coordinate of the ending control point.
+
+- **value**: The new y-coordinate value.
+
+### float getS(float t)
+Gets the arc length corresponding to the parameter t.
+
+- **t**: The parameter value.
+
+### float getT(float s)
+Gets the parameter value corresponding to the given arc length.
+
+- **s**: The arc length value.
+
+### Vector3 GetPoint(float t)
+Gets a point on the spline curve corresponding to the parameter t.
+
+- **t**: The parameter value.
+
+### Vector3 GetPointL(float l)
+Gets a point on the spline curve corresponding to the arc length l.
+
+- **l**: The arc length value.
+
+### Vector3 getDerivate1(float t)
+Gets the first derivative (tangent) of the spline curve at parameter t.
+
+- **t**: The parameter value.
+
+### Vector3 getDerivate2(float t)
+Gets the second derivative of the spline curve at parameter t.
+
+- **t**: The parameter value.
+
+### float getLength(float t)
+Gets the arc length of the spline curve up to parameter t.
+
+- **t**: The parameter value.
+
+### void getLeftRight(float t, out Vector3 left, out Vector3 right)
+Gets the left and right directions perpendicular to the tangent of the spline curve at parameter t.
+
+- **t**: The parameter value.
+- **left**: Output parameter for the left direction.
+- **right**: Output parameter for the right direction.
+
+### Vector3 getCurvatureVector2d(float t)
+Gets the curvature vector in 2D space at parameter t.
+
+- **t**: The parameter value.
+
+### Vector3 getCurvatureVector3d(float t)
+Gets the curvature vector in 3D space at parameter t.
+
+- **t**: The parameter value.
+
+### float getCurvatureRadius2d(float t)
+Gets the curvature radius in 2D space at parameter t.
+
+- **t**: The parameter value.
+
+### float getCurvatureRadius3d(float t)
+Gets the curvature radius in 3D space at parameter t.
+
+- **t**: The parameter value.
+
+### float getSignedRadius2d(float t)
+Gets the signed curvature radius in 2D space at parameter t.
+
+- **t**: The parameter value.
+
+### Vector3 getNormalAcceleration(float t, float velocity)
+Gets the normal acceleration of a point on the spline curve at parameter t and given velocity.
+
+- **t**: The parameter value.
+- **velocity**: The velocity of the point.
+
+### void getTrackSlope(float t, float velocity, out Vector3 left, out Vector3 right)
+Gets the slope of the track surface at parameter t for a given velocity.
+
+- **t**: The parameter value.
+- **velocity**: The velocity of the point.
+- **left**: Output parameter for the left direction.
+- **right**: Output parameter for the right direction.
+
+### Vector3 getClosest(Vector3 point, out float t)
+Gets the point on the spline curve closest to the given point in 3D space.
+
+- **point**: The point to which to find the closest point on the curve.
+- **t**: Output parameter for the parameter value corresponding to the closest point.
+
+### void update(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)
+Updates the control points of the spline segment.
+
+- **p0**: The starting control point.
+- **p1**: The first control point.
+- **p2**: The second control point.
+- **p3**: The ending control point.
+
+### void updateLenght()
+Recalculates the length and other properties of the spline segment.
+
+## Public Properties
+
+### Vector3 P0
+Gets or sets the starting control point.
+
+### Vector3 P1
+Gets or sets the first control point.
+
+### Vector3 P2
+Gets or sets the second control point.
+
+### Vector3 P3
+Gets or sets the ending control point.
+
+### float length
+Gets the length of the spline segment.
+
+### float offsetInSpline
+Gets or sets the offset of the spline segment within the overall spline.
+
+### float minRadius
+Gets the minimum radius of curvature within the spline segment.
+
+## Private Methods
+
+### float interpolateArr(float value, float range, float[] arr)
+Interpolates a value within a given range based on an array of values.
+
+- **value**: The value to interpolate.
+- **range**: The range of interpolation.
+- **arr**: The array of values.
+
+## Private Fields
+
+### Vector3 p0, p1, p2, p3
+The control points of the spline segment.
+
+### float[] t2l, l2t
+Arrays used for interpolating between parameter values and arc lengths.
