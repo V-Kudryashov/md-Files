@@ -30,9 +30,9 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
 - 2 [Biker](#biker)
     - 2.1 [IKcontrol](#ikcontrol)
     - 2.2 [FootContact](#footcontact)
-- 2 [Track](#track)
-    - 2.1 [IKcontrol](#ikcontrol)
-    - 2.2 [FootContact](#footcontact)
+- 3 [Track](#track)
+    - 3.1 [Spline](#spline)
+    - 3.2 [Track](#footcontact)
 
 <a name="bike"></a>
 ## 1 Bike
