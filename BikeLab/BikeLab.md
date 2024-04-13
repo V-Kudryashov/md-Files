@@ -37,6 +37,12 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 3.1.3 [Spline1](#spline1)
         - 3.1.4 [Spline2](#spline2)
     - 3.2 [Track Spline](#trackspline)
+        - 3.2.1 [TrackSpline](trackspline)
+        - 3.2.2 [TrackSpline2](trackspline2)
+        - 3.2.3 [TrackTarrain](tracktarrain)
+        - 3.2.4 [TrackMesh](trackMesh)
+        - 3.2.5 [TrackController(trackcontroller)
+        - 3.2.6 [SpeedLimits](speedlimits)
 
 <a name="bike"></a>
 ## 1 Bike
