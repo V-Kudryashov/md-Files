@@ -379,3 +379,5 @@ Interpolated steering angle
 Returns the interpolated position and rotation of the wheel.
 - **getSteer** -
 Returns the interpolated steer angle.
+- **reset** -
+Sets all variables to current value.
