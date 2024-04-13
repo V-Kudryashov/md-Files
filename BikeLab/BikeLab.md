@@ -615,3 +615,6 @@ A class representing another type of spline curve, inheriting from `SplineBase`.
 
 - `Boor(Vector3 p)`: Initializes a new instance of the `Boor` class with the specified position.
 
+<a name="trackspline"></a>
+## 3.2 TrackSpline
+
