@@ -451,10 +451,9 @@ This class tracks the contact of a foot with a surface.
 ### SplineSegment Class
 Represents a segment of a spline curve in 3D space.
 
-## Constructors
+#### Constructors
 
-### SplineSegment(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)
-Constructs a spline segment using control points.
+- **SplineSegment(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)** - Constructs a spline segment using control points.
 
 - **p0**: The starting control point.
 - **p1**: The first control point.
