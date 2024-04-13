@@ -27,6 +27,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 1.4.1 [SlipEffects](#slipeffects)
         - 1.4.2 [Sound](#sound)
         - 1.4.3 [WheelColliderInterpolator](#wheelColliderInterpolator)
+- 2 [Biker](#biker)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -381,3 +382,10 @@ Returns the interpolated position and rotation of the wheel.
 Returns the interpolated steer angle.
 - **reset** -
 Sets all variables to current value.
+
+<a name="biker"></a>
+## 2 Biker
+
+<a name="ikcontrol"></a>
+#### 2.1 IKControl
+**Description**<br>
