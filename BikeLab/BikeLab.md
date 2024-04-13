@@ -497,22 +497,22 @@ Represents a segment of a spline curve in 3D space.
 - **float minRadius** - Gets the minimum radius of curvature within the spline segment.
 
 <a name="splinebase"></a>
-## SplineBase
+## SplineBase Class
 A class representing the base spline curve.
 
-## Fields
+### Fields
 
-- `segments: List<SplineSegment>` - list of spline segments.
-- `clockwise: bool` - indicates the direction of the spline.
-- `count: int` - number of segments.
-- `radius: float` - spline radius.
-- `length: float` - spline length.
-- `minLength: float` - minimum spline length.
-- `l2segN: int[]` - array for calculating spline point by length.
-- `turns: List<Turn>` - list of turns on the spline.
-- `minTurnLength: float` - minimum turn length.
+- **segments: List<SplineSegment>** - list of spline segments.
+- **clockwise: bool** - indicates the direction of the spline.
+- **count: int** - number of segments.
+- **radius: float** - spline radius.
+- **length: float** - spline length.
+- **minLength: float** - minimum spline length.
+- **l2segN: int[]** - array for calculating spline point by length.
+- **turns: List<Turn>** - list of turns on the spline.
+- **minTurnLength: float** - minimum turn length.
 
-## Methods
+### Methods
 
 - `init(): void` - initializes the spline.
 - `getSegT(float s, out int seg): float` - gets the parameter t for the given length s.
