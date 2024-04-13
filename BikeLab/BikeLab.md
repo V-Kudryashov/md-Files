@@ -628,3 +628,131 @@ The control points of the spline segment.
 
 ### float[] t2l, l2t
 Arrays used for interpolating between parameter values and arc lengths.
+
+
+# SplineBase
+
+Namespace: `VK.BikeLab`
+
+A class representing the base spline curve.
+
+## Fields
+
+- `segments: List<SplineSegment>` - list of spline segments.
+- `clockwise: bool` - indicates the direction of the spline.
+- `count: int` - number of segments.
+- `radius: float` - spline radius.
+- `length: float` - spline length.
+- `minLength: float` - minimum spline length.
+- `l2segN: int[]` - array for calculating spline point by length.
+- `turns: List<Turn>` - list of turns on the spline.
+- `minTurnLength: float` - minimum turn length.
+
+## Methods
+
+- `init(): void` - initializes the spline.
+- `getSegT(float s, out int seg): float` - gets the parameter t for the given length s.
+- `getPoint(float s): Vector3` - returns the point on the spline for the given length s.
+- `getDerivate1(float s): Vector3` - returns the first derivative at point s.
+- `getCurvatureRadius2d(float s): float` - returns the curvature radius of the spline in 2D for the given length s.
+- `getSignedRadius2d(float s): float` - returns the signed curvature radius of the spline in 2D for the given length s.
+- `getCurvatureRadius3d(float l): float` - returns the curvature radius of the spline in 3D for the given length l.
+- `getCurvatureVector2d(float s): Vector3` - returns the curvature vector of the spline in 2D for the given length s.
+- `getLeftRight(float s, out Vector3 left, out Vector3 right): void` - returns the left and right points of the spline for the given length s.
+- `getTurn(float s): Turn` - returns the turn for the given length s.
+- `getFromToS(float fromS, float toS): float` - returns the distance between two points on the spline.
+- `getClosestDistance(float fromS, float toS): float` - returns the closest distance between two points on the spline.
+- `getClosestL(Vector3 point, out float closestL, float lastL = -1, float clamp = 4): Vector3` - returns the closest point on the spline to the given point.
+- `getLength(): float` - returns the length of the spline.
+- `updateLength(bool soft = false): void` - updates the length of the spline.
+- `updateTurns(float minRadius, float minTurnAngle, float trackWidth, bool mergeTurns): void` - updates the turns on the spline.
+- `nextI(int i, int count = -1): int` - returns the next index.
+- `prevI(int i, int count = -1): int` - returns the previous index.
+- `clampS(float s, float length): float` - clamps the spline length value.
+
+## Internal Classes
+
+### SPoint
+
+- Represents a point on the spline.
+- `seg: int` - segment index.
+- `t: float` - parameter t.
+- `s: float` - spline length.
+- `ss: SplineSegment` - spline segment.
+- `scalarRadius: float` - scalar radius.
+- `radius: Vector3` - radius.
+- `setCenterXZ(SPoint prevSP, SPoint nextSP): void` - sets the spline center in the XZ plane.
+- `getPos(): Vector3` - returns the point position.
+- `getTangent(): Vector3` - returns the tangent vector.
+
+### SP1
+
+- Represents a point on the spline.
+- `seg: int` - segment index.
+- `t: float` - parameter t.
+- `s: float` - spline length.
+- `l: float` - length.
+
+### Turn
+
+- Represents a turn on the spline.
+- `s: float` - spline length.
+- `startS: float` - start length of the turn spline.
+- `endS: float` - end length of the turn spline.
+- `leftRight: int` - turn direction (1 - left, -1 - right).
+- `position: Vector3` - turn position.
+- `startPoint: Vector3` - start point of the turn.
+- `endPoint: Vector3` - end point of the turn.
+- `radius: float` - turn radius.
+- `signedRadius: float` - signed turn radius.
+- `smoothRadius: float` - smoothed turn radius.
+- `maxV: float` - maximum velocity.
+- `angle: float` - turn angle.
+- `updateVectors(SplineBase spline): void` - updates vectors for the turn.
+
+# Spline1
+
+Namespace: `VK.BikeLab`
+
+A class representing a specific type of spline curve, inheriting from `SplineBase`.
+
+## Constructor
+
+- `Spline1(int count, float radius, bool clockwise = false)`: Initializes a new instance of the `Spline1` class with the specified number of segments, radius, and direction.
+
+## Methods
+
+- `reset(int count, float radius, bool clockwise = false)`: Resets the spline with the specified number of segments, radius, and direction.
+- `setP0(Vector3 pos, int index)`: Sets the position of control point P0 for the segment at the specified index.
+- `setP1(Vector3 pos, int index)`: Sets the position of control point P1 for the segment at the specified index.
+- `setP2(Vector3 pos, int index)`: Sets the position of control point P2 for the segment at the specified index.
+- `setTangent(int index)`: Sets the tangent for the segment at the specified index.
+- `addSegment(int index)`: Adds a new segment after the segment at the specified index.
+- `removeSegment(int index)`: Removes the segment at the specified index.
+
+# Spline2
+
+Namespace: `VK.BikeLab`
+
+A class representing another type of spline curve, inheriting from `SplineBase`.
+
+## Properties
+
+- `List<Boor> boor`: A list of control points (Boor objects) for the spline.
+
+## Constructor
+
+- `Spline2(int count, float radius, float randomH, float randomV)`: Initializes a new instance of the `Spline2` class with the specified number of segments, radius, and randomness parameters.
+
+## Methods
+
+- `reset(int count, float radius, float randomH, float randomV)`: Resets the spline with the specified number of segments, radius, and randomness parameters.
+- `update(bool soft = false)`: Updates the spline, optionally with soft updating.
+- `createFromTurns(SplineBase spline, float width)`: Creates a spline from the turns of another spline with a specified width.
+- `fitToPeaks(SplineBase spline, SplineBase splineL, SplineBase splineR, float width, float peacksInOut)`: Fits the spline to peaks based on other splines with specified width and peak parameters.
+- `setPos(Vector3 pos, int index)`: Sets the position of the control point at the specified index.
+
+## Boor Class
+
+- `Boor(Vector3 p)`: Initializes a new instance of the `Boor` class with the specified position.
+
