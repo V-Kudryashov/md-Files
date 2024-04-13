@@ -426,3 +426,11 @@ This script provides full-body IK (Inverse Kinematics) control for a character r
 **Nested Classes**
 - **InputData** - Contains input data for the IK control (velocity, steer, targetLean, waitStart, safeLean, shiftUp, pedalsRotation, win).
 - **Foot** - Represents a foot for IK control, including states (Locked, Locking, WeitStart, FootDown, StrongDown, Pedal).
+
+<a name="аootContact"></a>
+#### 2.2 FootContact
+**Description**<br>
+This class tracks the contact of a foot with a surface.
+**Fields**
+- **collisionStay** - Indicates if the collision with the surface persists.
+- **contactPoint** - [ContactPoint](https://docs.unity3d.com/ScriptReference/ContactPoint.html)
