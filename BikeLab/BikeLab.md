@@ -389,3 +389,4 @@ Sets all variables to current value.
 <a name="ikcontrol"></a>
 #### 2.1 IKControl
 **Description**<br>
+This script provides full-body IK (Inverse Kinematics) control for a character riding a bike, bicycle, or in a motoball game. It allows the character to interact realistically with the vehicle, including leaning, pedaling, and foot positioning.
