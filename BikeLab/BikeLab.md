@@ -36,8 +36,8 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 3.1.2 [SplineBase](#splinebase)
         - 3.1.3 [Spline1](#spline1)
         - 3.1.4 [Spline2](#spline2)
-    - 3.2 [Track Spline](#trackspline)
-        - 3.2.1 [TrackSpline](trackspline)
+    - 3.2 [Track Spline](#trac-kspline)
+        - 3.2.1 [TrackSpline Script](tracksplinescript)
         - 3.2.2 [TrackSpline2](trackspline2)
         - 3.2.3 [TrackTarrain](tracktarrain)
         - 3.2.4 [TrackMesh](trackMesh)
@@ -621,6 +621,75 @@ A class representing another type of spline curve, inheriting from `SplineBase`.
 
 - `Boor(Vector3 p)`: Initializes a new instance of the `Boor` class with the specified position.
 
-<a name="trackspline"></a>
-## 3.2 TrackSpline
+<a name="track-spline"></a>
+## 3.2 Track Spline
 
+<a name="tracksplinescript"></a>
+### 3.2.1 TrackSpline Script
+
+#### Description
+The `TrackSpline` script defines a MonoBehaviour class responsible for managing track splines in a Unity scene. It provides functionality for initializing, updating, and modifying track splines based on user-defined settings.
+
+#### Properties
+- **settings**: `Settings` - Settings object containing parameters for configuring the track spline.
+- **jumps**: `List<Jump>` - List of Jump objects representing jumps on the track spline.
+
+#### Public Methods
+- **Init()**: Initializes the track spline based on the current settings.
+- **reset()**: Resets the track spline with default settings or user-defined settings.
+- **land()**: Adjusts the height of the track spline to ensure it is properly positioned above the ground.
+- **addNode()**: Adds a new node to the track spline.
+- **removeNode()**: Removes a node from the track spline.
+- **updateSpline(bool soft = false)**: Updates the track spline based on the current settings, with an option for soft updating.
+- **resetTangents()**: Resets the tangents of nodes in the track spline.
+- **resetWidth()**: Resets the width of nodes in the track spline.
+- **resetHills()**: Resets the hill width of nodes in the track spline.
+
+### Settings Class
+#### Description
+Represents settings for configuring the track spline.
+
+#### Properties
+- **clockwise**: `bool` - Indicates whether the spline is clockwise.
+- **planeTrack**: `bool` - Indicates whether the track is planar.
+- **radius**: `float` - Radius of the track spline.
+- **maxTurnRadius**: `float` - Maximum radius of turns in the track spline.
+- **minTurnAngle**: `float` - Minimum angle of turns in the track spline.
+- **mergeTurns**: `bool` - Indicates whether turns should be merged.
+- **trackWidth**: `float` - Width of the track.
+- **hillWidth**: `float` - Width of the hill.
+- **segmentCount**: `int` - Number of segments in the track spline.
+- **verticalRandomDeviations**: `float` - Vertical randomness factor.
+- **horizontalRandomDeviations**: `float` - Horizontal randomness factor.
+
+### Node Class
+#### Description
+Represents a node in the track spline.
+
+#### Properties
+- **tangent**: `Tangents` - Tangent type of the node.
+- **inWidth**: `float` - Width of the node at the input.
+- **outWidth**: `float` - Width of the node at the output.
+- **hillInWidth**: `float` - Hill width of the node at the input.
+- **hillOutWidth**: `float` - Hill width of the node at the output.
+- **landInHill**: `bool` - Indicates whether the node lands in the hill.
+- **landOutHill**: `bool` - Indicates whether the node lands out of the hill.
+- **inMarker**: `Range` - Marker range at the input.
+- **outMarker**: `Range` - Marker range at the output.
+- **terrainRange**: `Range` - Terrain range of the node.
+- **maxVelocity**: `float` - Maximum velocity of the node.
+
+### Jump Class
+#### Description
+Represents a jump on the track spline.
+
+#### Properties
+- **startS**: `float` - Start position of the jump.
+- **peakS**: `float` - Peak position of the jump.
+- **endS**: `float` - End position of the jump.
+- **startPos**: `Vector3` - Start position of the jump in world space.
+- **peakPos**: `Vector3` - Peak position of the jump in world space.
+- **endPos**: `Vector3` - End position of the jump in world space.
+- **startTangent**: `Vector3` - Start tangent of the jump.
+- **peakTangent**: `Vector3` - Peak tangent of the jump.
+- **endTangent**: `Vector3` - End tangent of the jump.
