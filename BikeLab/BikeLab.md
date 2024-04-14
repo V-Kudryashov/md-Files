@@ -639,6 +639,8 @@ The `TrackSpline` script defines a MonoBehaviour class responsible for managing 
 ![Settings](https://github.com/V-Kudryashov/md-Files/assets/17885189/0429826a-a172-4d6a-b768-3a8cedba526c)
 - **jumps**: `List<Jump>` - List of Jump objects representing jumps on the track spline. You can manually add elements to this array and move them around the track.
 ![Jumps](https://github.com/V-Kudryashov/md-Files/assets/17885189/e54664ec-a464-47a3-8b33-c62c4e9ed5af)
+- **showTrack** - Enabling this property allows you to see and edit spline elements.
+![ShowTrack](https://github.com/V-Kudryashov/md-Files/assets/17885189/0ff84c93-85f3-4890-ad66-2c9dc4829af6)
 
 #### Public Methods
 - **Init()**: Initializes the track spline based on the current settings.
