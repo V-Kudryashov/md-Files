@@ -623,6 +623,10 @@ A class representing another type of spline curve, inheriting from `SplineBase`.
 
 <a name="track-spline"></a>
 ## 3.2 Track Spline
+This section describes scripts that allow you to build tracks. There are two scripts that allow you to build track splines. TreckSpline and TreckSpline2.
+TreckSpline generates a spline whose segments are connected in a smooth manner. At the junction point, the first derivatives coincide. In the case of TreckSpline2, the second derivatives are also the same. TreckSpline allows you to move a node directly, TreckSpline2 does not.
+A bike, unlike a car, cannot change its steering angle instantly, so it cannot travel exactly along the TreckSpline path. Along the TreckSpline2 trajectory - can.
+For your track you can use TreckSpline, TreckSpline2 or a combination of both. With TreckSpline you can build an exact replica of the original race track, then use TreckSpline2 to plot the optimal path along the track. See Motocross example.
 
 <a name="tracksplinescript"></a>
 ### 3.2.1 TrackSpline Script
