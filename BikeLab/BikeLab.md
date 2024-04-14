@@ -635,10 +635,10 @@ For your track you can use TreckSpline, TreckSpline2 or a combination of both. W
 The `TrackSpline` script defines a MonoBehaviour class responsible for managing track splines in a Unity scene. It provides functionality for initializing, updating, and modifying track splines based on user-defined settings.
 
 #### Properties
-- **settings**: `Settings` - Settings object containing parameters for configuring the track spline.
+- **settings**: `Settings` - Settings object containing parameters for configuring the track spline. These parameters are used when you press the Reset button
 ![Settings](https://github.com/V-Kudryashov/md-Files/assets/17885189/0429826a-a172-4d6a-b768-3a8cedba526c)
-
-- **jumps**: `List<Jump>` - List of Jump objects representing jumps on the track spline.
+- **jumps**: `List<Jump>` - List of Jump objects representing jumps on the track spline. You can manually add elements to this array and move them around the track.
+![Jumps](https://github.com/V-Kudryashov/md-Files/assets/17885189/e54664ec-a464-47a3-8b33-c62c4e9ed5af)
 
 #### Public Methods
 - **Init()**: Initializes the track spline based on the current settings.
