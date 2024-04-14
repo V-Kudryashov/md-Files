@@ -645,7 +645,7 @@ The `TrackSpline` script defines a MonoBehaviour class responsible for managing 
     - **turns** - Generated automatically. Used by Trackcontroller.
     - **jumps** - You can add them and edit them. Used by Trackcontroller.
     - **start** - Start zone. Initially located at the beginning of the track. The length is zero. Used when building Mesh;
-    - **start tracks** - The zone next to the starting one. In this zone, riders stick to their own tracks. Used by Trackcontroller.
+    - **start tracks** - The zone next to the starting one. In this zone, riders stick to their own tracks. Used by TrackСontroller.
 ![ShowTrack](https://github.com/V-Kudryashov/md-Files/assets/17885189/0ff84c93-85f3-4890-ad66-2c9dc4829af6)
 - **selectedNode** - The spline node you selected in the scene.
 ![SelectedNode](https://github.com/V-Kudryashov/md-Files/assets/17885189/e822c10b-6132-4306-8c62-23046bd347d1)
