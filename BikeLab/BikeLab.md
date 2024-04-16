@@ -672,5 +672,7 @@ The TreckSpline2 script is intended for use in conjunction with TreckSpline. All
 
 ![TrackSpline2](https://github.com/V-Kudryashov/md-Files/assets/17885189/27701f65-a9f1-4ee8-a740-b5eabd2719a0)
 
-
+- **'Reset' button** - creates a new spline in accordance with the Settings parameters.
+- **'Fit turns to peaks' button** - moves the spline closer to the inner or outer edge of the turn.
+- **'Peaks in-out' slider** - defines the position between the inner and outer edges of the turn.
 
