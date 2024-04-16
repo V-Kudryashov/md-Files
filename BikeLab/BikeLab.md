@@ -632,8 +632,7 @@ For your track, you can use TreckSpline or both splines. With TreckSpline you ca
 ### 3.2.1 TrackSpline Script
 
 #### Description
-The `TrackSpline` script defines a MonoBehaviour class responsible for managing track splines in a Unity scene. It provides functionality for initializing, updating, and modifying track splines based on user-defined settings.
-
+TreckSpline allows you to create and edit a track. The track consists of several splines [Spline1](#spline1).
 #### Properties
 - **settings**: `Settings` - Settings object containing parameters for configuring the track spline. These parameters are used when you press the Reset button
 
@@ -664,4 +663,14 @@ The `TrackSpline` script defines a MonoBehaviour class responsible for managing 
     - **Reset hills button**: Resets the width and tangents of the hills.
 
 ![MoreOptions](https://github.com/V-Kudryashov/md-Files/assets/17885189/7ad76c7d-22e6-4775-b959-bade28740051)
+
+<a name="trackspline2"></a>
+### 3.2.2 TrackSpline2
+
+#### Description
+The TreckSpline2 script is intended for use in conjunction with TreckSpline. Allows you to create a smooth track based on a TreckSpline track.
+
+![TrackSpline2](https://github.com/V-Kudryashov/md-Files/assets/17885189/27701f65-a9f1-4ee8-a740-b5eabd2719a0)
+
+
 
