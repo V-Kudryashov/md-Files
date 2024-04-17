@@ -715,3 +715,10 @@ The TrackMesh class generates a Mesh representing a TrackSpline.
 - **markerWidth** - Width of the track markers.
 - **landRoadside** - Whether to land the roadside of the track.
 - **landUnderside** - Whether to land the underside of the track.
+
+The Mesh contains 5 sub-meshes, for which you need to provide 5 materials.
+1. Road
+2. Roadside
+3. Marker.
+4. Track body.
+5. Starting area.
