@@ -676,3 +676,7 @@ The TreckSpline2 script is intended for use in conjunction with TreckSpline. All
 - **'Fit turns to peaks' button** - moves the spline closer to the inner or outer edge of the turn.
 - **'Peaks in-out' slider** - defines the position between the inner and outer edges of the turn.
 
+<a name="trackterrain"></a>
+## 3.3 TrackTerrain
+
+#### Description
