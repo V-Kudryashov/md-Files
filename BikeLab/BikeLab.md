@@ -703,15 +703,15 @@ This class is responsible for managing Terrain texture and Terrain heights.
 #### Description
 The TrackMesh class generates a Mesh representing a TrackSpline.
 
-![TrackMesh](https://github.com/V-Kudryashov/md-Files/assets/17885189/5ae7655d-a34f-48b2-8b09-075d6c20e58b)
+![TrackMesh](https://github.com/V-Kudryashov/md-Files/assets/17885189/610381be-e61e-419b-8211-5800f9b5259c)
+
 
 #### Fields:
 - **terrain** - The Terrain on which the track is placed.
 - **resolution** - The resolution of the track mesh.
 - **yOffset** - Vertical offset of the track from the terrain.
-- **trackWidth** - Width of the track.
+- **trackWidth** - Width of the track Mesh. The remaining part is occupied by the roadside.
 - **height** - Height of the track.
 - **markerWidth** - Width of the track markers.
-- **startSegment** - The segment of the track to start from.
 - **landRoadside** - Whether to land the roadside of the track.
 - **landUnderside** - Whether to land the underside of the track.
