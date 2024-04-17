@@ -697,3 +697,20 @@ This class is responsible for managing Terrain texture and Terrain heights.
 - **Build terrain** - Builds a track on the terrain according to the spline.
 - **Draw track** - Draws a track on the terrain.
  
+## 3.4 TracMesh
+
+#### Description
+The TrackMesh class generates a Mesh representing a TrackSpline.
+
+![TrackMesh](https://github.com/V-Kudryashov/md-Files/assets/17885189/5ae7655d-a34f-48b2-8b09-075d6c20e58b)
+
+#### Fields:
+- **terrain** - The Terrain on which the track is placed.
+- **resolution** - The resolution of the track mesh.
+- **yOffset** - Vertical offset of the track from the terrain.
+- **trackWidth** - Width of the track.
+- **height** - Height of the track.
+- **markerWidth** - Width of the track markers.
+- **startSegment** - The segment of the track to start from.
+- **landRoadside** - Whether to land on the roadside.
+- **landUnderside** - Whether to land on the underside of the track.
