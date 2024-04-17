@@ -733,7 +733,9 @@ The Mesh contains 5 sub-meshes, for which you need to provide 5 materials. See S
 #### Description
 Summary:
 TrackController guides the bike along the track. The bike is represented by the BikeController class and the track by the TreckSpline class. TrackController determines the direction of movement and speed.
+
 A target object moves along the track 1.5 seconds ahead of the bike, and the bike follows it. In addition, the track direction and radius of curvature are used to maintain the correct direction.
+
 The bike tends to swing around the target object. A damper is used to prevent swinging. The damper is applied to the target steering angle.
 
 Dependencies:
