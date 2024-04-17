@@ -405,7 +405,7 @@ Sets all variables to current value.
 <a name="ikcontrol"></a>
 #### 2.1 IKControl
 **Description**<br>
-This script provides full-body IK (Inverse Kinematics) control for a character riding a bike, bicycle, or in a motoball game. It allows the character to interact realistically with the vehicle, including leaning, pedaling, and foot positioning.
+This script provides full-body IK (Inverse Kinematics) control for a character riding a bike, bicycle, or in a motoball game. It allows the character to interact realistically with the bike, including leaning, pedaling, and foot positioning.
 
 **Fields**
 - **lookAt (bool)** - Enable/disable head tracking to look at a target.
@@ -766,32 +766,31 @@ The bike tends to swing around the target object. A damper is used to prevent sw
 ## 3.6 TracDispatcher
 
 #### Description
-The `TrackDispatcher` class manages the behavior of vehicles on a track. It controls various aspects such as speed, collision avoidance, and interaction with traffic lights.
+The `TrackDispatcher` class manages the behavior of bikes on a track. It controls various aspects such as speed, collision avoidance, and interaction with traffic lights.
+
+![TrackDispatcher](https://github.com/V-Kudryashov/md-Files/assets/17885189/51846ef3-4763-44aa-8522-9efa0b573f16)
 
 ## Public Properties
-
 - **spline**: A reference to the **TrackSpline` component representing the track.
 - **timeScale**: Controls the overall time scale of the simulation.
-- **slowJump**: Determines if the simulation should slow down when the vehicle jumps.
+- **slowJump**: Determines if the simulation should slow down when the bike jumps.
 - **jumpTimeScale**: Time scale applied during jumps.
-- **toCenter**: Adjusts the vehicle's speed towards the center of the track.
-- **randomSpeed**: Random speed variation applied to the vehicle.
-- **manualControl**: Not used in the current implementation.
+- **toCenter**: Adjusts the speed of the bike so that the bike approaches the midpoint.
+- **randomSpeed**: Random speed variation applied to the bike.
 - **avoidCollisions**: Determines the strength of collision avoidance behavior.
-- **sound**: Indicates whether sound effects are enabled.
 
 ## Private Fields
 
 - `mean`: A reference to a transform used for calculations (not clearly explained in the code).
-- `controllers`: A list of `TrackController` instances representing vehicles on the track.
+- `controllers`: A list of `TrackController` instances representing bikes on the track.
 - `lights`: A list of `TrafficLight.Track` instances representing traffic lights on the track.
-- `user`: The currently controlled vehicle.
-- `userIndex`: Index of the currently controlled vehicle in the `controllers` list.
+- `user`: The currently controlled bike.
+- `userIndex`: Index of the currently controlled bike in the `controllers` list.
 - `updateTime`: Time at which the speed update was last performed.
 - `slow`: Indicates whether the simulation is currently in slow motion.
 
 ## Public Methods
 
-- `start()`: Starts all vehicles on the track.
-- `reset()`: Resets all vehicles on the track.
-- `swichBike()`: Switches the control to the next vehicle.
+- `start()`: Starts all bikes on the track.
+- `reset()`: Resets all bikes on the track.
+- `swichBike()`: Switches the control to the next bike.
