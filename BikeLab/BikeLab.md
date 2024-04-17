@@ -770,7 +770,7 @@ The `TrackDispatcher` class manages the behavior of bikes on a track. It control
 
 ![TrackDispatcher](https://github.com/V-Kudryashov/md-Files/assets/17885189/51846ef3-4763-44aa-8522-9efa0b573f16)
 
-## Public Properties
+#### Fields
 - **spline**: A reference to the **TrackSpline` component representing the track.
 - **timeScale**: Controls the overall time scale of the simulation.
 - **slowJump**: Determines if the simulation should slow down when the bike jumps.
