@@ -42,7 +42,8 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
     - 3.3 [TrackTerrain](#trackterrain)
     - 3.4 [TrackMesh](#trackMesh)
     - 3.5 [TrackController](#trackcontroller)
-    - 3.6 [SpeedLimits](#speedlimits)
+    - 3.6 [TrackDispatcher](#trackdispatcher)
+    - 3.7 [SpeedLimits](#speedlimits)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -728,7 +729,7 @@ The Mesh contains 5 sub-meshes, for which you need to provide 5 materials. See S
 5. Starting area.
 
 <a name="trackcontroller"></a>
-## 3.4 TracController
+## 3.5 TracController
 
 #### Description
 TrackController guides the bike along the track. The bike is represented by the BikeController class and the track by the TreckSpline class. TrackController determines the direction of movement and speed.
@@ -760,3 +761,37 @@ The bike tends to swing around the target object. A damper is used to prevent sw
 - **manualSteer** - Manual steering input (0-1).
 - **manualVelocity** - Manual velocity input (0-1).
 - **blending** - Blend mode for blending manual and calculated values.
+
+<a name="trackdispatcher"></a>
+## 3.6 TracDispatcher
+
+#### Description
+The `TrackDispatcher` class manages the behavior of vehicles on a track. It controls various aspects such as speed, collision avoidance, and interaction with traffic lights.
+
+## Public Properties
+
+- **spline**: A reference to the **TrackSpline` component representing the track.
+- **timeScale**: Controls the overall time scale of the simulation.
+- **slowJump**: Determines if the simulation should slow down when the vehicle jumps.
+- **jumpTimeScale**: Time scale applied during jumps.
+- **toCenter**: Adjusts the vehicle's speed towards the center of the track.
+- **randomSpeed**: Random speed variation applied to the vehicle.
+- **manualControl**: Not used in the current implementation.
+- **avoidCollisions**: Determines the strength of collision avoidance behavior.
+- **sound**: Indicates whether sound effects are enabled.
+
+## Private Fields
+
+- `mean`: A reference to a transform used for calculations (not clearly explained in the code).
+- `controllers`: A list of `TrackController` instances representing vehicles on the track.
+- `lights`: A list of `TrafficLight.Track` instances representing traffic lights on the track.
+- `user`: The currently controlled vehicle.
+- `userIndex`: Index of the currently controlled vehicle in the `controllers` list.
+- `updateTime`: Time at which the speed update was last performed.
+- `slow`: Indicates whether the simulation is currently in slow motion.
+
+## Public Methods
+
+- `start()`: Starts all vehicles on the track.
+- `reset()`: Resets all vehicles on the track.
+- `swichBike()`: Switches the control to the next vehicle.
