@@ -680,3 +680,20 @@ The TreckSpline2 script is intended for use in conjunction with TreckSpline. All
 ## 3.3 TrackTerrain
 
 #### Description
+This class is responsible for managing Terrain texture and Terrain heights.
+
+![TrackTerrain](https://github.com/V-Kudryashov/md-Files/assets/17885189/e9736a1b-4dcf-4712-93b6-0ed58d2afd1a)
+
+#### Fields:
+    
+- **spline (TrackSpline)** - A reference to the TrackSpline object.
+- **terrain (Terrain)** - A reference to the Terrain object.
+- **clearHeights (bool)** - A flag indicating whether to clear the terrain heights before building the track.
+- **landTrack (bool)** - A flag indicating whether to "land" the track on the terrain.
+- **borderWidth (float)** - The width of the border around the track.
+
+#### Buttons:
+
+- **Build terrain** - Builds a track on the terrain according to the spline.
+- **Draw track** - Draws a track on the terrain.
+ 
