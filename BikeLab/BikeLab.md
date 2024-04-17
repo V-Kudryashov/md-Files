@@ -737,9 +737,24 @@ A target object moves along the track 1.5 seconds ahead of the bike, and the bik
 
 The bike tends to swing around the target object. A damper is used to prevent swinging. The damper is applied to the target steering angle.
 
-Dependencies:
-This script requires the BikeController component to be attached to the same GameObject.
-The TrackSpline component is needed for defining the track path and features.
-Various UnityEngine classes and components are used for physics, UI, and other functionalities.
-Usage:
-Attach this script to a GameObject representing the bike in your scene. Assign the required components and variables in the Inspector to customize the behavior.
+#### Fields:
+- **trackSpline** - Reference to the TrackSpline component defining the track path.
+- **closest1GO** - GameObject representing the closest point on the track spline.
+- **closest2GO** - GameObject representing the closest point on the second track spline.
+- **target** - Target GameObject for the bike to steer towards.
+- **speedText** - Text component for displaying speed and other information (optional).
+- **score** - Instance of the Score class for tracking lap times and speed statistics.
+- **maxVelocity** - Maximum velocity the bike can reach.
+- **speed** - Speed factor for controlling bike velocity.
+- **zSpeedValue** - Value for incline dumper interpolation between rotation speed and rotation value.
+- **zDumper** - Damping factor for z-axis rotation.
+- **tangentRadius** - Rudder interpolation between track tangent and turning radius.
+- **trackSteer** - Rudder interpolation between interpolated track direction and direction to target.
+- **drift** - Limits acceleration when drifting.
+- **targetTimeout** - Time limit for reaching the target.
+- **useSmoothRadius** - Flag for using smooth radius for calculations.
+- **useConstantVelocity** - Flag for using a constant velocity instead of calculated velocity.
+- **constantVelocity** - Constant velocity value when useConstantVelocity is true.
+- **manualSteer** - Manual steering input (0-1).
+- **manualVelocity** - Manual velocity input (0-1).
+- **blending** - Blend mode for blending steering and velocity inputs.
