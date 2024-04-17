@@ -716,7 +716,9 @@ The TrackMesh class generates a Mesh representing a TrackSpline.
 - **landRoadside** - Whether to land the roadside of the track.
 - **landUnderside** - Whether to land the underside of the track.
 
-The Mesh contains 5 sub-meshes, for which you need to provide 5 materials.
+![Mtaterials](https://github.com/V-Kudryashov/md-Files/assets/17885189/ebcac888-e7e9-4794-b424-2bd15e0e096e)
+
+The Mesh contains 5 sub-meshes, for which you need to provide 5 materials. See Suzuka example.
 1. Road
 2. Roadside
 3. Marker.
