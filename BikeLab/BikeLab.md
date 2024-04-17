@@ -726,3 +726,19 @@ The Mesh contains 5 sub-meshes, for which you need to provide 5 materials. See S
 3. Marker.
 4. Track body.
 5. Starting area.
+
+<a name="trackmesh"></a>
+## 3.4 TracMesh
+
+#### Description
+Summary:
+TrackController guides the bike along the track. The bike is represented by the BikeController class and the track by the TreckSpline class. TrackController determines the direction of movement and speed.
+A target object moves along the track 1.5 seconds ahead of the bike, and the bike follows it. In addition, the track direction and radius of curvature are used to maintain the correct direction.
+The bike tends to swing around the target object. A damper is used to prevent swinging. The damper is applied to the target steering angle.
+
+Dependencies:
+This script requires the BikeController component to be attached to the same GameObject.
+The TrackSpline component is needed for defining the track path and features.
+Various UnityEngine classes and components are used for physics, UI, and other functionalities.
+Usage:
+Attach this script to a GameObject representing the bike in your scene. Assign the required components and variables in the Inspector to customize the behavior.
