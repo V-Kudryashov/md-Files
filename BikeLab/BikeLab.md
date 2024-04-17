@@ -737,6 +737,8 @@ A target object moves along the track 1.5 seconds ahead of the bike, and the bik
 
 The bike tends to swing around the target object. A damper is used to prevent swinging. The damper is applied to the target steering angle.
 
+![TrackController](https://github.com/V-Kudryashov/md-Files/assets/17885189/cdf80e2a-10b1-4388-bc7d-1d8964ca1520)
+
 #### Fields:
 - **trackSpline** - Reference to the TrackSpline component defining the track path.
 - **closest1GO** - GameObject representing the closest point on the track spline.
