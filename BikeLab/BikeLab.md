@@ -713,5 +713,5 @@ The TrackMesh class generates a Mesh representing a TrackSpline.
 - **height** - Height of the track.
 - **markerWidth** - Width of the track markers.
 - **startSegment** - The segment of the track to start from.
-- **landRoadside** - Whether to land on the roadside.
-- **landUnderside** - Whether to land on the underside of the track.
+- **landRoadside** - Whether to land the roadside.
+- **landUnderside** - Whether to land the underside of the track.
