@@ -757,4 +757,4 @@ The bike tends to swing around the target object. A damper is used to prevent sw
 - **constantVelocity** - Constant velocity value when useConstantVelocity is true.
 - **manualSteer** - Manual steering input (0-1).
 - **manualVelocity** - Manual velocity input (0-1).
-- **blending** - Blend mode for blending steering and velocity inputs.
+- **blending** - Blend mode for blending manual and calculated values.
