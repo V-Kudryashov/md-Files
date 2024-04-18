@@ -763,7 +763,7 @@ The bike tends to swing around the target object. A damper is used to prevent sw
 - **blending** - Blend mode for blending manual and calculated values.
 
 <a name="trackdispatcher"></a>
-## 3.6 TracDispatcher
+## 3.6 TrackDispatcher
 
 #### Description
 The `TrackDispatcher` class manages the behavior of bikes on a track. It controls various aspects such as speed, collision avoidance, and interaction with traffic lights.
