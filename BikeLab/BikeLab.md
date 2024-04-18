@@ -43,7 +43,10 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
     - 3.4 [TrackMesh](#trackMesh)
     - 3.5 [TrackController](#trackcontroller)
     - 3.6 [TrackDispatcher](#trackdispatcher)
-    - 3.7 [SpeedLimits](#speedlimits)
+    - 3.7 [TrafficLights](#trafficlights)
+        - 3.7.1 [TrafficLight](#trafficlight)
+        - 3.7.2 [TrafficLightBox](#trafficlightbox)
+    - 3.8 [SpeedLimits](#speedlimits)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -785,3 +788,51 @@ The `TrackDispatcher` class manages the behavior of bikes on a track. It control
 - **R key** - Resets all bikes on the track.
 - **P key** - Switches the control to the next bike.
 - **T key** - Switches the timeScale to slow or normal.
+
+<a name="trackdispatcher"></a>
+## 3.7 TrafficLights
+
+### 3.7.1 TrafficLight
+#### Description
+The TrafficLight script controls the behavior of the attached TrafficLightBoxes. It manages the phases of the traffic light (red, yellow1, yellow2, green) and assigns the corresponding colors to associated tracks.
+#### Enumerations
+- **TrafficColor**: Represents the possible colors of a traffic light (Red, Yellow, Green).
+- **Phases**: Represents the phases of the traffic light (Yellow1, Red, Yellow2, Green).
+#### Public Variables
+- **dir1**: A Direction object representing settings for the first direction controlled by the traffic light.
+- **dir2**: A Direction object representing settings for the second direction controlled by the traffic light.
+- **tracks**: A list of Track objects representing the tracks associated with the traffic light.
+- **color1**: The current color of the traffic light for direction 1.
+- **color2**: The current color of the traffic light for direction 2.
+#### Classes
+- **Direction**: A class representing settings for a traffic light direction, including green time, brake time, and stop line position.
+- **Track**: A class representing a track associated with the traffic light, including the track object, direction, position on the track, stop line position, and current traffic light color.
+#### Usage
+- Attach the TrafficLight script to a GameObject representing the traffic light.
+- Set the dir1 and dir2 variables in the inspector to configure the green time, brake time, and stop line for each direction.
+- Add Track objects to the tracks list in the inspector to associate them with the traffic light.
+- Add child objects and attach TrafficLightBox scripts to them.
+You can see an example of use in the City scene. Assets/BikeLab/Segway/Scenes/Sity.unity
+
+
+
+
+TrafficLightBox
+Description
+The TrafficLightBox class is responsible for controlling the visual state of a traffic light box. It allows setting the color of the traffic light (red, yellow, or green) by changing the materials of the associated mesh renderers.
+
+Public Properties
+track: The TrackSpline associated with the traffic light box.
+inverse: A boolean flag indicating if the traffic light colors should be inverted.
+red: A list of MeshRenderer components representing the red light.
+yellow: A list of MeshRenderer components representing the yellow light.
+green: A list of MeshRenderer components representing the green light.
+redOff: The material to use when the red light is off.
+redOn: The material to use when the red light is on.
+yellowOff: The material to use when the yellow light is off.
+yellowOn: The material to use when the yellow light is on.
+greenOff: The material to use when the green light is off.
+greenOn: The material to use when the green light is on.
+Public Methods
+setColor(TrafficColor color): Sets the color of the traffic light box. Accepts a TrafficColor enum value (Red, Yellow, or Green) and updates the materials of the mesh renderers accordingly.
+
