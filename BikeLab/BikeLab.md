@@ -362,7 +362,6 @@ Wheel slip threshold for trail.
 **Description**<br>
 If rps < 0.001 plays idle [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html), else plays run [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html).
 Pitch and volume depends on [WheelCollider](https://docs.unity3d.com/ScriptReference/WheelCollider.html) [rpm](https://docs.unity3d.com/ScriptReference/WheelCollider-rpm.html) and [motorTorque](https://docs.unity3d.com/ScriptReference/WheelCollider-motorTorque.html).
-Sound on/off - O key.
 
 **Fields**
 - **idle** -
@@ -377,6 +376,8 @@ RPS of run AudioClip
 Full gear ratio
 - **pitch** -
 Info field
+#### Control keys
+- **O key** - Sound on/off.
 
 <a name="wheelColliderInterpolator"></a>
 #### 1.4.3 WheelColliderInterpolator
