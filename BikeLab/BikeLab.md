@@ -779,18 +779,8 @@ The `TrackDispatcher` class manages the behavior of bikes on a track. It control
 - **randomSpeed**: Random speed variation applied to the bike.
 - **avoidCollisions**: Determines the strength of collision avoidance behavior.
 
-## Private Fields
-
-- `mean`: A reference to a transform used for calculations (not clearly explained in the code).
-- `controllers`: A list of `TrackController` instances representing bikes on the track.
-- `lights`: A list of `TrafficLight.Track` instances representing traffic lights on the track.
-- `user`: The currently controlled bike.
-- `userIndex`: Index of the currently controlled bike in the `controllers` list.
-- `updateTime`: Time at which the speed update was last performed.
-- `slow`: Indicates whether the simulation is currently in slow motion.
-
-## Public Methods
-
-- `start()`: Starts all bikes on the track.
-- `reset()`: Resets all bikes on the track.
-- `swichBike()`: Switches the control to the next bike.
+#### Control keys
+- **S key** - Starts all bikes on the track.
+- **R key** - Resets all bikes on the track.
+- **P key** - Switches the control to the next bike.
+- **T key** - Switches the timeScale to slow or normal.
