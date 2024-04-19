@@ -74,7 +74,7 @@ s = b + (b - t) * k + d
 
 As a result, the bike tilts towards the turn until the factor (b - t) becomes zero.
 
-**Fields**
+**Properties**
 - **frontCollider** - 
 Front [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html)
 - **rearCollider** - 
@@ -146,7 +146,7 @@ Output data:
 - Target steering angle
 - Forward or brake  acceleration
 
-**Fields**
+**Properties**
 - **sliderX** -
 Optional field. The slider visualizes user input along the X axis.
 - **sliderSteer** -
@@ -172,7 +172,7 @@ BikeInput supports old and new Input System. If new Input System available user 
 If new Input System not available BikeInput use [Input.GetAxis](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html) method.
 In either case, user input is placed in the xAxis and yAxis fields.
 
-**Fields**
+**Properties**
 - **keyboardSettings** -
 For new input system only.
 - **joystickSettings** -
@@ -191,7 +191,7 @@ Output of this script.
 **Description**<br>
 For new input system only. This script allow you to select one of the available Input Devices.
 
-**Fields**
+**Properties**
 - **deviceDropdown** -
 This [Dropdown](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-Dropdown.html) will be contain available Input Devices.
 - **bikeInput** -
@@ -221,7 +221,7 @@ The sequence of building a bike model.
 **Description**<br>
 Fork is designed to visualize a telescopic fork. The [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html) damper moves vertically, but telescopic fork has some incline. Fork performs appropriate motion of the damper and wheel.
 
-**Fields**
+**Properties**
 - **frontCollider** -
 front [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html)
 - **fork** -
@@ -242,7 +242,7 @@ Front wheel visual model object.
 **Description**<br>
 Swingarm provides the movement of the swingarm and rear wheel.
 
-**Fields**
+**Properties**
 - **rearCollider** -
 Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html).
 - **wheel** -
@@ -257,7 +257,7 @@ Rear fork visual model object.
 **Description**<br>
 Wheel provides the movement of the wheel. If Children contains a [TrailRenderer](https://docs.unity3d.com/Manual/class-TrailRenderer.html), the script controls it.
 
-**Fields**
+**Properties**
 - **wheelCollider** -
 - **wheelVisualModel** -
 
@@ -266,7 +266,7 @@ Wheel provides the movement of the wheel. If Children contains a [TrailRenderer]
 **Description**<br>
 Damper provides the movement of the rear dumper.
 
-**Fields**
+**Properties**
 - **damperBottom** -
 Bottom of the damper. This part is located on the swingarm.
 - **spring** -
@@ -296,7 +296,7 @@ In order to prepare the script for work, you need to complete the following step
 8. Move the slider. You will see the chain moving. Install the chain so that it fits correctly on the sprocket.
 9. You can save the new mesh. To do this, specify the Mesh Path and click the Save Mesh button.
 
-**Fields**
+**Properties**
 - **rearCollider** -
 Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html).
 - **rearWheel** -
@@ -328,7 +328,7 @@ Moves the chain in accordance with the specified angle of rotation of the rear s
 Rotates the drive sprocket of the bicycle in accordance with the rotation of the rear wheel. The gear ratio changes automatically to keep the rotation speed within the specified limits.
 Must be attached to [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html). [TrailRenderer](https://docs.unity3d.com/Manual/class-TrailRenderer.html) and [ParticleSystem](https://docs.unity3d.com/ScriptReference/ParticleSystem.html) are located in children.
 
-**Fields**
+**Properties**
 - **rearCollider** -
 Rear [WheelCollider](https://docs.unity3d.com/Manual/class-WheelCollider.html).
 - **pedals** -
@@ -346,7 +346,7 @@ Maximum rotation speed in revolutions per second.
 **Description**<br>
 Emits trail and particles depending on wheel slip and specified parameters.
 
-**Fields**
+**Properties**
 - **useParticles** -
 Splashes or smoke from under the rear wheel
 - **minParticleSlip** -
@@ -366,7 +366,7 @@ Wheel slip threshold for trail.
 If rps < 0.001 plays idle [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html), else plays run [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html).
 Pitch and volume depends on [WheelCollider](https://docs.unity3d.com/ScriptReference/WheelCollider.html) [rpm](https://docs.unity3d.com/ScriptReference/WheelCollider-rpm.html) and [motorTorque](https://docs.unity3d.com/ScriptReference/WheelCollider-motorTorque.html).
 
-**Fields**
+**Properties**
 - **idle** -
 Idle [AudioSource](https://docs.unity3d.com/ScriptReference/AudioSource.html)
 - **run** -
@@ -387,7 +387,7 @@ Info field
 **Description**<br>
 [WheelCollider](https://docs.unity3d.com/ScriptReference/WheelCollider.html) does not provide interpolation capabilities. This script interpolates WheelCollider data.
 
-**Fields**
+**Properties**
 - **posInterpolated** -
 Interpolated wheel position
 - **rotInterpolated** -
@@ -411,7 +411,7 @@ Sets all variables to current value.
 **Description**<br>
 This script provides full-body IK (Inverse Kinematics) control for a character riding a bike, bicycle, or in a motoball game. It allows the character to interact realistically with the bike, including leaning, pedaling, and foot positioning.
 
-**Fields**
+**Properties**
 - **lookAt (bool)** - Enable/disable head tracking to look at a target.
 - **target (Transform)** - The target for the character to look at (if lookAt is enabled).
 - **ball (Transform)** - The ball object for motoball mode.
@@ -451,7 +451,7 @@ This script provides full-body IK (Inverse Kinematics) control for a character r
 #### 2.2 FootContact
 **Description**<br>
 This class tracks the contact of a foot with a surface.
-**Fields**
+**Properties**
 - **collisionStay** - Indicates if the collision with the surface persists.
 - **contactPoint** - [ContactPoint](https://docs.unity3d.com/ScriptReference/ContactPoint.html)
 
