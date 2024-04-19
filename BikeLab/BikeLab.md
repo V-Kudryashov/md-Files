@@ -854,3 +854,24 @@ The SpeedLimits script manages the placement and removal of speed limit road sig
 #### Buttons
 - **Add Road Signs**: Adds road signs along the track at each turn, displaying the maximum speed for that turn.
 - **Remove Road Signs**: Removes all road sign game objects with the same tag as the prefab.
+
+<a name="motoball"></a>
+# 4 Motoball
+
+<a name="motoballcontroller"></a>
+# 4.1 MotoballController
+
+### Description
+The MotoballController script is responsible for controlling the behavior of a motoball bike. It handles the movement of the bike towards the ball, holding the ball, movement to the goal and hitting the ball.
+
+### Fields
+- **ball**: The transform representing the ball in the scene.
+- **goal**: The transform representing the goal in the scene.
+- **wall**: The transform representing the wall in the scene.
+- **target**: The target transform towards which the bike should move.
+- **approachDirection**: Direction of approach to the ball.
+- **zSpeedValue**: Value for incline dumper interpolation between rotation speed and rotation value.
+- **zDumper**: Damping factor for z-axis rotation.
+### Public methods
+- **start()**: Starts the bike's movement.
+- **reset()**: Resets the bike, biker and ball;
