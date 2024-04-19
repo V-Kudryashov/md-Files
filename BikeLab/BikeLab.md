@@ -789,9 +789,10 @@ The `TrackDispatcher` class manages the behavior of bikes on a track. It control
 - **P key** - Switches the control to the next bike.
 - **T key** - Switches the timeScale to slow or normal.
 
-<a name="trackdispatcher"></a>
+<a name="trafficlights"></a>
 ## 3.7 TrafficLights
 
+<a name="trafficlight"></a>
 ### 3.7.1 TrafficLight
 #### Description
 The TrafficLight script controls the behavior of the attached TrafficLightBoxes. It manages the phases of the traffic light (red, yellow1, yellow2, green) and assigns the corresponding colors to associated tracks.
@@ -799,14 +800,14 @@ The TrafficLight script controls the behavior of the attached TrafficLightBoxes.
 - **TrafficColor**: Represents the possible colors of a traffic light (Red, Yellow, Green).
 - **Phases**: Represents the phases of the traffic light (Yellow1, Red, Yellow2, Green).
 #### Public Variables
-
-![TrafficLight](https://github.com/V-Kudryashov/md-Files/assets/17885189/8f28e35a-3ff0-4a85-ab66-be6781cd9b7e)
-
 - **dir1**: A Direction object representing settings for the first direction controlled by the traffic light.
 - **dir2**: A Direction object representing settings for the second direction controlled by the traffic light.
 - **tracks**: A list of Track objects representing the tracks associated with the traffic light.
 - **color1**: The current color of the traffic light for direction 1.
 - **color2**: The current color of the traffic light for direction 2.
+
+![TrafficLight](https://github.com/V-Kudryashov/md-Files/assets/17885189/8f28e35a-3ff0-4a85-ab66-be6781cd9b7e)
+
 #### Classes
 - **Direction**: A class representing settings for a traffic light direction, including green time, brake time, and stop line position.
 - **Track**: A class representing a track associated with the traffic light, including the track object, direction, position on the track, stop line position, and current traffic light color.
@@ -817,25 +818,26 @@ The TrafficLight script controls the behavior of the attached TrafficLightBoxes.
 - Add child objects and attach TrafficLightBox scripts to them.
 You can see an example of use in the City scene. Assets/BikeLab/Segway/Scenes/Sity.unity
 
-
-
-
-TrafficLightBox
-Description
+<a name="trafficlightbox"></a>
+### 3.7.2 TrafficLightBox
+#### Description
 The TrafficLightBox class is responsible for controlling the visual state of a traffic light box. It allows setting the color of the traffic light (red, yellow, or green) by changing the materials of the associated mesh renderers.
 
-Public Properties
-track: The TrackSpline associated with the traffic light box.
-inverse: A boolean flag indicating if the traffic light colors should be inverted.
-red: A list of MeshRenderer components representing the red light.
-yellow: A list of MeshRenderer components representing the yellow light.
-green: A list of MeshRenderer components representing the green light.
-redOff: The material to use when the red light is off.
-redOn: The material to use when the red light is on.
-yellowOff: The material to use when the yellow light is off.
-yellowOn: The material to use when the yellow light is on.
-greenOff: The material to use when the green light is off.
-greenOn: The material to use when the green light is on.
-Public Methods
-setColor(TrafficColor color): Sets the color of the traffic light box. Accepts a TrafficColor enum value (Red, Yellow, or Green) and updates the materials of the mesh renderers accordingly.
+#### Public Variables
+- **track**: The TrackSpline associated with the traffic light box.
+- **inverse**: A boolean flag indicating if the traffic light colors should be inverted.
+- **red**: A list of MeshRenderer components representing the red light.
+- **yellow**: A list of MeshRenderer components representing the yellow light.
+- **green**: A list of MeshRenderer components representing the green light.
+- **redOff**: The material to use when the red light is off.
+- **redOn**: The material to use when the red light is on.
+- **yellowOff**: The material to use when the yellow light is off.
+- **yellowOn**: The material to use when the yellow light is on.
+- **greenOff**: The material to use when the green light is off.
+- **greenOn**: The material to use when the green light is on.
+
+![TrafficLightBox](https://github.com/V-Kudryashov/md-Files/assets/17885189/a7e5be29-018c-47ff-be97-39282968eec2)
+
+#### Public Methods
+- **setColor(TrafficColor color)**: Sets the color of the traffic light box. Accepts a TrafficColor enum value (Red, Yellow, or Green) and updates the materials of the mesh renderers accordingly.
 
