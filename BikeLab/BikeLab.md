@@ -47,6 +47,8 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 3.7.1 [TrafficLight](#trafficlight)
         - 3.7.2 [TrafficLightBox](#trafficlightbox)
     - 3.8 [SpeedLimits](#speedlimits)
+- 4 [Motoball](#motoball)
+    - 4.1 [MotoballController](#motoballcontroller)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -859,7 +861,7 @@ The SpeedLimits script manages the placement and removal of speed limit road sig
 # 4 Motoball
 
 <a name="motoballcontroller"></a>
-# 4.1 MotoballController
+## 4.1 MotoballController
 
 ### Description
 The MotoballController script is responsible for controlling the behavior of a motoball bike. It handles the movement of the bike towards the ball, holding the ball, movement to the goal and hitting the ball.
