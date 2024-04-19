@@ -799,6 +799,9 @@ The TrafficLight script controls the behavior of the attached TrafficLightBoxes.
 - **TrafficColor**: Represents the possible colors of a traffic light (Red, Yellow, Green).
 - **Phases**: Represents the phases of the traffic light (Yellow1, Red, Yellow2, Green).
 #### Public Variables
+
+![TrafficLight](https://github.com/V-Kudryashov/md-Files/assets/17885189/8f28e35a-3ff0-4a85-ab66-be6781cd9b7e)
+
 - **dir1**: A Direction object representing settings for the first direction controlled by the traffic light.
 - **dir2**: A Direction object representing settings for the second direction controlled by the traffic light.
 - **tracks**: A list of Track objects representing the tracks associated with the traffic light.
