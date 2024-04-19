@@ -799,7 +799,7 @@ The TrafficLight script controls the behavior of the attached TrafficLightBoxes.
 #### Enumerations
 - **TrafficColor**: Represents the possible colors of a traffic light (Red, Yellow, Green).
 - **Phases**: Represents the phases of the traffic light (Yellow1, Red, Yellow2, Green).
-#### Public Variables
+#### Fields
 - **dir1**: A Direction object representing settings for the first direction controlled by the traffic light.
 - **dir2**: A Direction object representing settings for the second direction controlled by the traffic light.
 - **tracks**: A list of Track objects representing the tracks associated with the traffic light.
@@ -823,7 +823,7 @@ You can see an example of use in the City scene. Assets/BikeLab/Segway/Scenes/Si
 #### Description
 The TrafficLightBox class is responsible for controlling the visual state of a traffic light box. It allows setting the color of the traffic light (red, yellow, or green) by changing the materials of the associated mesh renderers.
 
-#### Public Variables
+#### Fields
 - **track**: The TrackSpline associated with the traffic light box.
 - **inverse**: A boolean flag indicating if the traffic light colors should be inverted.
 - **red**: A list of MeshRenderer components representing the red light.
@@ -841,3 +841,16 @@ The TrafficLightBox class is responsible for controlling the visual state of a t
 #### Public Methods
 - **setColor(TrafficColor color)**: Sets the color of the traffic light box. Accepts a TrafficColor enum value (Red, Yellow, or Green) and updates the materials of the mesh renderers accordingly.
 
+<a name="speedlimits"></a>
+### 3.8 SpeedLimits
+#### Description
+The SpeedLimits script manages the placement and removal of speed limit road signs along a track. It calculates the maximum speed for each turn based on the turn radius and displays this information on the road signs.
+
+![SpeedLimits](https://github.com/V-Kudryashov/md-Files/assets/17885189/7e100bae-47da-4e53-9426-5afc6f981f48)
+
+#### Fields
+- **prefab**: The road sign prefab to be instantiated.
+- **trackSpline**: The TrackSpline object representing the track.
+#### Buttons
+- **Add Road Signs**: Adds road signs along the track at each turn, displaying the maximum speed for that turn.
+- **Remove Road Signs**: Removes all road sign game objects with the same tag as the prefab.
