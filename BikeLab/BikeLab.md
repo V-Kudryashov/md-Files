@@ -874,6 +874,8 @@ The MotoballController script is responsible for controlling the behavior of a m
 - **approachDirection**: Direction of approach to the ball.
 - **zSpeedValue**: Value for incline dumper interpolation between rotation speed and rotation value.
 - **zDumper**: Damping factor for z-axis rotation.
+- **minGoalTangent**: The bike moves towards the goal along a Bezier curve. The minGoalTangent field specifies the minimum length of the p3p2 vector. The longer the length, the smoother the bike approaches the goal. A vector that is too long increases the path length.
+- **minBallTangent**: The bike moves towards the ball along a Bezier curve. The minGoalTangent field specifies the minimum length of the p3p2 vector. The longer the length, the smoother the bike approaches the ball. A vector that is too long increases the path length.
 ### Public methods
 - **start()**: Starts the bike's movement.
 - **reset()**: Resets the bike, biker and ball;
