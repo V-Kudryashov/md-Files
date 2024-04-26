@@ -49,6 +49,8 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
     - 3.8 [SpeedLimits](#speedlimits)
 - 4 [Motoball](#motoball)
     - 4.1 [MotoballController](#motoballcontroller)
+- 5 [Segway](#segway)
+    - 5.1 [SegwayController](#segwaycontroller)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -862,6 +864,31 @@ The SpeedLimits script manages the placement and removal of speed limit road sig
 
 <a name="motoballcontroller"></a>
 ## 4.1 MotoballController
+
+### Description
+The MotoballController script is responsible for controlling the behavior of a motoball bike. It handles the movement of the bike towards the ball, holding the ball, movement to the goal and hitting the ball.
+
+![MotoballController](https://github.com/V-Kudryashov/md-Files/assets/17885189/92438dad-d15b-4d23-9079-c53ce3e43817)
+
+### Fields
+- **ball**: The transform representing the ball in the scene.
+- **goal**: The transform representing the goal in the scene.
+- **wall**: The transform representing the wall in the scene.
+- **target**: The target transform towards which the bike should move.
+- **approachDirection**: Direction of approach to the ball.
+- **zSpeedValue**: Value for incline dumper interpolation between rotation speed and rotation value.
+- **zDumper**: Damping factor for z-axis rotation.
+- **minGoalTangent**: The bike moves towards the goal along a Bezier curve. The minGoalTangent field specifies the minimum length of the p3p2 vector. The longer the length, the smoother the bike approaches the goal. A vector that is too long increases the path length.
+- **minBallTangent**: The bike moves towards the ball along a Bezier curve. The minGoalTangent field specifies the minimum length of the p3p2 vector. The longer the length, the smoother the bike approaches the ball. A vector that is too long increases the path length.
+### Public methods
+- **start()**: Starts the bike's movement.
+- **reset()**: Resets the bike, biker and ball;
+
+<a name="segway"></a>
+# 5 Segway
+
+<a name="segwaycontroller"></a>
+## 5.1 SegwayController
 
 ### Description
 The MotoballController script is responsible for controlling the behavior of a motoball bike. It handles the movement of the bike towards the ball, holding the ball, movement to the goal and hitting the ball.
