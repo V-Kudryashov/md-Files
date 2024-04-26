@@ -866,6 +866,8 @@ The SpeedLimits script manages the placement and removal of speed limit road sig
 ### Description
 The MotoballController script is responsible for controlling the behavior of a motoball bike. It handles the movement of the bike towards the ball, holding the ball, movement to the goal and hitting the ball.
 
+![MotoballController](https://github.com/V-Kudryashov/md-Files/assets/17885189/92438dad-d15b-4d23-9079-c53ce3e43817)
+
 ### Fields
 - **ball**: The transform representing the ball in the scene.
 - **goal**: The transform representing the goal in the scene.
