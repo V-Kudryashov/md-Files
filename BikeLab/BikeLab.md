@@ -910,7 +910,7 @@ The SegwayController script controls the behavior of a Segway-like vehicle. It u
 ## 5.2 SegwayTrackController
 
 ### Description
-The SegwayTrackController script manages the behavior of a [SegwayController](segwaycontroller) on a [Track](trackspline). It controls the movement of the vehicle along the track, handles steering towards the target, and adjusts velocity based on track conditions such as turns and obstacles. 
+The SegwayTrackController script manages the behavior of a [SegwayController](segwaycontroller) on a [TrackSpline](#track-spline). It controls the movement of the vehicle along the track, handles steering towards the target, and adjusts velocity based on track conditions such as turns and obstacles. 
 
 ### Fields
 - **jointL**: HingeJoint component for the left wheel.
