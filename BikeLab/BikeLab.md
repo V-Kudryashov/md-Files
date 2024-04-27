@@ -893,7 +893,24 @@ The MotoballController script is responsible for controlling the behavior of a m
 ### Description
 The SegwayController script controls the behavior of a Segway-like vehicle. It uses a pair of [HingeJoint](https://docs.unity3d.com/2023.2/Documentation/Manual/class-HingeJoint.html) components to simulate the movement of the vehicle's wheels, allowing for realistic physics-based motion.
 
-![MotoballController](https://github.com/V-Kudryashov/md-Files/assets/17885189/92438dad-d15b-4d23-9079-c53ce3e43817)
+### Fields
+- **jointL**: HingeJoint component for the left wheel.
+- **jointR**: HingeJoint component for the right wheel.
+- **centerOfMass**: Transform representing the  overall center of mass. Used for visualization during debugging.
+- **bodyCenterOfMass**: Transform representing the center of mass of the body of the character. Used for visualization during debugging.
+
+### Public methods
+- **setVelocity(float targetV)**: Sets the target velocity of the vehicle.
+- **setSideIncline(float incline)**: Sets the target side inclination of the vehicle. By changing the incline you can control the direction of movement.
+- **getVelosity()**: Returns the current velocity of the vehicle.
+- **getRigidbody()**: Returns the Rigidbody component of the vehicle.
+- **reset()**: Resets the position and orientation of the vehicle.
+
+<a name="segwaytrackcontroller"></a>
+## 5.2 SegwayTrackController
+
+### Description
+The SegwayTrackController script manages the behavior of a [SegwayController](segwaycontroller) on a [Track](trackspline). It controls the movement of the vehicle along the track, handles steering towards the target, and adjusts velocity based on track conditions such as turns and obstacles. 
 
 ### Fields
 - **jointL**: HingeJoint component for the left wheel.
