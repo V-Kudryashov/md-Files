@@ -971,6 +971,8 @@ The SegwayIK script implements inverse kinematics (IK) for a Segway driver. It a
 # 6 Examples
 <a name="bicycle"></a>
 ## 6.1 Bicycle
+### Description
+The Bicycle scene demonstrates the use of the Bicycle prefab. This is a minimalist scene. The bike is controlled manually.
 <a name="bike"></a>
 ## 6.2 Bike
 <a name="demo"></a>
