@@ -939,15 +939,15 @@ The SegwayDispatcher script manages the interaction between Segway vehicles (Seg
 ## 5.4 SegwayIK
 
 ### Description
-The SegwayIK script implements inverse kinematics (IK) for a Segway driver. It adjusts the position and rotation of the vehicle's body parts (hands, feet, hips, and spine) to match the movement of the vehicle and simulate realistic behavior.
+The SegwayIK script implements inverse kinematics (IK) for a Segway driver. It adjusts the position and rotation of the character's body parts (hands, feet, hips, and spine) to match the movement of the vehicle and simulate realistic behavior.
 
 ### Fields
 - **leftHandHandle**: Transform representing the left hand IK target.
 - **rightHandHandle**: Transform representing the right hand IK target.
 - **leftFootHandle**: Transform representing the left foot IK target.
 - **rightFootHandle**: Transform representing the right foot IK target.
-- **frame1**: Transform representing the first frame for forward incline.
-- **frame2**: Transform representing the second frame for side incline.
+- **frame1**: Transform representing the base of the segway.
+- **frame2**: Transform representing the segway handle.
 - **segway**: SegwayController component representing the Segway vehicle controller.
 - **forwardInclineThreshold**: Threshold for forward incline angle. If the incline is less than this threshold, the character does not react.
 
