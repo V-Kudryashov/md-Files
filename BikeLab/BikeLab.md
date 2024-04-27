@@ -54,6 +54,22 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
     - 5.2 [SegwayTrackController](#segwaytrackcontroller)
     - 5.3 [SegwayDispatcher](#segwaydispatcher)
     - 5.4 [SegwayIK](#segwayik)
+- 5 [Examples](#examples)
+    - 6.1 [Bicycle](#bicycle)
+    - 6.2 [Bike](#bike)
+    - 6.3 [Demo](#demo)
+    - 6.4 [Motocross](#motocross)
+        - 6.4.1 [BigJump](#bigjump)
+        - 6.4.2 [Motocross](#motocross)
+        - 6.4.3 [Slow](#slow)
+    - 6.5 [RoadRacing](#roadracing)
+        - 6.5.1 [Donington](#donington)
+        - 6.5.2 [Eight](#eight)
+        - 6.5.3 [Suzuka](#suzuka)
+    - 6.6 [Segway](#segway)
+        - 6.5.1 [Segway](#segwayscene)
+        - 6.5.2 [Sity](#sity)
+        - 6.5.3 [Track](#track)
 
 <a name="bike"></a>
 ## 1 Bike
