@@ -67,9 +67,9 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
         - 6.5.2 [Eight](#eight)
         - 6.5.3 [Suzuka](#suzuka)
     - 6.6 [Segway](#segway)
-        - 6.5.1 [Segway](#segwayscene)
-        - 6.5.2 [Sity](#sity)
-        - 6.5.3 [Track](#track)
+        - 6.6.1 [Segway](#segwayscene)
+        - 6.6.2 [Sity](#sity)
+        - 6.6.3 [Track](#track)
 
 <a name="bike"></a>
 ## 1 Bike
