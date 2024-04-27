@@ -54,7 +54,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
     - 5.2 [SegwayTrackController](#segwaytrackcontroller)
     - 5.3 [SegwayDispatcher](#segwaydispatcher)
     - 5.4 [SegwayIK](#segwayik)
-- 5 [Examples](#examples)
+- 6 [Examples](#examples)
     - 6.1 [Bicycle](#bicycle)
     - 6.2 [Bike](#bike)
     - 6.3 [Demo](#demo)
@@ -967,3 +967,19 @@ The SegwayIK script implements inverse kinematics (IK) for a Segway driver. It a
 - **segway**: SegwayController component representing the Segway vehicle controller.
 - **forwardInclineThreshold**: Threshold for forward incline angle. If the incline is less than this threshold, the character does not react.
 
+<a name="xamples"></a>
+# Examples
+<a name="bicycle"></a>
+## Bicycle
+<a name="bike"></a>
+## Bike
+<a name="demo"></a>
+## Demo
+<a name="motocross"></a>
+## Motocross
+<a name="bigJump"></a>
+### BigJump
+<a name="motocrossscene"></a>
+### Motocross
+<a name="slow"></a>
+### Slow
