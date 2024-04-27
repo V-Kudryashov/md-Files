@@ -891,7 +891,7 @@ The MotoballController script is responsible for controlling the behavior of a m
 ## 5.1 SegwayController
 
 ### Description
-The MotoballController script is responsible for controlling the behavior of a motoball bike. It handles the movement of the bike towards the ball, holding the ball, movement to the goal and hitting the ball.
+The SegwayController script controls the behavior of a Segway-like vehicle. It uses a pair of [HingeJoint](https://docs.unity3d.com/2023.2/Documentation/Manual/class-HingeJoint.html) components to simulate the movement of the vehicle's wheels, allowing for realistic physics-based motion.
 
 ![MotoballController](https://github.com/V-Kudryashov/md-Files/assets/17885189/92438dad-d15b-4d23-9079-c53ce3e43817)
 
