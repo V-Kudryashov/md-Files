@@ -968,18 +968,18 @@ The SegwayIK script implements inverse kinematics (IK) for a Segway driver. It a
 - **forwardInclineThreshold**: Threshold for forward incline angle. If the incline is less than this threshold, the character does not react.
 
 <a name="xamples"></a>
-# Examples
+# 6 Examples
 <a name="bicycle"></a>
-## Bicycle
+## 6.1 Bicycle
 <a name="bike"></a>
-## Bike
+## 6.2 Bike
 <a name="demo"></a>
-## Demo
+## 6.3 Demo
 <a name="motocross"></a>
-## Motocross
+## 6.4 Motocross
 <a name="bigJump"></a>
-### BigJump
+### 6.4.1 BigJump
 <a name="motocrossscene"></a>
-### Motocross
+### 6.4.2 Motocross
 <a name="slow"></a>
-### Slow
+### 6.4.3 Slow
