@@ -896,15 +896,14 @@ The SegwayController script controls the behavior of a Segway-like vehicle. It u
 ![MotoballController](https://github.com/V-Kudryashov/md-Files/assets/17885189/92438dad-d15b-4d23-9079-c53ce3e43817)
 
 ### Fields
-- **ball**: The transform representing the ball in the scene.
-- **goal**: The transform representing the goal in the scene.
-- **wall**: The transform representing the wall in the scene.
-- **target**: The target transform towards which the bike should move.
-- **approachDirection**: Direction of approach to the ball.
-- **zSpeedValue**: Value for incline dumper interpolation between rotation speed and rotation value.
-- **zDumper**: Damping factor for z-axis rotation.
-- **minGoalTangent**: The bike moves towards the goal along a Bezier curve. The minGoalTangent field specifies the minimum length of the p3p2 vector. The longer the length, the smoother the bike approaches the goal. A vector that is too long increases the path length.
-- **minBallTangent**: The bike moves towards the ball along a Bezier curve. The minGoalTangent field specifies the minimum length of the p3p2 vector. The longer the length, the smoother the bike approaches the ball. A vector that is too long increases the path length.
+- **jointL**: HingeJoint component for the left wheel.
+- **jointR**: HingeJoint component for the right wheel.
+- **centerOfMass**: Transform representing the  overall center of mass. Used for visualization during debugging.
+- **bodyCenterOfMass**: Transform representing the center of mass of the body of the character. Used for visualization during debugging.
+
 ### Public methods
-- **start()**: Starts the bike's movement.
-- **reset()**: Resets the bike, biker and ball;
+- **setVelocity(float targetV)**: Sets the target velocity of the vehicle.
+- **setSideIncline(float incline)**: Sets the target side inclination of the vehicle. By changing the incline you can control the direction of movement.
+- **getVelosity()**: Returns the current velocity of the vehicle.
+- **getRigidbody()**: Returns the Rigidbody component of the vehicle.
+- **reset()**: Resets the position and orientation of the vehicle.
