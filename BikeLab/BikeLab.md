@@ -918,6 +918,8 @@ The SegwayTrackController script manages the behavior of a SegwayController on a
 - **closect**: Transform representing the closest point on the track to the vehicle. Used for visualization during debugging.
 - **target**: Transform representing the target object. Used for visualization during debugging.
 - **waitStart**: Boolean flag indicating whether the vehicle should stay.
+- **distanceToRedLight**: Input data. Distance to the nearest traffic light. Must be greater than zero if the light is red.
+- **stopline**: Input data. Stopline of the nearest traffic light.
 
 ### Public methods
 - **getL()**: Returns the current position of the vehicle on the track.
