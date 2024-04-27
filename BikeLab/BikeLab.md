@@ -57,7 +57,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
 - 6 [Examples](#examples)
     - 6.1 [Bicycle](#bicycle)
     - 6.2 [Bike](#bike)
-    - 6.3 [Demo](#demo)
+    - 6.3 [Bike Lab Demo](#bike-lab-demo)
     - 6.4 [Motocross](#motocross)
         - 6.4.1 [BigJump](#bigjump)
         - 6.4.2 [Motocross](#motocross)
@@ -983,10 +983,10 @@ The Bike scene demonstrates the use of a basic Bike Lab asset script, the BikeCo
 
 ![Bike](https://github.com/V-Kudryashov/md-Files/assets/17885189/b34a2138-33ec-40ba-8194-fcadba9b180a)
 
-<a name="demo"></a>
-## 6.3 Demo
+<a name="bike-lab-demo"></a>
+## 6.3 Bike Lab Demo
 ### Description
-The Demo scene lets you see some examples.
+The Bike Lab Demo scene lets you see some examples.
 
 ![Demo](https://github.com/V-Kudryashov/md-Files/assets/17885189/2a1a230d-07ae-4296-b32d-177419aace65)
 
