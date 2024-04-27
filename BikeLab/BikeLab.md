@@ -967,7 +967,7 @@ The SegwayIK script implements inverse kinematics (IK) for a Segway driver. It a
 - **segway**: SegwayController component representing the Segway vehicle controller.
 - **forwardInclineThreshold**: Threshold for forward incline angle. If the incline is less than this threshold, the character does not react.
 
-<a name="xamples"></a>
+<a name="examples"></a>
 # 6 Examples
 <a name="bicycle"></a>
 ## 6.1 Bicycle
