@@ -978,6 +978,11 @@ The Bicycle scene demonstrates the use of the Bicycle prefab. This is a minimali
 
 <a name="bike"></a>
 ## 6.2 Bike
+### Description
+The Bike scene demonstrates the use of a basic Bike Lab asset script, the BikeController script.
+
+![Bike](https://github.com/V-Kudryashov/md-Files/assets/17885189/b34a2138-33ec-40ba-8194-fcadba9b180a)
+
 <a name="demo"></a>
 ## 6.3 Demo
 <a name="motocross"></a>
