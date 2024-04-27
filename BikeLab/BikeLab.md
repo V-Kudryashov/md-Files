@@ -52,6 +52,8 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
 - 5 [Segway](#segway)
     - 5.1 [SegwayController](#segwaycontroller)
     - 5.2 [SegwayTrackController](#segwaytrackcontroller)
+    - 5.3 [SegwayDispatcher](#segwaydispatcher)
+    - 5.4 [SegwayIK](#segwayik)
 
 <a name="bike"></a>
 ## 1 Bike
