@@ -923,3 +923,12 @@ The SegwayTrackController script manages the behavior of a SegwayController on a
 
 ### Public methods
 - **getL()**: Returns the current position of the vehicle on the track.
+
+<a name="segwaydispatcher"></a>
+## 5.3 SegwayDispatcher
+
+### Description
+The SegwayDispatcher script manages the interaction between Segway vehicles (SegwayTrackController) and traffic lights (TrafficLight) on a specified track (TrackSpline). It finds all Segway vehicles and traffic lights associated with the track and updates the distance to the nearest red light and stop line for each vehicle.
+
+### Fields
+- **track**: TrackSpline component representing the track for the vehicles and lights.
