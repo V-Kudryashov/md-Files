@@ -51,6 +51,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
     - 4.1 [MotoballController](#motoballcontroller)
 - 5 [Segway](#segway)
     - 5.1 [SegwayController](#segwaycontroller)
+    - 5.2 [SegwayTrackController](#segwaytrackcontroller)
 
 <a name="bike"></a>
 ## 1 Bike
@@ -910,17 +911,13 @@ The SegwayController script controls the behavior of a Segway-like vehicle. It u
 ## 5.2 SegwayTrackController
 
 ### Description
-The SegwayTrackController script manages the behavior of a [SegwayController](segwaycontroller) on a [TrackSpline](#track-spline). It controls the movement of the vehicle along the track, handles steering towards the target, and adjusts velocity based on track conditions such as turns and obstacles. 
+The SegwayTrackController script manages the behavior of a [SegwayController](segwaycontroller) on a [TrackSpline](#track-spline). It controls the movement of the vehicle along the track, handles steering towards the target, and adjusts velocity based on track conditions such as turns and traffic lights. 
 
 ### Fields
-- **jointL**: HingeJoint component for the left wheel.
-- **jointR**: HingeJoint component for the right wheel.
-- **centerOfMass**: Transform representing the  overall center of mass. Used for visualization during debugging.
-- **bodyCenterOfMass**: Transform representing the center of mass of the body of the character. Used for visualization during debugging.
+- **track**: TrackSpline component.
+- **closect**: Transform representing the closest point on the track to the vehicle. Used for visualization during debugging.
+- **target**: Transform representing the target object. Used for visualization during debugging.
+- **waitStart**: Boolean flag indicating whether the vehicle should stay.
 
 ### Public methods
-- **setVelocity(float targetV)**: Sets the target velocity of the vehicle.
-- **setSideIncline(float incline)**: Sets the target side inclination of the vehicle. By changing the incline you can control the direction of movement.
-- **getVelosity()**: Returns the current velocity of the vehicle.
-- **getRigidbody()**: Returns the Rigidbody component of the vehicle.
-- **reset()**: Resets the position and orientation of the vehicle.
+- **getL()**: Returns the current position of the vehicle on the track.
