@@ -1003,5 +1003,9 @@ In the BigJump  scene CrossBike makes a 150 m long jump. In order to successfull
 - FixedDeltaTime reduced by 10 times (PhysicSattings script).
 <a name="motocrossscene"></a>
 ### 6.4.2 Motocross
+
+![Motocross](https://github.com/V-Kudryashov/md-Files/assets/17885189/bc4be341-ad22-468c-927b-ec4c339b2d42)
+
+The Motocross scene demonstrates the use of an additional spline. Using the TreckSpline script, a track close to the original was laid. Then, the TreckSpline2 script was added and an additional spline was generated. The second spline is smoother than the first and the bikes can go noticeably faster.
 <a name="slow"></a>
 ### 6.4.3 Slow
