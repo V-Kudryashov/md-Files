@@ -1009,3 +1009,7 @@ In the BigJump  scene CrossBike makes a 150 m long jump. In order to successfull
 The Motocross scene demonstrates the use of an additional spline. Using the TreckSpline script, a track close to the original was laid. Then, the TreckSpline2 script was added and an additional spline was generated. The second spline is smoother than the first and the bikes can go noticeably faster.
 <a name="slow"></a>
 ### 6.4.3 Slow
+
+![Slow](https://github.com/V-Kudryashov/md-Files/assets/17885189/0b5eb30e-7f24-4176-90aa-79e320a33b84)
+
+In the Slow scene Track  it is laid out in the form of a small figure eight.
