@@ -60,7 +60,7 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
     - 6.3 [Demo](#demo)
     - 6.4 [Motocross](#motocross)
         - 6.4.1 [BigJump](#bigjump)
-        - 6.4.2 [Motocross](#motocross)
+        - 6.4.2 [Motocross](#motocrossscene)
         - 6.4.3 [Slow](#slow)
     - 6.5 [RoadRacing](#roadracing)
         - 6.5.1 [Donington](#donington)
