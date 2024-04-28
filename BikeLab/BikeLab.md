@@ -992,8 +992,15 @@ The Demo scene lets you see some examples.
 
 <a name="motocross"></a>
 ## 6.4 Motocross
+This section provides examples of using the CrossBike prefab.
 <a name="bigJump"></a>
 ### 6.4.1 BigJump
+
+![BigJump](https://github.com/V-Kudryashov/md-Files/assets/17885189/a2ee0c6c-0361-4451-ab3d-21da1b9080c8)
+
+In the BigJump  scene CrossBike makes a 150 m long jump. In order to successfully complete such a long jump, special measures had to be taken.
+- The profile of the springboard was made smooth enough so that the shock absorbers do not press in completely and so that the front wheel does not go down.
+- FixedDeltaTime reduced by 10 times (PhysicSattings script).
 <a name="motocrossscene"></a>
 ### 6.4.2 Motocross
 <a name="slow"></a>
