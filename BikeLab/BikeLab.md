@@ -1013,3 +1013,25 @@ The Motocross scene demonstrates the use of an additional spline. Using the Trec
 ![Slow](https://github.com/V-Kudryashov/md-Files/assets/17885189/0b5eb30e-7f24-4176-90aa-79e320a33b84)
 
 In the Slow scene Track  it is laid out in the form of a small figure eight.
+
+<a name="motocross"></a>
+## 6.5 Road Racing
+This section provides examples of using the RoadBike prefab.
+<a name="donington"></a>
+### 6.5.1 Donington
+
+![Donington](https://github.com/V-Kudryashov/md-Files/assets/17885189/b80604de-aee1-4289-92d0-e5441398f77d)
+
+The 'Donington' scene is an example of a flat track.
+<a name="eight"></a>
+### 6.5.2 Eight
+
+![Eight](https://github.com/V-Kudryashov/md-Files/assets/17885189/a243a84d-9ed2-400e-ad85-db305696e732)
+
+In this scene, the Track is laid out in the form of a three-dimensional figure eight.<a name="slow"></a>
+<a name="suzuka"></a>
+### 6.5.3 Suzuka
+
+![Suzuka](https://github.com/V-Kudryashov/md-Files/assets/17885189/34292ff2-7b98-432d-a88d-eb7ab1bf3bf0)
+
+The Suzuka scene is a model of a real track. 
