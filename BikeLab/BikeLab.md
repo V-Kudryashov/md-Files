@@ -8,6 +8,8 @@ The next necessary part is the motorcyclist. The humanoid model is controlled us
 
 The Bike Lab package also includes a Segway Controller. This is a relatively simple script since the balance task for a Segway is much simpler than for a Bike.
 
+The sections in this guide correspond to project folders.
+
 **Table of Contents**
 - 1 [Bike](#1-bike)
     - 1.1 [Physics](#physics)
