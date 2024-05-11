@@ -990,7 +990,7 @@ The Bike scene demonstrates the use of a basic Bike Lab asset script, the BikeCo
 ### Description
 The Demo scene lets you see all examples.
 
-![Demo](https://github.com/V-Kudryashov/md-Files/assets/17885189/330903c3-675c-4b1f-a421-b5d383d46bb8)
+![Demo](https://github.com/V-Kudryashov/md-Files/assets/17885189/a292eeec-b87c-4b63-996a-1cd92aba164c)
 
 <a name="motocross"></a>
 ## 6.4 Motocross
