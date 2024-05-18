@@ -14,6 +14,7 @@ The sections in this guide correspond to project folders.
 - 1 [Bike](#1-bike)
     - 1.1 [Physics](#physics)
         - 1.1.1 [BikeController](#bikecontroller)
+        - 1.1.2 [Feet](#feet)
     - 1.2 [Input](#input)
         - 1.2.1 [ManualControl](#manualcontrol)
         - 1.2.2 [BikeInput](#bikeinput)
@@ -459,7 +460,6 @@ This script provides full-body IK (Inverse Kinematics) control for a character r
 - **shiftHeight (float)** - The height for shifting up.
 - **onLeanAction (Enum)** - Action to take on leaning (None, LeftRightMotion, FootDown, Both).
 - **spineToSteer (float)** - The amount of spine rotation for steering.
-- **footTargetPosition (Vector3)** - The target position for the feet.
 - **hipsRotationX (float)** - The initial rotation of the hips on the X axis.
 - **spineRotationX (float)** - The initial rotation of the spine on the X axis.
 - **lElbow (Transform)** - The left elbow transform for IK hints.
@@ -467,10 +467,12 @@ This script provides full-body IK (Inverse Kinematics) control for a character r
 - **lKnee (Transform)** - The left knee transform for IK hints.
 - **rKnee (Transform)** - The right knee transform for IK hints.
 - **inputData (InputData)** - Input data for the IK control.
+<a name="feet"></a>
+#### 2.2 Feet
+**Description**<br>
+This script provides full-body IK (Inverse Kinematics) control for a character riding a bike, bicycle, or in a motoball game. It allows the character to interact realistically with the bike, including leaning, pedaling, and foot positioning.
 
-**Nested Classes**
-- **InputData** - Contains input data for the IK control (velocity, steer, targetLean, waitStart, safeLean, shiftUp, pedalsRotation, win).
-- **Foot** - Represents a foot for IK control, including states (Locked, Locking, WeitStart, FootDown, StrongDown, Pedal).
+**Properties**
 
 <a name="footContact"></a>
 #### 2.2 FootContact
