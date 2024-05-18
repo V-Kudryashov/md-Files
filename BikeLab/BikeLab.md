@@ -470,12 +470,23 @@ This script provides full-body IK (Inverse Kinematics) control for a character r
 <a name="feet"></a>
 #### 2.2 Feet
 **Description**<br>
-This script provides full-body IK (Inverse Kinematics) control for a character riding a bike, bicycle, or in a motoball game. It allows the character to interact realistically with the bike, including leaning, pedaling, and foot positioning.
-
+The Feet class manages the behavior of the feet of a rider on a bike, including the positioning, state management, and interaction with a ball in a motoball game.
 **Properties**
+- **public Transform ball: The ball transform for motoball.
+- **footTargetPosition: Target position for the feet.
+- **footDown: Indicates if the foot is down.
+- **waitStart: Indicates if the system is waiting to start.
+- **motoball: Indicates if the motoball mode is active.
+**Public Methods**
+- **reset Sets waitStart to true, indicating that the system is waiting to start.
+- **start Sets waitStart to false, indicating that the system has started.
+- **getStateL Returns the state of the left foot.
+- **getStateR Returns the state of the right foot.
+- **getLeftFoot Returns the left foot object.
+- **getRightFoot Returns the right foot object.
 
 <a name="footContact"></a>
-#### 2.2 FootContact
+#### 2.3 FootContact
 **Description**<br>
 This class tracks the contact of a foot with a surface.
 **Properties**
