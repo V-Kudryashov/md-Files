@@ -160,18 +160,20 @@ Returns the midpoint between the front and back touch points.
 **Description**<br>
 The Feet class manages the behavior of the feet of a rider on a bike, including the positioning, state management, and interaction with a ball in a motoball game.
 **Properties**
-- **public Transform ball**: The ball transform for motoball.
+- **ball**: The ball transform for motoball.
 - **footTargetPosition**: Target position for the feet.
 - **footDown**: Indicates if the foot is down.
 - **waitStart**: Indicates if the system is waiting to start.
 - **motoball**: Indicates if the motoball mode is active.
+
 **Public Methods**
-- **reset** Sets waitStart to true, indicating that the system is waiting to start.
-- **start** Sets waitStart to false, indicating that the system has started.
-- **getStateL** Returns the state of the left foot.
-- **getStateR** Returns the state of the right foot.
-- **getLeftFoot** Returns the left foot object.
-- **getRightFoot** Returns the right foot object.
+
+- **reset**: Sets waitStart to true, indicating that the system is waiting to start.
+- **start**: Sets waitStart to false, indicating that the system has started.
+- **getStateL**: Returns the state of the left foot.
+- **getStateR**: Returns the state of the right foot.
+- **getLeftFoot**: Returns the left foot object.
+- **getRightFoot**: Returns the right foot object.
 
 
 <a name="input"></a>
