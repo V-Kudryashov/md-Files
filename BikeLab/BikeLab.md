@@ -155,6 +155,24 @@ Returns bike to the starting position.
 Getting bike up. Use if the bike falls over.
 - **getHitPoint** -
 Returns the midpoint between the front and back touch points.
+<a name="feet"></a>
+#### 1.1.2 Feet
+**Description**<br>
+The Feet class manages the behavior of the feet of a rider on a bike, including the positioning, state management, and interaction with a ball in a motoball game.
+**Properties**
+- **public Transform ball: The ball transform for motoball.
+- **footTargetPosition: Target position for the feet.
+- **footDown: Indicates if the foot is down.
+- **waitStart: Indicates if the system is waiting to start.
+- **motoball: Indicates if the motoball mode is active.
+**Public Methods**
+- **reset Sets waitStart to true, indicating that the system is waiting to start.
+- **start Sets waitStart to false, indicating that the system has started.
+- **getStateL Returns the state of the left foot.
+- **getStateR Returns the state of the right foot.
+- **getLeftFoot Returns the left foot object.
+- **getRightFoot Returns the right foot object.
+
 
 <a name="input"></a>
 ### 1.2 Input
@@ -467,26 +485,8 @@ This script provides full-body IK (Inverse Kinematics) control for a character r
 - **lKnee (Transform)** - The left knee transform for IK hints.
 - **rKnee (Transform)** - The right knee transform for IK hints.
 - **inputData (InputData)** - Input data for the IK control.
-<a name="feet"></a>
-#### 2.2 Feet
-**Description**<br>
-The Feet class manages the behavior of the feet of a rider on a bike, including the positioning, state management, and interaction with a ball in a motoball game.
-**Properties**
-- **public Transform ball: The ball transform for motoball.
-- **footTargetPosition: Target position for the feet.
-- **footDown: Indicates if the foot is down.
-- **waitStart: Indicates if the system is waiting to start.
-- **motoball: Indicates if the motoball mode is active.
-**Public Methods**
-- **reset Sets waitStart to true, indicating that the system is waiting to start.
-- **start Sets waitStart to false, indicating that the system has started.
-- **getStateL Returns the state of the left foot.
-- **getStateR Returns the state of the right foot.
-- **getLeftFoot Returns the left foot object.
-- **getRightFoot Returns the right foot object.
-
 <a name="footContact"></a>
-#### 2.3 FootContact
+#### 2.2 FootContact
 **Description**<br>
 This class tracks the contact of a foot with a surface.
 **Properties**
