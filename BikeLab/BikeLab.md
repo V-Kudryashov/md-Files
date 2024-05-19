@@ -59,7 +59,7 @@ The sections in this guide correspond to project folders.
     - 5.4 [SegwayIK](#segwayik)
 - 6 [Examples](#examples)
     - 6.1 [Bicycle](#bicycle)
-    - 6.2 [Bike](#bike)
+    - 6.2 [Bike](#bikeexample)
     - 6.3 [Demo](#demo)
     - 6.4 [Motocross](#motocross)
         - 6.4.1 [BigJump](#bigjump)
@@ -994,7 +994,7 @@ The Bicycle scene demonstrates the use of the Bicycle prefab. This is a minimali
 
 ![Bicycle](https://github.com/V-Kudryashov/md-Files/assets/17885189/2482571d-143f-4900-a036-5133c4e8ee09)
 
-<a name="bike"></a>
+<a name="bikeexample"></a>
 ## 6.2 Bike
 ### Description
 The Bike scene demonstrates the use of a basic Bike Lab asset script, the BikeController script.
