@@ -158,13 +158,14 @@ Returns the midpoint between the front and back touch points.
 <a name="feet"></a>
 #### 1.1.2 Feet
 **Description**<br>
-The Feet class manages the behavior of the feet of a rider on a bike, including the positioning, state management, and interaction with a ball in a motoball game.
+Feet is a pair of feet, each of which consists of three parts: Rigidbody, SphereCollider and ConfigurableJoint connected to the bike. The foot serves as a support when the bike's tilt becomes dangerous.
+The second function of the leg is to capture and hold the ball when playing motorball.
 **Properties**
 - **ball**: The ball transform for motoball.
-- **footTargetPosition**: Target position for the feet.
-- **footDown**: Indicates if the foot is down.
-- **waitStart**: Indicates if the system is waiting to start.
-- **motoball**: Indicates if the motoball mode is active.
+- **footTargetPosition**: Target position for the feet in wait mode.
+- **footDown**: Enables support behavior.
+- **waitStart**: Sets the wait behavior.
+- **motoball**: Activates the motorball behavior.
 
 **Public Methods**
 
