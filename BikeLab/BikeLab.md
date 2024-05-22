@@ -53,8 +53,8 @@ The sections in this guide correspond to project folders.
 - 4 [Motoball](#motoball)
     - 4.1 [MotoballController](#motoballcontroller)
 - 5 [Segway](#segway)
-    - 5.1 [SegwayController](#segwaycontroller)
-    - 5.2 [SegwayTrackController](#segwaytrackcontroller)
+    - 5.1 [Segway](#segwayscript)
+    - 5.2 [SegwayController](#segwaycontroller)
     - 5.3 [SegwayDispatcher](#segwaydispatcher)
     - 5.4 [SegwayIK](#segwayik)
 - 6 [Examples](#examples)
@@ -83,7 +83,7 @@ The sections in this guide correspond to project folders.
 <a name="bikescript"></a>
 #### 1.1.1 Bike
 **Description**<br>
-BikeController allows you to control a bike, which consists of two WheelColliders and a RigidBody. BikeController itself does not use user input. There are public methods to control the bike: setSteer, SetAcceleration etc. It follows from this that another script is needed to control the bike. This script can use user input, for example.
+Bike script allows you to control a bike, which consists of two WheelColliders and a RigidBody. BikeController itself does not use user input. There are public methods to control the bike: setSteer, SetAcceleration etc. It follows from this that another script is needed to control the bike. This script can use user input, for example.
 
 For a given speed and lean angle, there is a steering angle that ensures the balance of the bike - the balance angle. BikeController uses the balance angle to control the bike. Obviously, the balance angle depends on the mechanical properties of the bike.
 
@@ -777,7 +777,7 @@ The Mesh contains 5 sub-meshes, for which you need to provide 5 materials. See S
 ## 3.5 BikeController
 
 #### Description
-TrackController guides the bike along the track. The bike is represented by the BikeController class and the track by the TreckSpline class. TrackController determines the direction of movement and speed.
+BikeController guides the bike along the track. The bike is represented by the BikeController class and the track by the TreckSpline class. TrackController determines the direction of movement and speed.
 
 A target object moves along the track 1.5 seconds ahead of the bike, and the bike follows it. In addition, the track direction and radius of curvature are used to maintain the correct direction.
 
@@ -924,11 +924,11 @@ The MotoballController script is responsible for controlling the behavior of a m
 <a name="segway"></a>
 # 5 Segway
 
-<a name="segwaycontroller"></a>
-## 5.1 SegwayController
+<a name="segwayscript"></a>
+## 5.1 Segway
 
 ### Description
-The SegwayController script controls the behavior of a Segway-like vehicle. It uses a pair of [HingeJoint](https://docs.unity3d.com/2023.2/Documentation/Manual/class-HingeJoint.html) components to simulate the movement of the vehicle's wheels, allowing for realistic physics-based motion.
+The Segway script controls the behavior of a Segway-like vehicle. It uses a pair of [HingeJoint](https://docs.unity3d.com/2023.2/Documentation/Manual/class-HingeJoint.html) components to simulate the movement of the vehicle's wheels, allowing for realistic physics-based motion.
 
 ### Fields
 - **jointL**: HingeJoint component for the left wheel.
@@ -943,11 +943,11 @@ The SegwayController script controls the behavior of a Segway-like vehicle. It u
 - **getRigidbody()**: Returns the Rigidbody component of the vehicle.
 - **reset()**: Resets the position and orientation of the vehicle.
 
-<a name="segwaytrackcontroller"></a>
-## 5.2 SegwayTrackController
+<a name="segwaycontroller"></a>
+## 5.2 SegwayController
 
 ### Description
-The SegwayTrackController script manages the behavior of a SegwayController on a [TrackSpline](#track-spline). It controls the movement of the vehicle along the track, handles steering towards the target, and adjusts velocity based on track conditions such as turns and traffic lights. 
+The SegwayController script manages the behavior of a SegwayController on a [TrackSpline](#track-spline). It controls the movement of the vehicle along the track, handles steering towards the target, and adjusts velocity based on track conditions such as turns and traffic lights. 
 
 ### Fields
 - **track**: TrackSpline component.
