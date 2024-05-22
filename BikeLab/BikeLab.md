@@ -13,7 +13,7 @@ The sections in this guide correspond to project folders.
 **Table of Contents**
 - 1 [Bike](#1-bike)
     - 1.1 [Physics](#physics)
-        - 1.1.1 [BikeController](#bikecontroller)
+        - 1.1.1 [Bike](#bike)
         - 1.1.2 [Feet](#feet)
     - 1.2 [Input](#input)
         - 1.2.1 [ManualControl](#manualcontrol)
@@ -44,7 +44,7 @@ The sections in this guide correspond to project folders.
         - 3.2.2 [TrackSpline2](#trackspline2)
     - 3.3 [TrackTerrain](#trackterrain)
     - 3.4 [TrackMesh](#trackMesh)
-    - 3.5 [TrackController](#trackcontroller)
+    - 3.5 [BikeController](#bikecontroller)
     - 3.6 [TrackDispatcher](#trackdispatcher)
     - 3.7 [TrafficLights](#trafficlights)
         - 3.7.1 [TrafficLight](#trafficlight)
@@ -80,8 +80,8 @@ The sections in this guide correspond to project folders.
 <a name="physics"></a>
 ### 1.1 Physics
 
-<a name="bikecontroller"></a>
-#### 1.1.1 BikeController
+<a name="bike"></a>
+#### 1.1.1 Bike
 **Description**<br>
 BikeController allows you to control a bike, which consists of two WheelColliders and a RigidBody. BikeController itself does not use user input. There are public methods to control the bike: setSteer, SetAcceleration etc. It follows from this that another script is needed to control the bike. This script can use user input, for example.
 
@@ -773,8 +773,8 @@ The Mesh contains 5 sub-meshes, for which you need to provide 5 materials. See S
 4. Track body.
 5. Starting area.
 
-<a name="trackcontroller"></a>
-## 3.5 TracController
+<a name="bikecontroller"></a>
+## 3.5 BikeController
 
 #### Description
 TrackController guides the bike along the track. The bike is represented by the BikeController class and the track by the TreckSpline class. TrackController determines the direction of movement and speed.
