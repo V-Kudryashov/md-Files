@@ -11,9 +11,9 @@ The Bike Lab package also includes a Segway Controller. This is a relatively sim
 The sections in this guide correspond to project folders.
 
 **Table of Contents**
-- 1 [Bike](#1-bike)
+- 1 [Bike](#bike)
     - 1.1 [Physics](#physics)
-        - 1.1.1 [Bike](#bike)
+        - 1.1.1 [Bike](#bikescript)
         - 1.1.2 [Feet](#feet)
     - 1.2 [Input](#input)
         - 1.2.1 [ManualControl](#manualcontrol)
@@ -80,7 +80,7 @@ The sections in this guide correspond to project folders.
 <a name="physics"></a>
 ### 1.1 Physics
 
-<a name="bike"></a>
+<a name="bikescript"></a>
 #### 1.1.1 Bike
 **Description**<br>
 BikeController allows you to control a bike, which consists of two WheelColliders and a RigidBody. BikeController itself does not use user input. There are public methods to control the bike: setSteer, SetAcceleration etc. It follows from this that another script is needed to control the bike. This script can use user input, for example.
