@@ -47,10 +47,11 @@ The sections in this guide correspond to project folders.
     - 3.4 [TrackMesh](#trackMesh)
     - 3.5 [TrackController](#trackcontroller)
     - 3.6 [TrackDispatcher](#trackdispatcher)
-    - 3.7 [TrafficLights](#trafficlights)
-        - 3.7.1 [TrafficLight](#trafficlight)
-        - 3.7.2 [TrafficLightBox](#trafficlightbox)
-    - 3.8 [SpeedLimits](#speedlimits)
+    - 3.7 [IVehicle](#ivehicle)
+    - 3.8 [TrafficLights](#trafficlights)
+        - 3.8.1 [TrafficLight](#trafficlight)
+        - 3.8.2 [TrafficLightBox](#trafficlightbox)
+    - 3.9 [SpeedLimits](#speedlimits)
 - 4 [Motoball](#motoball)
     - 4.1 [MotoballController](#motoballcontroller)
 - 5 [Segway](#segway)
@@ -835,11 +836,14 @@ The `TrackDispatcher` class manages the behavior of bikes on a track. It control
 - **P key** - Switches the control to the next bike.
 - **T key** - Switches the timeScale to slow or normal.
 
+<a name="IVehicle"></a>
+## 3.7 IVehicle
+
 <a name="trafficlights"></a>
-## 3.7 TrafficLights
+## 3.8 TrafficLights
 
 <a name="trafficlight"></a>
-### 3.7.1 TrafficLight
+### 3.8.1 TrafficLight
 #### Description
 The TrafficLight script controls the behavior of the attached TrafficLightBoxes. It manages the phases of the traffic light (red, yellow1, yellow2, green) and assigns the corresponding colors to associated tracks.
 #### Enumerations
@@ -865,7 +869,7 @@ The TrafficLight script controls the behavior of the attached TrafficLightBoxes.
 You can see an example of use in the City scene. Assets/BikeLab/Segway/Scenes/Sity.unity
 
 <a name="trafficlightbox"></a>
-### 3.7.2 TrafficLightBox
+### 3.8.2 TrafficLightBox
 #### Description
 The TrafficLightBox class is responsible for controlling the visual state of a traffic light box. It allows setting the color of the traffic light (red, yellow, or green) by changing the materials of the associated mesh renderers.
 
@@ -888,7 +892,7 @@ The TrafficLightBox class is responsible for controlling the visual state of a t
 - **setColor(TrafficColor color)**: Sets the color of the traffic light box. Accepts a TrafficColor enum value (Red, Yellow, or Green) and updates the materials of the mesh renderers accordingly.
 
 <a name="speedlimits"></a>
-### 3.8 SpeedLimits
+### 3.9 SpeedLimits
 #### Description
 The SpeedLimits script manages the placement and removal of speed limit road signs along a track. It calculates the maximum speed for each turn based on the turn radius and displays this information on the road signs.
 
