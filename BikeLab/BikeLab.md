@@ -27,9 +27,10 @@ The sections in this guide correspond to project folders.
         - 1.3.5 [Chain](#chain)
         - 1.3.6 [Pedals](#pedals)
     - 1.4 [Other Bike scripts](#other)
-        - 1.4.1 [SlipEffects](#slipeffects)
-        - 1.4.2 [Sound](#sound)
-        - 1.4.3 [WheelColliderInterpolator](#wheelColliderInterpolator)
+        - 1.4.1 [BikeTrackController](#biketrackcontroller)
+        - 1.4.2 [SlipEffects](#slipeffects)
+        - 1.4.3 [Sound](#sound)
+        - 1.4.4 [WheelColliderInterpolator](#wheelColliderInterpolator)
 - 2 [Biker](#biker)
     - 2.1 [IKcontrol](#ikcontrol)
     - 2.2 [FootContact](#footcontact)
@@ -388,8 +389,12 @@ Maximum rotation speed in revolutions per second.
 <a name="other"></a>
 ### 1.4 Other Bike scripts
 
+<a name="biketrackcontroller"></a>
+#### 1.4.1 BikeTrackController
+**Description**<br>
+
 <a name="slipeffects"></a>
-#### 1.4.1 SlipEffects
+#### 1.4.2 SlipEffects
 **Description**<br>
 Emits trail and particles depending on wheel slip and specified parameters.
 
@@ -408,7 +413,7 @@ Emit trail When slipping sideways.
 Wheel slip threshold for trail.
 
 <a name="sound"></a>
-#### 1.4.2 Sound
+#### 1.4.3 Sound
 **Description**<br>
 If rps < 0.001 plays idle [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html), else plays run [AudioClip](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html).
 Pitch and volume depends on [WheelCollider](https://docs.unity3d.com/ScriptReference/WheelCollider.html) [rpm](https://docs.unity3d.com/ScriptReference/WheelCollider-rpm.html) and [motorTorque](https://docs.unity3d.com/ScriptReference/WheelCollider-motorTorque.html).
@@ -430,7 +435,7 @@ Info field
 - **O key** - Sound on/off.
 
 <a name="wheelColliderInterpolator"></a>
-#### 1.4.3 WheelColliderInterpolator
+#### 1.4.4 WheelColliderInterpolator
 **Description**<br>
 [WheelCollider](https://docs.unity3d.com/ScriptReference/WheelCollider.html) does not provide interpolation capabilities. This script interpolates WheelCollider data.
 
