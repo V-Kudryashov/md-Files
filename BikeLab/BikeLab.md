@@ -55,8 +55,8 @@ The sections in this guide correspond to project folders.
     - 4.1 [MotoballController](#motoballcontroller)
 - 5 [Segway](#segway)
     - 5.1 [Segway](#segwayscript)
-    - 5.2 [SegwayController](#segwaycontroller)
-    - 5.3 [SegwayDispatcher](#segwaydispatcher)
+    - 5.2 [SegwayTrackController](#segwaytrackcontroller)
+    - 5.3 [SegwayTrackDispatcher](#segwaytrackdispatcher)
     - 5.4 [SegwayIK](#segwayik)
 - 6 [Examples](#examples)
     - 6.1 [Bicycle](#bicycle)
@@ -948,8 +948,8 @@ The Segway script controls the behavior of a Segway-like vehicle. It uses a pair
 - **getRigidbody()**: Returns the Rigidbody component of the vehicle.
 - **reset()**: Resets the position and orientation of the vehicle.
 
-<a name="segwaycontroller"></a>
-## 5.2 SegwayController
+<a name="segwaytrackcontroller"></a>
+## 5.2 SegwayTrackController
 
 ### Description
 The SegwayController script manages the behavior of a SegwayController on a [TrackSpline](#track-spline). It controls the movement of the vehicle along the track, handles steering towards the target, and adjusts velocity based on track conditions such as turns and traffic lights. 
@@ -965,8 +965,8 @@ The SegwayController script manages the behavior of a SegwayController on a [Tra
 ### Public methods
 - **getL()**: Returns the current position of the vehicle on the track.
 
-<a name="segwaydispatcher"></a>
-## 5.3 SegwayDispatcher
+<a name="segwaytrackdispatcher"></a>
+## 5.3 SegwayTrackDispatcher
 
 ### Description
 The SegwayDispatcher script manages the interaction between Segway vehicles (SegwayTrackController) and traffic lights (TrafficLight) on a specified track (TrackSpline). It finds all Segway vehicles and traffic lights associated with the track and updates the distance to the nearest red light and stop line for each vehicle.
