@@ -44,7 +44,7 @@ The sections in this guide correspond to project folders.
         - 3.2.2 [TrackSpline2](#trackspline2)
     - 3.3 [TrackTerrain](#trackterrain)
     - 3.4 [TrackMesh](#trackMesh)
-    - 3.5 [BikeController](#bikecontroller)
+    - 3.5 [TrackController](#trackcontroller)
     - 3.6 [TrackDispatcher](#trackdispatcher)
     - 3.7 [TrafficLights](#trafficlights)
         - 3.7.1 [TrafficLight](#trafficlight)
@@ -773,8 +773,8 @@ The Mesh contains 5 sub-meshes, for which you need to provide 5 materials. See S
 4. Track body.
 5. Starting area.
 
-<a name="bikecontroller"></a>
-## 3.5 BikeController
+<a name="trackcontroller"></a>
+## 3.5 TrackController
 
 #### Description
 BikeController guides the bike along the track. The bike is represented by the BikeController class and the track by the TreckSpline class. TrackController determines the direction of movement and speed.
