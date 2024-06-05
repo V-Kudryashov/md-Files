@@ -894,6 +894,26 @@ The IVehicle interface allows the TrackCintroller class to control various vehic
 - **public void reset()** - Resets the vehicle to its initial state.
 - **public void getup(float h = 0.1f, float turn = 0)** - Sets the vehicle to a vertical position. **h** - The height to which the vehicle should be lifted. **turn** - The turn value to set.
 
+<a name="actions"></a>
+## 3.8 Actions
+
+### Description
+The `Actions` script provides functionality for controlling various aspects of the game, such as switching cameras, adjusting time scale, and toggling sound.
+
+### Public Variables
+- **panelMenu** *(GameObject)*: The menu panel GameObject.
+### Public Methods
+- **showHidePanelMenu()**: Toggles the visibility of the menu panel.
+- **selectNext()**: Selects the next camera in the list.
+- **select(int index)**: Selects the camera at the specified index.
+- **switchCamera()**: Switches the current camera.
+- **zoomPlus()**: Zooms in the current camera.
+- **zoomMinus()**: Zooms out the current camera.
+- **sound()**: Toggles sound on/off.
+- **updateTimeScale()**: Toggles slow motion.
+
+## Usage
+Attach this script to a GameObject in your scene. Assign the `panelMenu` variable to the menu panel GameObject. Assign buttons actions to the script public methods.
 <a name="trafficlights"></a>
 ## 3.8 TrafficLights
 
