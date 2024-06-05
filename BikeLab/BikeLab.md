@@ -797,8 +797,6 @@ The TrackController script drives a vehicle along the track. This vehicle must i
 
 A target object moves along the track 1.5 seconds ahead of the bike, and the bike follows it. In addition, the track direction and radius of curvature are used to maintain the correct direction.
 
-![TrackController](https://github.com/V-Kudryashov/md-Files/assets/17885189/cdf80e2a-10b1-4388-bc7d-1d8964ca1520)
-
 #### Fields:
 - **trackSpline** - Reference to the TrackSpline component defining the track path.
 - **closest1GO** - GameObject representing the closest point on the track spline.
@@ -1015,15 +1013,10 @@ The Segway script controls the behavior of a Segway-like vehicle. It uses a pair
 ## 5.2 SegwayTrackController
 
 ### Description
-The SegwayController script manages the behavior of a SegwayController on a [TrackSpline](#track-spline). It controls the movement of the vehicle along the track, handles steering towards the target, and adjusts velocity based on track conditions such as turns and traffic lights. 
+The SegwayTrackController class is an implementation of the TrackController class. The Segway script should be attached as the IVehicle.
 
 ### Fields
-- **track**: TrackSpline component.
-- **closect**: Transform representing the closest point on the track to the vehicle. Used for visualization during debugging.
-- **target**: Transform representing the target object. Used for visualization during debugging.
 - **waitStart**: Boolean flag indicating whether the vehicle should stay.
-- **distanceToRedLight**: Input data. Distance to the nearest traffic light. Must be greater than zero if the light is red.
-- **stopline**: Input data. Stopline of the nearest traffic light.
 
 ### Public methods
 - **getL()**: Returns the current position of the vehicle on the track.
