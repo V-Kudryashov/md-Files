@@ -861,9 +861,7 @@ A target object moves along the track 1.5 seconds ahead of the bike, and the bik
 ## 3.6 TrackDispatcher
 
 #### Description
-The `TrackDispatcher` class manages the behavior of bikes on a track. It controls various aspects such as speed, collision avoidance, and interaction with traffic lights.
-
-![TrackDispatcher](https://github.com/V-Kudryashov/md-Files/assets/17885189/51846ef3-4763-44aa-8522-9efa0b573f16)
+The `TrackDispatcher` class manages the behavior of vehicles on a track. It controls various aspects such as speed, collision avoidance, and interaction with traffic lights.
 
 #### Fields
 - **spline**: A reference to the TrackSpline component representing the track.
