@@ -392,7 +392,11 @@ Maximum rotation speed in revolutions per second.
 
 <a name="biketrackcontroller"></a>
 #### 1.4.1 BikeTrackController
-**Description**<br>
+#### Description
+The BikeTrackController class is an implementation of the TrackController class. The Bike script should be attached as the IVehicle.
+BikeTrackController guides the bike along the track. The bike is represented by the Bike class and the track by the TreckSpline class.
+
+The bike tends to swing around the target object. A damper is used to prevent swinging. The damper is applied to the target steering angle.
 
 #### Fields:
 - **zSpeedValue** - Value for incline dumper interpolation between rotation speed and rotation value.
@@ -789,11 +793,9 @@ The Mesh contains 5 sub-meshes, for which you need to provide 5 materials. See S
 ## 3.5 TrackController
 
 #### Description
-BikeController guides the bike along the track. The bike is represented by the BikeController class and the track by the TreckSpline class. TrackController determines the direction of movement and speed.
+The TrackController script drives a vehicle along the track. This vehicle must implement the IVehicle interface. It could be a Bike, a Segway, or something else. TrackController determines the direction of movement and speed.
 
 A target object moves along the track 1.5 seconds ahead of the bike, and the bike follows it. In addition, the track direction and radius of curvature are used to maintain the correct direction.
-
-The bike tends to swing around the target object. A damper is used to prevent swinging. The damper is applied to the target steering angle.
 
 ![TrackController](https://github.com/V-Kudryashov/md-Files/assets/17885189/cdf80e2a-10b1-4388-bc7d-1d8964ca1520)
 
