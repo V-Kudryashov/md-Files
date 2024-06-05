@@ -884,6 +884,20 @@ The `TrackDispatcher` class manages the behavior of bikes on a track. It control
 
 <a name="IVehicle"></a>
 ## 3.7 IVehicle
+#### Description
+### Public Methods
+
+- **public Rigidbody getRigidbody()** - Gets the Rigidbody component of the vehicle.
+- **public float getMaxForwardAcceleration()** - Gets the maximum forward acceleration of the vehicle.
+- **public float getMaxBrakeAcceleration()** - Gets the maximum brake acceleration of the vehicle.
+- **public float getMaxSidewaysAcceleration(float velocity)** - Gets the maximum sideways acceleration of the vehicle at a given velocity.
+- **public float getMaxVelocity(float radius)** - Gets the allowed speed for the given turning radius.
+- **public float getRadiusSteer(float radius)** - Gets the radius steer value for the given turning radius.
+- **public float getTurnRadius()** - Gets the current turning radius of the vehicle.
+- **public float getTurnDir()** - Gets the current turning direction of the vehicle.
+- **public void reset()** - Resets the vehicle to its initial state.
+- **public void getup(float h = 0.1f, float turn = 0)** - Sets the vehicle to a vertical position. **h** - The height to which the vehicle should be lifted. **turn** - The turn value to set.
+
 
 <a name="trafficlights"></a>
 ## 3.8 TrafficLights
