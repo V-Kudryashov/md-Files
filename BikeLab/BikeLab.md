@@ -812,6 +812,49 @@ The bike tends to swing around the target object. A damper is used to prevent sw
 - **manualSteer** - Manual steering input (0-1).
 - **manualVelocity** - Manual velocity input (0-1).
 - **blending** - Blend mode for blending manual and calculated values.
+***********************************************************
+
+## Public Methods
+
+- **init(IVehicle vehicle)**: Initializes the track controller with a vehicle implementing the `IVehicle` interface.
+- **update()**: Updates the track controller, including updating the speed text display.
+- **fixedUpdate()**: Updates the track controller in a fixed time step, including updating the closest points on the track and the target position.
+- **start()**: Starts the track controller, resetting the score and setting the wait flag to false.
+- **reset()**: Resets the track controller, including resetting the vehicle and score.
+- **getJump()**: Returns the current jump on the track.
+- **getTurn()**: Returns the current turn on the track.
+- **getRadiusSteer(float s)**: Returns the steering angle based on the track's radius at a given point.
+- **getTangentSteer(float s)**: Returns the steering angle based on the track's tangent at a given point.
+- **getTracktSteer(float s)**: Returns the steering angle based on a blend of the tangent and radius at a given point.
+- **getSteerToTarget()**: Returns the steering angle to the target position.
+- **getSafeVelocity()**: Returns the safe velocity for the vehicle.
+- **getL()**: Returns the current position on track.
+- **getL2()**: Returns the current position track2 length.
+
+## Serialized Classes
+
+### Score
+- **lap** *(int)*: The current lap number.
+- **lapTime** *(float)*: The time taken for the current lap.
+- **time** *(float)*: The current time.
+- **speed** *(float)*: The current speed of the vehicle.
+- **lapMaxSpeed** *(float)*: The maximum speed achieved in the current lap.
+- **maxSpeed** *(float)*: The maximum speed achieved overall.
+- **maxSpeedS** *(float)*: The track зщышешщт at which the maximum speed was achieved.
+
+### DispatcherData
+- **wait** *(bool)*: Flag indicating if the vehicle should wait.
+- **currentSpeed** *(float)*: The current speed factor.
+- **startingL** *(float)*: The starting position.
+- **l** *(float)*: The track length from the beginning of the spline to the current position.
+- **fullL** *(float)*: Distance traveled.
+- **s** *(float)*: The length of the track from the start to the current position.
+- **fullS** *(float)*: Distance traveled.
+- **zeroCounter** *(int)*: Counter for zero crossings.
+- **lapCounter** *(int)*: Counter for lap crossings.
+- **distanceToRedLight** *(float)*: Distance to the red light.
+- **stopline** *(float)*: The position of the stop line.
+
 
 <a name="trackdispatcher"></a>
 ## 3.6 TrackDispatcher
