@@ -394,6 +394,12 @@ Maximum rotation speed in revolutions per second.
 #### 1.4.1 BikeTrackController
 **Description**<br>
 
+#### Fields:
+- **zSpeedValue** - Value for incline dumper interpolation between rotation speed and rotation value.
+- **zDumper** - Damping factor for z-axis rotation.
+- **trackSteer** - Rudder interpolation between interpolated track direction and direction to target.
+- **drift** - Limits acceleration when drifting.
+
 <a name="slipeffects"></a>
 #### 1.4.2 SlipEffects
 **Description**<br>
@@ -800,11 +806,7 @@ The bike tends to swing around the target object. A damper is used to prevent sw
 - **score** - Instance of the Score class for tracking lap times and speed statistics.
 - **maxVelocity** - Maximum velocity the bike can reach.
 - **speed** - Speed factor for controlling bike velocity.
-- **zSpeedValue** - Value for incline dumper interpolation between rotation speed and rotation value.
-- **zDumper** - Damping factor for z-axis rotation.
 - **tangentRadius** - Rudder interpolation between track tangent and turning radius.
-- **trackSteer** - Rudder interpolation between interpolated track direction and direction to target.
-- **drift** - Limits acceleration when drifting.
 - **targetTimeout** - Time limit for reaching the target.
 - **useSmoothRadius** - Flag for using smooth radius for calculations.
 - **useConstantVelocity** - Flag for using a constant velocity instead of calculated velocity.
