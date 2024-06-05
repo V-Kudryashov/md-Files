@@ -896,7 +896,7 @@ The IVehicle interface allows the TrackCintroller class to control various vehic
 - **public void getup(float h = 0.1f, float turn = 0)** - Sets the vehicle to a vertical position. **h** - The height to which the vehicle should be lifted. **turn** - The turn value to set.
 
 <a name="actions"></a>
-## 3.8 Actions
+### 3.8 Actions
 
 ### Description
 The `Actions` script provides functionality for controlling various aspects of the game, such as switching cameras, adjusting time scale, and toggling sound.
