@@ -813,7 +813,7 @@ The bike tends to swing around the target object. A damper is used to prevent sw
 - **manualVelocity** - Manual velocity input (0-1).
 - **blending** - Blend mode for blending manual and calculated values.
 
-№## Public Methods
+### Public Methods
 
 - **init(IVehicle vehicle)**: Initializes the track controller with a vehicle implementing the `IVehicle` interface.
 - **update()**: Updates the track controller, including updating the speed text display.
@@ -830,7 +830,7 @@ The bike tends to swing around the target object. A damper is used to prevent sw
 - **getL()**: Returns the current position on track.
 - **getL2()**: Returns the current position track2 length.
 
-№## Serialized Classes
+### Serialized Classes
 
 ### Score
 - **lap** *(int)*: The current lap number.
