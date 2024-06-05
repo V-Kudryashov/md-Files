@@ -884,7 +884,7 @@ The `TrackDispatcher` class manages the behavior of bikes on a track. It control
 
 <a name="IVehicle"></a>
 ## 3.7 IVehicle
-#### Description
+### Description
 The IVehicle interface allows the TrackCintroller class to control various vehicles such as a bicycle, segway, etc.
 ### Public Methods
 - **public Rigidbody getRigidbody()** - Gets the Rigidbody component of the vehicle.
