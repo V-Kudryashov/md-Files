@@ -58,8 +58,7 @@ The sections in this guide correspond to project folders.
 - 5 [Segway](#segway)
     - 5.1 [Segway](#segwayscript)
     - 5.2 [SegwayTrackController](#segwaytrackcontroller)
-    - 5.3 [SegwayTrackDispatcher](#segwaytrackdispatcher)
-    - 5.4 [SegwayIK](#segwayik)
+    - 5.3 [SegwayIK](#segwayik)
 - 6 [Examples](#examples)
     - 6.1 [Bicycle](#bicycle)
     - 6.2 [Bike](#bikeexample)
@@ -1039,15 +1038,6 @@ The SegwayTrackController class is an implementation of the TrackController clas
 
 ### Public methods
 - **getL()**: Returns the current position of the vehicle on the track.
-
-<a name="segwaytrackdispatcher"></a>
-## 5.3 SegwayTrackDispatcher
-
-### Description
-The SegwayDispatcher script manages the interaction between Segway vehicles (SegwayTrackController) and traffic lights (TrafficLight) on a specified track (TrackSpline). It finds all Segway vehicles and traffic lights associated with the track and updates the distance to the nearest red light and stop line for each vehicle.
-
-### Fields
-- **track**: TrackSpline component representing the track for the vehicles and lights.
 
 <a name="segwayik"></a>
 ## 5.4 SegwayIK
