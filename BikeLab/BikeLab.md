@@ -848,9 +848,9 @@ A target object moves along the track 1.5 seconds ahead of the bike, and the bik
 - **currentSpeed** *(float)*: The current speed factor.
 - **startingL** *(float)*: The starting position.
 - **l** *(float)*: The track length from the beginning of the spline to the current position.
-- **fullL** *(float)*: Distance traveled.
+- **fullL** *(float)*: The path traveled from the beginning of the spline to the current point.
 - **s** *(float)*: The length of the track from the start to the current position.
-- **fullS** *(float)*: Distance traveled.
+- **fullS** *(float)*: The path traveled from the start of the track to the current point.
 - **zeroCounter** *(int)*: Counter for zero crossings.
 - **lapCounter** *(int)*: Counter for lap crossings.
 - **distanceToRedLight** *(float)*: Distance to the red light.
