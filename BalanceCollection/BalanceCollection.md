@@ -22,6 +22,35 @@ I tried to make the models and scripts as simple as possible. The controller scr
 <a name="bike"></a>
 ### 2.1 Bike
 The bike model consists of two WheelColliders and one Rigidbody. The controller script is very simple, but the formula for BalanceSteer requires some explanation.
+The first figure illustrates the relationship between lean angle and lateral acceleration.
+
+![acc](https://github.com/user-attachments/assets/d809ae74-da75-46bb-bd70-8bd78312fe90)
+
+a = g * tan(i),
+
+where<br>
+i - incline<br>
+g - gravity<br>
+a - lateral acceleration.<br>
+
+The second figure explains the relationship between lateral acceleration and steering angle.
+![steering](https://github.com/user-attachments/assets/c0245026-904f-42ce-9621-c97dad573954)
+Here<br>
+O - turn center<br>
+C - center of mass<br>
+w - wheelbase<br>
+S - steering angle<br>
+R - rotation radius<br>
+
+then<br>
+sin(S/2) = W/2/R<br>
+considering that R = V^2/a, we get<br>
+sin(S/2) = W/2/V^2 * a<br>
+Now we substitute the previously calculated value a<br>
+sin(S/2) = W/2/V^2*g*tan(i)<br>
+We got the formula that is used in the controller<br>
+
+
 <a name="biped"></a>
 ### 2.2 Biped
 
