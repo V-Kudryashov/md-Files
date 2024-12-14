@@ -21,7 +21,7 @@ I tried to make the models and scripts as simple as possible. The controller scr
 
 <a name="bike"></a>
 ### 2.1 Bike
-
+The bike model consists of two WheelColliders and one Rigidbody. The controller script is very simple, but the formula for BalanceSteer requires some explanation.
 <a name="biped"></a>
 ### 2.2 Biped
 
