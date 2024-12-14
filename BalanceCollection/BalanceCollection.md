@@ -24,7 +24,7 @@ I tried to make the models and scripts as simple as possible. The controller scr
 The bike model consists of two WheelColliders and one Rigidbody. The controller script is very simple, but the formula for BalanceSteer requires some explanation.
 The first figure illustrates the relationship between lean angle and lateral acceleration.
 
-![acc](https://github.com/user-attachments/assets/d809ae74-da75-46bb-bd70-8bd78312fe90 | width=100)
+<img src="https://github.com/user-attachments/assets/d809ae74-da75-46bb-bd70-8bd78312fe90" alt="acc" style="width:50%; height:auto;">
 
 a = g * tan(i),
 
@@ -34,7 +34,8 @@ g - gravity<br>
 a - lateral acceleration.<br>
 
 The second figure explains the relationship between lateral acceleration and steering angle.
-![steering](https://github.com/user-attachments/assets/c0245026-904f-42ce-9621-c97dad573954)
+
+<img src="https://github.com/user-attachments/assets/c0245026-904f-42ce-9621-c97dad573954" alt="steering" style="width:50%; height:auto;">
 Here<br>
 O - turn center<br>
 C - center of mass<br>
