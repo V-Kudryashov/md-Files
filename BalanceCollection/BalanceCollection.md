@@ -74,6 +74,10 @@ Lateral balance is achieved using a flywheel with a vertical axis. It's not a co
 <a name="segway"></a>
 ### 2.5 Segway
 
+Segway is a vehicle with two wheels located on one axle.<br>
+This model uses SphereCollider as wheels.<br>
+Longitudinal balance is achieved by means of motors. The wheels rotate until the axle reaches the balance point.
+
 <a name="wheelie"></a>
 ### 2.6 Wheelie
 
