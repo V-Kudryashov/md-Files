@@ -67,6 +67,8 @@ The Car model is a car on four wheels. The controller allows the model to balanc
 <a name="mono"></a>
 ### 2.4 Mono
 
+The Mono model is a one-wheeled model. For the wheel I used a SphereCollider since the WheelCollider is not designed to tilt forward or backward.
+
 <a name="segway"></a>
 ### 2.5 Segway
 
