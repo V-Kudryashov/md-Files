@@ -55,6 +55,9 @@ We got the formula that is used in the controller<br>
 
 <a name="biped"></a>
 ### 2.2 Biped
+The Biped consists of three parts - a body and two feet. The feet are moved using a ConfigurableJoint.<br>
+Each time the balance is disturbed, the controller moves one of the feet to the balance point.<br>
+This type of balance allows the model to not fall, but the model cannot stop, continuing to continuously move her feet. To solve this problem I used magic force. This is the simplest way, but instead of magic force you can replace SphereCollider with BoxCollider and control their rotation.
 
 <a name="car"></a>
 ### 2.3 Car
