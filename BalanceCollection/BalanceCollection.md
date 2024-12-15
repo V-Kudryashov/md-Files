@@ -62,6 +62,8 @@ This type of balance allows the model to not fall, but the model cannot stop, co
 <a name="car"></a>
 ### 2.3 Car
 
+The Car model is a car on four wheels. The controller allows the model to balance on two wheels like a bike.
+
 <a name="mono"></a>
 ### 2.4 Mono
 
