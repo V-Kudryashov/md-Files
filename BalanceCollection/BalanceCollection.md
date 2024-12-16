@@ -81,3 +81,15 @@ Longitudinal balance is achieved by means of motors. The wheels rotate until the
 <a name="wheelie"></a>
 ### 2.6 Wheelie
 
+The Wheelie model is a bike that can perform two tricks: Wheelie and Stoppie.
+The controller operates in one of three modes defined in the Stunts enumeration { Wheelie, Stoppie, None }.
+None
+In None mode the model works the same as the Bike model.
+Wheelie
+In Wheelie mode, the model rides on the rear wheel. Longitudinal balance is achieved by rotating the rear wheel.
+In this case, the rotation of the wheel is determined by the value of the targetAngularVelocity property.
+To balance laterally, the bike turns right or left. In order for the bike to turn, an external torque (magic force) is applied to it.
+Stoppie
+In Stoppie mode, the model rides on the front wheel. The rotation of the rear wheel is determined by the value of the angularXDrive.positionDamper property.
+
+
