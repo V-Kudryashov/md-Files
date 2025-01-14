@@ -7,7 +7,7 @@
     - 2.2 [Biped](#biped)
     - 2.3 [Car](#biped)
     - 2.4 [Mono](#biped)
-    - 2.5 [Segway](#biped)
+    - 2.5 [GyroScooter](#biped)
     - 2.6 [Wheelie](#biped)
 
 
@@ -71,10 +71,10 @@ The Mono model is a one-wheeled model. For the wheel I used a SphereCollider sin
 Longitudinal Balance is achieved by a motor. The wheel rotates until it reaches the balance point.<br>
 Lateral balance is achieved using a flywheel with a vertical axis. It's not a completely natural way, but it's simple.
 
-<a name="segway"></a>
-### 2.5 Segway
+<a name="gyroscooter"></a>
+### 2.5 GyroScooter
 
-Segway is a vehicle with two wheels located on one axle.<br>
+GyroScooter is a vehicle with two wheels located on one axle.<br>
 This model uses SphereCollider as wheels.<br>
 Longitudinal balance is achieved by means of motors. The wheels rotate until the axle reaches the balance point.
 
