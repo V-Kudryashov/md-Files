@@ -5,6 +5,8 @@ Physics Motion Pack brings ML-Agents powered, physics-based humanoid locomotion 
 
 This project adapts DeepMimic-style motion cloning to Unity using `ArticulationBody` for improved stability and many small specialized models rather than a single monolithic network. The package focuses on inference (pretrained models) rather than training workflows.
 
+The model has a humanoid Rig, so the movement can be easily retargeted to another humanoid model.
+
 ## Technical requirements
 - Unity: `6000.2.10.f1` or newer.
 - ML-Agents: `2.0.2` installed via the Package Manager.
@@ -52,7 +54,7 @@ Additionally the package contains two get-up models: `GetupFromBack` and `GetupF
 - SimpleCharacterController — implemented by `SimpleLocomotionAgent`. Uses only `Strong` models per behaviour. Easier to configure; motions are less natural.
 - SimpleAgent — implemented by `SimpleAgent`. Minimal agent controlling a single `ModelAsset` for quick tests or custom usage.
 
-Open the corresponding example scene or prefab to inspect each setup and see inspector configuration.
+The CharacterController and SimpleCharacterController scenes have a Retarget object. If activated, the movement will be retargeted to another model.
 
 ## Scripts (overview)
 - `LocomotionAgent` — High-level agent managing multiple models, transitions, turning, strong/fail/get-up logic and updating `BehaviorParameters.Model` at runtime.
