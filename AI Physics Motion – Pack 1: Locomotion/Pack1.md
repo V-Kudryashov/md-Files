@@ -3,7 +3,7 @@
 ## Introduction
 Physics Motion Pack brings ML-Agents powered, physics-based humanoid locomotion to Unity. The package provides inference-ready neural models, example agents and utilities for switching between motion primitives (Idle, Walk, Run, Sprint, Walk Backwards) and handling falls and get-ups.
 
-This project adapts DeepMimic-style motion cloning to Unity using `ArticulationBody` for improved stability and many small specialized models rather than a single monolithic network. The package focuses on inference (pretrained models) rather than training workflows.
+This project adapts DeepMimic-style motion cloning to Unity. It replaces Rigidbodies with `ArticulationBody` for improved simulation stability, and adopts many small, specialized neural models (one per skill) rather than a single large network — a modular approach that simplifies scaling and reuse. The package focuses on inference (pretrained models) rather than training workflows.
 
 The model has a humanoid Rig, so the movement can be easily retargeted to another humanoid model.
 
