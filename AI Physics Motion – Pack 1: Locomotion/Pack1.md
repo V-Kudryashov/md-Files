@@ -30,7 +30,7 @@ The package provides pretrained `ModelAsset` inference models for five locomotio
 - Sprint
 - Walking Backwards
 
-Each behavior has its own duration (Length) and movement speed. This data must be specified in the LocomotionAgent, SimpleLocomotionAgent, and SimpleAgent script parameters.
+Each behavior has its own duration (Length) and movement speed. This data must be specified in the LocomotionAgent, SimpleLocomotionAgent and SimpleAgent script parameters.
 | behaviour      | Length (s) |  Speed  |
 | :------------- | ---------: | ------: |
 | Backwards      |     1.200  | -1.071  |
