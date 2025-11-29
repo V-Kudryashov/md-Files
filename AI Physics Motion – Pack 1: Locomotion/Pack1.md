@@ -17,7 +17,7 @@ Note: Models and controllers use `ArticulationBody`. Make sure the physics setti
 ## Installation
 1. Copy or import the `Assets/PhysicsMotionPack1` folder into your Unity project.
 2. Install ML-Agents `2.0.2` via the __Package Manager__ (`Window > Package Manager`) if it is not already present.
-3. Open one of the example scenes (see Folder structure) and press Play.
+3. Open one of the example scenes and press Play.
 
 ## Quick Start
 1. Open the provided example scene or drag the example agent prefab into your scene.
