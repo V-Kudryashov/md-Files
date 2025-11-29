@@ -29,6 +29,15 @@ The package provides pretrained `ModelAsset` inference models for five locomotio
 - Run
 - Sprint
 - Walking Backwards
+
+| Index | Motion        | Length (s) |  Speed  |
+|-----:| :------------- | ---------: | ------: |
+| 0    | Backwards      |     1.200  | -1.071  |
+| 1    | Idle           |     2.000  |  0.000  |
+| 2    | Walk           |     1.233  |  1.014  |
+| 3    | Run            |     0.833  |  2.370  |
+| 4    | Sprint         |     0.533  |  5.519  |
+
 Each behaviour includes four model variants:
 - `Base` — high-fidelity imitation of reference animation, minimal jitter.
 - `Transition` — supports two behaviours and enables transitions between them.
