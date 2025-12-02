@@ -79,8 +79,8 @@ The CharacterController and SimpleCharacterController scenes have a Retarget obj
   - `transitionModel` — model used for transitions.
   - `strongModel` — robust model for recovery.
   - `turnModel` — model specialized for turning.
-  - `length` — nominal phase length of the motion.
-  - `speed` — target speed multiplier used by the controller.
+  - `length` — duration of the motion.
+  - `speed` — target speed used by the `BoneController`.
 - `getupFromBack`, `getupFromBelly` — model settings used when the agent gets up from lying on back or belly.
 - `textState` (optional) — UI `Text` to display current agent state.
 
