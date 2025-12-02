@@ -12,8 +12,6 @@ The model has a humanoid Rig, so the movement can be easily retargeted to anothe
 - ML-Agents: `2.0.2` installed via the Package Manager.
 - Platform: Desktop (Windows / macOS / Linux), Mobile (Android / iOS) — standard Unity build targets supported.
 
-Note: Models and controllers use `ArticulationBody`. Make sure the physics settings (fixedDeltaTime) are set to default.
-
 ## Installation
 1. Copy or import the `Assets/PhysicsMotionPack1` folder into your Unity project.
 2. Install ML-Agents `2.0.2` via the __Package Manager__ (`Window > Package Manager`) if it is not already present.
