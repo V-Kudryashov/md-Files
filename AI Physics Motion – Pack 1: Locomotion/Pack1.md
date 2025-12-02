@@ -1,11 +1,18 @@
-# Physics Motion Pack — README
+# Physics Motion Pack
 
 ## Introduction
-Physics Motion Pack brings ML-Agents powered, physics-based humanoid locomotion to Unity. The package provides inference-ready neural models, example agents and utilities for switching between motion primitives (Idle, Walk, Run, Sprint, Walk Backwards) and handling falls and get-ups.
 
-This project adapts DeepMimic-style motion cloning to Unity. It replaces Rigidbodies with `ArticulationBody` for improved simulation stability, and adopts many small, specialized neural models (one per skill) rather than a single large network — a modular approach that simplifies scaling and reuse. The package focuses on inference (pretrained models) rather than training workflows.
+In Unity, a "Ragdoll" usually means a humanoid model driven by physics. A ragdoll is passive — springs act as its muscles. As someone once put it, a ragdoll only really “comes to life” when it dies. Actively controlling a physics-driven humanoid has long attracted researchers and developers; the first satisfactory solution was presented by the authors of the DeepMimic paper.
 
-The model has a humanoid Rig, so the movement can be easily retargeted to another humanoid model.
+The DeepMimic project used the Bullet physics engine. I have been trying for a long time to port DeepMimic techniques to Unity using ML-Agents, and finally I got some promising results. The first obstacle I overcame was replacing Rigidbodies with ArticulationBodies — the latter are much more stable. The next challenge was training a single neural network to learn many different skills. I chose a different path: many small models, each trained for one simple skill. This approach makes it possible to scale the number of skills indefinitely.
+
+This package includes models for five locomotion behaviors: Idle, Walking, Run, Sprint, and Walking Backwards. For each behavior there are four neural-network models:
+- **Base** — faithfully reproduces the animation without jitter.
+- **Transition** — can perform two behaviors and transition between them.
+- **Turn** — specialized for turning.
+- **Strong** — a very robust model, trained to withstand disturbances. Because of its stability it can also turn and transition to other behaviors, but it performs those tasks less naturally than the specialized models.
+
+The package also contains two get-up models: `GetupFromBack` and `GetupFromBelly`.
 
 ## Technical requirements
 - Unity: `6000.2.10.f1` or newer.
