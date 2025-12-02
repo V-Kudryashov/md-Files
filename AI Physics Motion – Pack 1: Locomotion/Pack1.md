@@ -10,7 +10,7 @@ The model has a humanoid Rig, so the movement can be easily retargeted to anothe
 ## Technical requirements
 - Unity: `6000.2.10.f1` or newer.
 - ML-Agents: `2.0.2` installed via the Package Manager.
-- Platform: Desktop (Windows / macOS / Linux) — standard Unity build targets supported.
+- Platform: Desktop (Windows / macOS / Linux), Mobile (Android / iOS) — standard Unity build targets supported.
 
 Note: Models and controllers use `ArticulationBody`. Make sure the physics settings (fixedDeltaTime) are set to default.
 
