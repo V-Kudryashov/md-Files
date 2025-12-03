@@ -20,8 +20,8 @@ The package also contains two get-up models: `GetupFromBack` and `GetupFromBelly
 - Platform: Desktop (Windows / macOS / Linux), Mobile (Android / iOS) — standard Unity build targets supported.
 
 ## Installation
-1. Copy or import the `Assets/PhysicsMotionPack1` folder into your Unity project.
-2. Install ML-Agents `2.0.2` via the __Package Manager__ (`Window > Package Manager`) if it is not already present.
+1. Install ML-Agents `2.0.2` via the __Package Manager__ (`Window > Package Manager`) if it is not already present.
+2. Copy or import the `Assets/PhysicsMotionPack1` folder into your Unity project.
 3. Open one of the example scenes and press Play.
 
 ## Quick Start
