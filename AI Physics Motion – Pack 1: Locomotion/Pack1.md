@@ -15,7 +15,7 @@ This package includes models for five locomotion behaviors: Idle, Walking, Run, 
 The package also contains two get-up models: `GetupFromBack` and `GetupFromBelly`.
 
 ## Technical requirements
-- Unity: `6000.2.10.f1` or newer.
+- Unity: `2022.3.62f3` or newer.
 - ML-Agents: `2.0.2` installed via the Package Manager.
 - Platform: Desktop (Windows / macOS / Linux), Mobile (Android / iOS) — standard Unity build targets supported.
 
