@@ -89,7 +89,7 @@ The CharacterController and SimpleCharacterController scenes have a Retarget obj
 - Down / S — request previous (slower) motion.
 - Left / A — rotate left.
 - Right / D — rotate right.
-- G — force get-up behaviour (selects back/belly get-up automatically).
+- Space — turn the gun on/off.
 - R — reset agent to initial pose.
 
 ---
