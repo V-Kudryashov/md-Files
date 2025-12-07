@@ -5,10 +5,10 @@
 - 2 [Models](#2-models)
     - 2.1 [Bike](#bike)
     - 2.2 [Biped](#biped)
-    - 2.3 [Car](#biped)
-    - 2.4 [Mono](#biped)
-    - 2.5 [GyroScooter](#biped)
-    - 2.6 [Wheelie](#biped)
+    - 2.3 [Car](#car)
+    - 2.4 [Mono](#mono)
+    - 2.5 [GyroScooter](#gyroscooter)
+    - 2.6 [Wheelie](#wheelie)
 
 
 ## 1 Description
