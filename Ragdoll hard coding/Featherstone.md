@@ -45,24 +45,9 @@ $\boldsymbol{\tau} = \mathbf{M(q)\ddot q + C(q,\dot q) + g(q)}$
 
 Уравнение движения:
 
-$\begin{bmatrix}
-\mathbf{M_{bb}} & \mathbf{M_{bj}} \\
-\mathbf{M_{jb}} & \mathbf{M_{jj}}
-\end{bmatrix}
-\begin{bmatrix}
-\ddot q_b \\
-\ddot q_j
-\end{bmatrix}
-+
-\begin{bmatrix}
-\mathbf{h_b} \\
-\mathbf{h_j}
-\end{bmatrix}
-=
-\begin{bmatrix}
-\mathbf{0} \\
-\boldsymbol{\tau}
-\end{bmatrix}$
+[ M_bb  M_bj ] [ q̈_b ] + [ h_b ] = [ 0 ]
+[ M_jb  M_jj ] [ q̈_j ]   [ h_j ]   [ τ ]
+
 
 Задача inverse dynamics:
 
