@@ -20,17 +20,9 @@ $I_i$ — bias force (Coriolis + centrifugal + gravity)
 
 $X_iλ(i)$ — spatial transform от родителя 
 
-Для каждого сустава 
-𝑖
-i:
+Для каждого сустава $i:$
 
-𝑆
-𝑖
-S
-i
-	​
-
- — motion subspace (6×1 для 1-DOF)
+$S_i$ — motion subspace (6×1 для 1-DOF)
 
 𝑞
 ˙
