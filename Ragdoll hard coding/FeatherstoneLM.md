@@ -149,15 +149,15 @@ $$Q_i = \hat{s}_i^S \hat{f}_i$$
 
 1. **Скорость звена $i$ (в $i$-координатах, Ур. 4.10):**
 
-   $$\hat{v}_i = \hat{X}_{i-1} \hat{v}_{i-1} + \hat{s}_i^* \dot{q}_i$$
+$$\hat{v}_i = \hat{X}_{i-1} \hat{v}_{i-1} + \hat{s}_i^* \dot{q}_i \quad \text{(4.10)}$$
 
 3. **Ускорение звена $i$ (в $i$-координатах, Ур. 4.11):**
 
-   $$\hat{a}_i = {^i}\hat{X}_{i-1} \hat{a}_{i-1} + \hat{v}_i \times \hat{s}_i^* \dot{q}_i + \hat{s}_i^* \ddot{q}_i$$
+$$\hat{a}_i = \hat{X}_{i-1} \hat{a}_{i-1} + \hat{v}_i \times \hat{s}_i^* \dot{q}_i + \hat{s}_i^* \ddot{q}_i \quad \text{(4.11)}$$
 
 5. **Чистая пространственная сила/момент на звено $i$ (в $i$-координатах, Ур. 4.12):**
 
-   $$\hat{f}_i = \hat{I}_i^* \hat{a}_i + \hat{v}_i \times \hat{I}_i^* \hat{v}_i$$
+$$\hat{f}_i = \hat{I}_i^* \hat{a}_i + \hat{v}_i \times \hat{I}_i^* \hat{v}_i$$
 
 #### II. Обратный проход: Расчет передаваемых и шарнирных сил (Backward Pass: Transmitted and Joint Forces)
 
