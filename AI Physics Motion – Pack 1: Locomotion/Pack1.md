@@ -14,7 +14,7 @@ The package also contains two get-up models: `GetupFromBack` and `GetupFromBelly
 
 ## Technical requirements
 - Unity: `2022.3.62f3` or newer.
-- ML-Agents: `2.0.2` installed via the Package Manager.
+- Sentis: `2.1.3`.
 - Platform: Desktop (Windows / macOS / Linux), Mobile (Android / iOS) — standard Unity build targets supported.
 
 ## Installation
