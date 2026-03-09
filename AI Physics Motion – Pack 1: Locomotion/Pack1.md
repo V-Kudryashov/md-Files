@@ -2,9 +2,7 @@
 
 ## Introduction
 
-In Unity, a "Ragdoll" usually means a humanoid model driven by physics. A ragdoll is passive — springs act as its muscles. As someone once put it, a ragdoll only really “comes to life” when it dies. Actively controlling a physics-driven humanoid has long attracted researchers and developers; the first satisfactory solution was presented by the authors of the DeepMimic paper.
-
-The DeepMimic project used the Bullet physics engine. I have been trying for a long time to port DeepMimic techniques to Unity using ML-Agents, and finally I got some promising results. The first obstacle I overcame was replacing Rigidbodies with ArticulationBodies — the latter are much more stable. The next challenge was training a single neural network to learn many different skills. I chose a different path: many small models, each trained for one simple skill. This approach makes it possible to scale the number of skills indefinitely.
+In Unity, a "Ragdoll" usually means a humanoid model driven by physics. A ragdoll is passive — springs act as its muscles. As someone once put it, a ragdoll only really “comes to life” when it dies. Actively controlling a physics-driven humanoid has long attracted researchers and developers; the first satisfactory solution was presented by the authors of the DeepMimic paper. When training the models, I followed the methodology proposed in the Deep Mimic project.
 
 This package includes models for five locomotion behaviors: Idle, Walking, Run, Sprint, and Walking Backwards. For each behavior there are four neural-network models:
 - **Base** — faithfully reproduces the animation without jitter.
@@ -20,9 +18,8 @@ The package also contains two get-up models: `GetupFromBack` and `GetupFromBelly
 - Platform: Desktop (Windows / macOS / Linux), Mobile (Android / iOS) — standard Unity build targets supported.
 
 ## Installation
-1. Install ML-Agents `2.0.2` via the __Package Manager__ (`Window > Package Manager`) if it is not already present.
-2. Copy or import the `Assets/PhysicsMotionPack1` folder into your Unity project.
-3. Open one of the example scenes and press Play.
+1. Import the package into your Unity project. This package depends on the Unity Sentis package. Sentis will be installed automatically.
+2. Open one of the example scenes and press Play.
 
 ## Quick Start
 1. Open the provided example scene or drag the example agent prefab into your scene.
