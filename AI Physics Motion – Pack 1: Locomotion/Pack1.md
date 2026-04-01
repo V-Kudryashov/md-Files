@@ -46,6 +46,7 @@ Additionally the package contains two get-up models: `GetupFromBack` and `GetupF
 - CharacterController — implemented by `LocomotionAgent`. Can sequentially switch motions, perform turns, handle falls and get-up behaviours. This is the most feature-complete setup and functions like a CharacterController.
 - SimpleCharacterController — implemented by `SimpleLocomotionAgent`. Uses only `Strong` models per behaviour. Easier to configure; motions are less natural.
 - SimpleAgent — implemented by `SimpleAgent`. Minimal agent controlling a single `ModelAsset` for quick tests or custom usage.
+- Game — аn example of a simple game.
 
 The CharacterController and SimpleCharacterController scenes have a Retarget object. If activated, the movement will be retargeted to another model.
 
